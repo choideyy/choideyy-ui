@@ -1,0 +1,87 @@
+.countdown {
+  width: 100%;
+  max-width: 829px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--white);
+}
+
+.countdown__values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.countdown__group {
+  display: flex;
+  align-items: center;
+}
+
+.countdown__number {
+  font-family: var(--font-neue-plak);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: normal;
+  min-width: 164px;
+  text-align: center;
+}
+
+.countdown__separator {
+  font-family: var(--font-neue-plak);
+  font-size: 80px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 8px;
+}
+
+.countdown__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 0 6px;
+}
+
+.countdown__label {
+  font-family: var(--font-neue-plak);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: normal;
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .countdown__number {
+    font-size: 48px;
+    min-width: 80px;
+  }
+
+  .countdown__separator {
+    font-size: 48px;
+    margin: 0 4px;
+  }
+
+  .countdown__label {
+    font-size: 24px;
+  }
+
+  .countdown__labels {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .countdown__number {
+    font-size: 32px;
+    min-width: 56px;
+  }
+
+  .countdown__separator {
+    font-size: 32px;
+  }
+
+  .countdown__label {
+    font-size: 16px;
+  }
+}

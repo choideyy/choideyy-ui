@@ -1,0 +1,1 @@
+export { FooterMarquee } from './FooterMarquee';

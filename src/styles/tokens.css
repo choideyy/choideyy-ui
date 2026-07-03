@@ -1,0 +1,21 @@
+:root {
+  --charcoal-black: #1a1a1b;
+  --hiphop-red: #991b2d;
+  --faq-bg: #3b0d14;
+  --faq-bg-rgb: 59, 13, 20;
+  --faq-bg-60: rgba(59, 13, 20, 0.6);
+  --ghost-white: #f8f8ff;
+  --gold-accent: #b89a59;
+  --white: #ffffff;
+  --black: #000000;
+  --gray-muted: #d9d9d9;
+
+  --font-neue-plak: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-thunder: 'Bebas Neue', 'Impact', sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-slopdogz: 'Slopdogz', 'Permanent Marker', cursive;
+  --font-aerosoldier: 'Aerosoldier', 'Bungee', cursive;
+  --font-another-tag: 'Another Tag', 'Bangers', cursive;
+
+  --page-max-width: 1440px;
+}
