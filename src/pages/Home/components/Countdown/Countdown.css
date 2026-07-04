@@ -51,37 +51,45 @@
   text-align: center;
 }
 
-@media (max-width: 900px) {
+/* Tablet: 768px–1023px */
+@media (max-width: 1023px) {
   .countdown__number {
-    font-size: 48px;
-    min-width: 80px;
+    font-size: 64px;
+    min-width: 120px;
   }
 
   .countdown__separator {
-    font-size: 48px;
-    margin: 0 4px;
+    font-size: 64px;
+    margin: 0 6px;
   }
 
   .countdown__label {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .countdown__labels {
-    margin-top: 16px;
+    margin-top: 24px;
   }
 }
 
-@media (max-width: 520px) {
+/* Mobile: 0–767px */
+@media (max-width: 767px) {
   .countdown__number {
-    font-size: 32px;
-    min-width: 56px;
+    font-size: 28px;
+    min-width: 52px;
   }
 
   .countdown__separator {
-    font-size: 32px;
+    font-size: 28px;
+    margin: 0 2px;
   }
 
   .countdown__label {
-    font-size: 16px;
+    font-size: 12px;
+  }
+
+  .countdown__labels {
+    margin-top: 12px;
+    padding: 0 2px;
   }
 }

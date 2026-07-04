@@ -94,45 +94,47 @@ const stickerStyle = (sticker: StickerItem): CSSProperties =>
 export const StickerNav = () => {
   return (
     <section className="sticker-nav" aria-label="Quick navigation">
-      <div className="sticker-nav__grid">
-        <div className="sticker-nav__deco" aria-hidden="true">
-          <img src={stickerDeco} alt="" />
-        </div>
+      <div className="sticker-nav__scale">
+        <div className="sticker-nav__grid">
+          <div className="sticker-nav__deco" aria-hidden="true">
+            <img src={stickerDeco} alt="" />
+          </div>
 
-        {STICKERS.map((sticker) => (
-          <a
-            key={sticker.id}
-            href={sticker.href}
-            className={`sticker-nav__item${
-              sticker.id === 'event' ? ' sticker-nav__item--event' : ''
-            }`}
-            style={stickerStyle(sticker)}
-          >
-            <div
-              className="sticker-nav__sticker"
-              style={{ transform: `rotate(${sticker.stickerRotation}deg)` }}
+          {STICKERS.map((sticker) => (
+            <a
+              key={sticker.id}
+              href={sticker.href}
+              className={`sticker-nav__item${
+                sticker.id === 'event' ? ' sticker-nav__item--event' : ''
+              }`}
+              style={stickerStyle(sticker)}
             >
-              <img
-                className="sticker-nav__bg"
-                src={stickerBg}
-                alt=""
-                aria-hidden="true"
-              />
-              <span
-                className="sticker-nav__label"
-                style={{
-                  fontFamily: sticker.fontFamily,
-                  color: sticker.color,
-                  textTransform: sticker.textTransform,
-                  textShadow: sticker.textShadow,
-                  transform: `rotate(${sticker.rotation}deg)`,
-                }}
+              <div
+                className="sticker-nav__sticker"
+                style={{ transform: `rotate(${sticker.stickerRotation}deg)` }}
               >
-                {sticker.label}
-              </span>
-            </div>
-          </a>
-        ))}
+                <img
+                  className="sticker-nav__bg"
+                  src={stickerBg}
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span
+                  className="sticker-nav__label"
+                  style={{
+                    fontFamily: sticker.fontFamily,
+                    color: sticker.color,
+                    textTransform: sticker.textTransform,
+                    textShadow: sticker.textShadow,
+                    transform: `rotate(${sticker.rotation}deg)`,
+                  }}
+                >
+                  {sticker.label}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

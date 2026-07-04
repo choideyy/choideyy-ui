@@ -1,0 +1,59 @@
+---
+description: Project folder structure for pages, components, and shared modules
+globs: src/**/*
+alwaysApply: true
+---
+
+# Project Structure
+
+Use this folder structure consistently throughout the project.
+
+```
+src/
+  pages/
+  components/
+  hooks/
+  services/
+  utils/
+  assets/
+  types/
+```
+
+## Pages
+
+- All route-level components must be placed inside `src/pages`.
+- Each page must have its own folder.
+- Never place page components inside `src/components`.
+
+```
+src/pages/
+  Home/
+    Home.tsx
+    Home.css
+    index.ts
+    components/
+      Hero/
+        Hero.tsx
+        Hero.css
+        index.ts
+```
+
+## Components
+
+- Shared components used by multiple pages belong in `src/components`.
+- Page-specific components belong in a `components` folder within that page.
+- Every component must live in its own folder (see `03-component-structure.mdc`).
+
+## Imports
+
+- Import pages through their `index.ts`: `import { Home } from './pages/Home'`
+- Import shared components through their `index.ts`: `import { Button } from './components/ui/Button'`
+- Import page-specific components relative to the page or through their `index.ts`.
+
+## Other Directories
+
+- `hooks/` — custom React hooks
+- `services/` — API clients and external service integrations
+- `utils/` — pure utility functions
+- `types/` — shared TypeScript types and interfaces
+- `assets/` — static images, fonts, and media files

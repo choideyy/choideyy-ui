@@ -1,0 +1,42 @@
+---
+description: React component folder structure and import conventions
+globs: src/components/**/*
+alwaysApply: true
+---
+
+# Component Structure
+
+Every React component must live in its own folder. The folder name must match the component name.
+
+```
+ComponentName/
+├── ComponentName.tsx
+├── ComponentName.css
+└── index.ts
+```
+
+## Rules
+
+- Import components through their `index.ts` whenever possible.
+- Never place `Component.tsx` directly inside the `components` or `pages` directories.
+- Co-locate assets, hooks, tests, and helper files with the component they belong to.
+- Page-specific components live in `src/pages/<Page>/components/` (see `04-project-structure.mdc`).
+- When creating new components, always follow this structure automatically.
+- When modifying existing code, preserve or migrate to this structure where practical.
+
+## Example
+
+```
+src/components/ui/Button/
+├── Button.tsx
+├── Button.css
+└── index.ts
+```
+
+```typescript
+// index.ts
+export { Button } from './Button';
+
+// Consumer
+import { Button } from '@/components/ui/Button';
+```
