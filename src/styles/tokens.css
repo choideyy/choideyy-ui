@@ -18,4 +18,8 @@
   --font-another-tag: 'Another Tag', 'Bangers', cursive;
 
   --page-max-width: 1440px;
+
+  --bp-desktop: 1024px;
+  --bp-tablet-max: 1023px;
+  --bp-mobile-max: 767px;
 }
