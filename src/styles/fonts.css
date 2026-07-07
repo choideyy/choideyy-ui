@@ -22,10 +22,22 @@
   font-display: swap;
 }
 
+
 @font-face {
-  font-family: 'Grotesk';
+  font-family: 'Neue Plak';
+  src: url('../../otf/NeuePlak-Black.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'DC Monument Extended';
   src: url('../../otf/TITLE.OTF') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}       
+}
+
