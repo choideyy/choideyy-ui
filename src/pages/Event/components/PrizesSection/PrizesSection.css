@@ -1,0 +1,109 @@
+.event-prizes {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 90px 160px;
+  box-sizing: border-box;
+}
+
+.event-prizes__title {
+  margin: 0 0 64px;
+  color: var(--white);
+  font-family: var(--font-thunder);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: normal;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.event-prizes__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.event-prizes__item {
+  width: fit-content;
+  max-width: 100%;
+  padding: 24px 48px;
+  background: var(--charcoal-black);
+  box-shadow: 2px 0 10px rgba(255, 255, 255, 0.5);
+  transform: rotate(var(--prize-rotation, 0deg));
+}
+
+.event-prizes__item-title {
+  margin: 0 0 8px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.event-prizes__item-amount {
+  margin: 0;
+  color: var(--white);
+  font-family: 'Neue Plak', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+.event-prizes__decoration {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  width: min(35%, 497px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .event-prizes {
+    padding: 0 40px 120px;
+  }
+
+  .event-prizes__title {
+    font-size: 48px;
+  }
+
+  .event-prizes__item {
+    max-width: 100%;
+  }
+
+  .event-prizes__item-title,
+  .event-prizes__item-amount {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .event-prizes {
+    padding: 0 20px 96px;
+  }
+
+  .event-prizes__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .event-prizes__item-title,
+  .event-prizes__item-amount {
+    font-size: 22px;
+  }
+
+  .event-prizes__decoration {
+    display: none;
+  }
+}

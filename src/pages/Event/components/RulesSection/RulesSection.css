@@ -1,0 +1,91 @@
+.event-rules {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 90px 160px;
+  box-sizing: border-box;
+}
+
+.event-rules__title {
+  margin: 0 0 64px;
+  color: var(--white);
+  font-family: var(--font-slopdogz);
+  font-size: 128px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.event-rules__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.event-rules__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-rules__image-wrap {
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 517 / 612;
+}
+
+.event-rules__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-rules__label {
+  margin: 0;
+  padding: 32px 24px;
+  background: var(--gold-accent);
+  border-radius: 0 0 15px 15px;
+  color: var(--charcoal-black);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1023px) {
+  .event-rules {
+    padding: 0 40px 120px;
+  }
+
+  .event-rules__title {
+    font-size: 96px;
+  }
+
+  .event-rules__label {
+    font-size: 28px;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .event-rules {
+    padding: 0 20px 96px;
+  }
+
+  .event-rules__title {
+    font-size: 64px;
+    margin-bottom: 40px;
+  }
+
+  .event-rules__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .event-rules__label {
+    font-size: 22px;
+  }
+}
