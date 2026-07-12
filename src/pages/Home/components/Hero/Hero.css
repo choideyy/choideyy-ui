@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   margin: 0 auto;
 }
 
