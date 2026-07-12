@@ -1,0 +1,104 @@
+.contact-info-cards {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 74px 64px;
+  box-sizing: border-box;
+}
+
+.contact-info-cards__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 46px;
+}
+
+.contact-info-cards__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 90px;
+  padding: 16px 24px;
+  background: var(--gray-muted);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--charcoal-black);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-info-cards__card:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.contact-info-cards__card:focus-visible {
+  outline: 2px solid var(--ghost-white);
+  outline-offset: 4px;
+}
+
+.contact-info-cards__card img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.contact-info-cards__text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-info-cards__text {
+  margin: 0;
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.contact-info-cards__text--single {
+  text-align: left;
+}
+
+.contact-info-cards__subtext {
+  margin: 0;
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .contact-info-cards {
+    padding: 0 40px 48px;
+  }
+
+  .contact-info-cards__list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-info-cards__text--single {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-info-cards {
+    padding: 0 20px 40px;
+  }
+
+  .contact-info-cards__card {
+    min-height: 80px;
+    padding: 14px 18px;
+  }
+
+  .contact-info-cards__text {
+    font-size: 18px;
+  }
+}

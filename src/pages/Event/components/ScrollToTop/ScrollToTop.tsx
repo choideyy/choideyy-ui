@@ -1,4 +1,4 @@
-import scrollTopIcon from '../../../../assets/figma/scroll-top.png';
+import scrollTopIcon from '../../../../assets/figma/scroll-top.svg';
 import './ScrollToTop.css';
 
 export const ScrollToTop = () => {

@@ -1,0 +1,298 @@
+.crew-vs-crew {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background: var(--charcoal-black);
+  overflow-x: hidden;
+}
+
+.crew-vs-crew__bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.crew-vs-crew__main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 48px 90px 160px;
+  box-sizing: border-box;
+}
+
+.crew-vs-crew__nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.crew-vs-crew__title {
+  margin: 0 0 48px;
+  color: var(--white);
+  font-family: var(--font-thunder);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.crew-vs-crew__hero {
+  width: 100%;
+  margin-bottom: 80px;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.crew-vs-crew__hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.crew-vs-crew__section {
+  margin-bottom: 96px;
+}
+
+.crew-vs-crew__showcase-grid,
+.crew-vs-crew__battle-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 610px);
+  gap: 48px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.crew-vs-crew__theme {
+  margin-bottom: 40px;
+}
+
+.crew-vs-crew__theme-title {
+  margin: 0 0 8px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.crew-vs-crew__theme-label {
+  margin: 0;
+  color: var(--ghost-white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(6.29deg);
+  width: fit-content;
+}
+
+.crew-vs-crew__requirements {
+  list-style: none;
+  margin: 0 0 48px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.crew-vs-crew__requirements li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.crew-vs-crew__requirements img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.crew-vs-crew__req-title {
+  margin: 0 0 4px;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.crew-vs-crew__req-value {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.crew-vs-crew__prize-box {
+  padding: 32px;
+  background: rgba(26, 26, 27, 0.7);
+  border: 5px solid var(--ghost-white);
+  text-align: center;
+}
+
+.crew-vs-crew__prize-label {
+  margin: 0 0 8px;
+  color: var(--ghost-white);
+  font-family: var(--font-thunder);
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 2px var(--charcoal-black);
+}
+
+.crew-vs-crew__prize-desc {
+  margin: 0 0 16px;
+  color: var(--ghost-white);
+  font-family: var(--font-inter);
+  font-size: 32px;
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.crew-vs-crew__prize-amount {
+  margin: 0;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 5vw, 58px);
+  font-weight: 400;
+}
+
+.crew-vs-crew__showcase-image,
+.crew-vs-crew__battle-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.crew-vs-crew__battle-heading {
+  margin: 0 0 24px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.crew-vs-crew__rules-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.crew-vs-crew__rules-list li {
+  margin-bottom: 8px;
+}
+
+.crew-vs-crew__final {
+  margin-top: 64px;
+}
+
+.crew-vs-crew__final-label {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 12px 48px;
+  background: #3e96d0;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+}
+
+.crew-vs-crew__rules-list--final {
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+.crew-vs-crew__rules-list--final strong {
+  font-weight: 800;
+}
+
+.crew-vs-crew__champion {
+  margin-top: 80px;
+}
+
+.crew-vs-crew__deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+.crew-vs-crew__deco--left {
+  left: -113px;
+  top: 1200px;
+  width: min(55%, 787px);
+}
+
+.crew-vs-crew__deco--right {
+  right: -120px;
+  top: 2200px;
+  width: min(60%, 870px);
+}
+
+.crew-vs-crew__deco--bottom {
+  left: -134px;
+  bottom: 280px;
+  width: min(35%, 445px);
+  opacity: 0.5;
+  transform: rotate(-8.89deg);
+}
+
+@media (max-width: 1023px) {
+  .crew-vs-crew__main {
+    padding: 40px 40px 120px;
+  }
+
+  .crew-vs-crew__showcase-grid,
+  .crew-vs-crew__battle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crew-vs-crew__battle-heading {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .crew-vs-crew__main {
+    padding: 32px 20px 96px;
+  }
+
+  .crew-vs-crew__section {
+    margin-bottom: 64px;
+  }
+
+  .crew-vs-crew__requirements img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .crew-vs-crew__req-title {
+    font-size: 22px;
+  }
+
+  .crew-vs-crew__req-value {
+    font-size: 20px;
+  }
+
+  .crew-vs-crew__deco {
+    display: none;
+  }
+}

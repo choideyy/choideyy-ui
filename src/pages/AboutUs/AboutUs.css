@@ -1,0 +1,23 @@
+.about-us {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background: var(--charcoal-black);
+  overflow-x: hidden;
+}
+
+.about-us__bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-us__main {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,62 @@
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background: var(--charcoal-black);
+  overflow-x: hidden;
+}
+
+.contact__bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact__main {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__scroll-top {
+  position: fixed;
+  right: 40px;
+  bottom: 180px;
+  z-index: 10;
+  width: 75px;
+  height: 86px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact__scroll-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact__scroll-top:hover {
+  transform: translateY(-4px);
+  opacity: 0.85;
+}
+
+.contact__scroll-top:focus-visible {
+  outline: 2px solid var(--ghost-white);
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .contact__scroll-top {
+    right: 20px;
+    bottom: 140px;
+    width: 56px;
+    height: 64px;
+  }
+}

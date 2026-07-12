@@ -1,0 +1,53 @@
+.about-us-organizers {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 52px 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.about-us-organizers__title {
+  margin: 0;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.about-us-organizers__photo {
+  width: min(1336px, 100%);
+  height: auto;
+  object-fit: cover;
+}
+
+.about-us-organizers__partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.about-us-organizers__partners img {
+  width: min(492px, 100%);
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .about-us-organizers {
+    padding: 0 20px 80px;
+    gap: 48px;
+  }
+
+  .about-us-organizers__partners {
+    flex-direction: column;
+    gap: 32px;
+  }
+}

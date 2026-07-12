@@ -45,17 +45,19 @@ export const FacebookSection = () => {
   return (
     <section className="event-facebook" aria-label="Latest Facebook post">
       <div className="event-facebook__inner" ref={containerRef}>
-        <div
-          className="fb-page"
-          data-href={FACEBOOK_PAGE_URL}
-          data-tabs="timeline"
-          data-width="903"
-          data-height="620"
-          data-small-header="true"
-          data-adapt-container-width="true"
-          data-hide-cover="true"
-          data-show-facepile="false"
-        />
+        <div className="event-facebook__embed">
+          <div
+            className="fb-page"
+            data-href={FACEBOOK_PAGE_URL}
+            data-tabs="timeline"
+            data-width="903"
+            data-height="620"
+            data-small-header="true"
+            data-adapt-container-width="true"
+            data-hide-cover="true"
+            data-show-facepile="false"
+          />
+        </div>
       </div>
     </section>
   );
