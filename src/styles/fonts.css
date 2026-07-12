@@ -24,7 +24,7 @@
 
 
 @font-face {
-  font-family: 'Neue Plak';
+  font-family: 'Neue Plak Black';
   src: url('../../otf/NeuePlak-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-  font-family: 'Neue Plak';
+  font-family: 'Neue Plak Regular';
   src: url('../../otf/NeuePlak-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -46,5 +46,13 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+    font-family: "SVN A Love of Thunder";
+    src: url("../../otf/SVN-A-Love-of-Thunder.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+
 }
 
