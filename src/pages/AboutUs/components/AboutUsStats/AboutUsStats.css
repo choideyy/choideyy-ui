@@ -1,0 +1,97 @@
+.about-us-stats {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+}
+
+.about-us-stats__header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-us-stats__title {
+  margin: 0;
+  color: var(--ghost-white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.about-us-stats__intro {
+  margin: 0;
+  max-width: 1200px;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: clamp(16px, 2.5vw, 24px);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.about-us-stats__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-us-stats__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 288px;
+  padding: 32px;
+  background: #3e96d0;
+  border-radius: 16px;
+  color: var(--charcoal-black);
+}
+
+.about-us-stats__value {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-us-stats__label {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+}
+
+.about-us-stats__description {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+@media (max-width: 1023px) {
+  .about-us-stats {
+    padding: 80px 40px;
+    gap: 48px;
+  }
+
+  .about-us-stats__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us-stats {
+    padding: 64px 20px;
+  }
+}

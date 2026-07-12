@@ -1,0 +1,1 @@
+export { JudgesCarousel } from './JudgesCarousel';

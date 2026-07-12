@@ -1,0 +1,121 @@
+.event-theme {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 80px 90px 120px;
+  box-sizing: border-box;
+}
+
+.event-theme__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.event-theme__label {
+  margin: 0;
+  color: var(--ghost-white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: rotate(-5.81deg);
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.event-theme__star {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.event-theme__title {
+  margin: 0 0 16px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 96px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.event-theme__subtitle {
+  margin: 0 0 48px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.event-theme__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  padding-top: 32px;
+  border-top: 3px solid rgba(255, 255, 255, 0.35);
+}
+
+.event-theme__content p {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: justify;
+}
+
+.event-theme__content strong {
+  font-weight: 800;
+}
+
+@media (max-width: 1023px) {
+  .event-theme {
+    padding: 64px 40px 96px;
+  }
+
+  .event-theme__title {
+    font-size: 64px;
+  }
+
+  .event-theme__subtitle {
+    font-size: 28px;
+  }
+
+  .event-theme__content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .event-theme {
+    padding: 48px 20px 72px;
+  }
+
+  .event-theme__label {
+    font-size: 24px;
+  }
+
+  .event-theme__star {
+    width: 120px;
+  }
+
+  .event-theme__title {
+    font-size: 40px;
+  }
+
+  .event-theme__subtitle {
+    font-size: 22px;
+    margin-bottom: 32px;
+  }
+
+  .event-theme__content p {
+    font-size: 16px;
+  }
+}

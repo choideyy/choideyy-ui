@@ -1,0 +1,1 @@
+export { SpecialGuestsCarousel } from './SpecialGuestsCarousel';

@@ -1,0 +1,36 @@
+.event-scroll-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 10;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.event-scroll-top img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.event-scroll-top:hover {
+  transform: translateY(-4px);
+  opacity: 0.85;
+}
+
+.event-scroll-top:focus-visible {
+  outline: 2px solid var(--ghost-white);
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .event-scroll-top {
+    right: 20px;
+    bottom: 140px;
+    width: 56px;
+    height: 64px;
+  }
+}

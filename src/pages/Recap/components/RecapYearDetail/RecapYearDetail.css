@@ -1,0 +1,491 @@
+.recap-year {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background: var(--charcoal-black);
+  overflow-x: hidden;
+}
+
+.recap-year__bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.recap-year__main {
+  position: relative;
+  z-index: 1;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 24px 24px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recap-year__hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 48px 0 64px;
+}
+
+.recap-year__hero-accent {
+  position: absolute;
+  bottom: 56px;
+  width: 255px;
+  height: 52px;
+  background: #520e18;
+}
+
+.recap-year__hero-title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--ghost-white);
+  font-family: var(--font-another-tag);
+  font-size: clamp(72px, 12vw, 128px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.recap-year__gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.recap-year__gallery-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.recap-year__gallery-item {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.recap-year__gallery-item--4 {
+  grid-column: 1;
+}
+
+.recap-year__gallery-item--5 {
+  grid-column: 2;
+}
+
+.recap-year__gallery-item--6 {
+  grid-column: 3;
+}
+
+.recap-year__gallery-item--7 {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 6;
+}
+
+.recap-year__see-more {
+  padding: 20px 48px;
+  border: 3px solid var(--ghost-white);
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.recap-year__see-more:hover {
+  opacity: 0.85;
+}
+
+.recap-year__stats {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  margin-bottom: 120px;
+}
+
+.recap-year__stats-deco {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg) scaleY(-1);
+  width: min(60%, 600px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.recap-year__stats-cards {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+.recap-year__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 40px;
+  min-width: min(100%, 520px);
+}
+
+.recap-year__stat--interests {
+  background: var(--ghost-white);
+  transform: rotate(-0.39deg);
+  color: var(--charcoal-black);
+}
+
+.recap-year__stat--participants {
+  background: #3e96d0;
+  transform: rotate(-2.61deg);
+  color: var(--ghost-white);
+  box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.recap-year__stat-value {
+  margin: 0;
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.recap-year__stat-label {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.recap-year__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.recap-year__section-header h2 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-thunder);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.recap-year__arrows {
+  display: flex;
+  gap: 16px;
+}
+
+.recap-year__arrows img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.recap-year__judges,
+.recap-year__guests,
+.recap-year__mc-dj {
+  position: relative;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.recap-year__judges-track,
+.recap-year__guests-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+}
+
+.recap-year__judge-card {
+  flex: 0 0 min(620px, 80vw);
+  scroll-snap-align: center;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.recap-year__winners {
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.recap-year__winners-title {
+  margin: 0 0 64px;
+  text-align: center;
+  color: var(--white);
+  font-family: var(--font-slopdogz);
+  font-size: clamp(64px, 10vw, 128px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.recap-year__winners-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.recap-year__winner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recap-year__winner-photo {
+  width: min(1105px, 100%);
+  height: auto;
+  object-fit: cover;
+  transform: rotate(var(--winner-rotation, -1.9deg));
+}
+
+.recap-year__winner--champion .recap-year__winner-photo {
+  --winner-rotation: -1.9deg;
+}
+
+.recap-year__winner--runner-up .recap-year__winner-photo {
+  --winner-rotation: 3.01deg;
+}
+
+.recap-year__winner--best-performance .recap-year__winner-photo {
+  --winner-rotation: -1.41deg;
+}
+
+.recap-year__winner--cypher .recap-year__winner-photo,
+.recap-year__winner--seven-to-smoke .recap-year__winner-photo {
+  --winner-rotation: 3.2deg;
+}
+
+.recap-year__winner-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: -48px;
+  padding: 24px 32px;
+  transform: rotate(-0.11deg);
+  box-shadow: 4px 4px 10px rgba(248, 248, 255, 0.5);
+}
+
+.recap-year__winner--champion .recap-year__winner-banner {
+  background: #991b2d;
+  color: var(--ghost-white);
+}
+
+.recap-year__winner--runner-up .recap-year__winner-banner {
+  background: var(--ghost-white);
+  color: var(--charcoal-black);
+}
+
+.recap-year__winner--best-performance .recap-year__winner-banner {
+  background: var(--gold-accent);
+  color: var(--charcoal-black);
+}
+
+.recap-year__winner--cypher .recap-year__winner-banner,
+.recap-year__winner--seven-to-smoke .recap-year__winner-banner {
+  background: var(--charcoal-black);
+  color: var(--ghost-white);
+  box-shadow: 2px 0 10px rgba(248, 248, 255, 0.5);
+}
+
+.recap-year__winner-medal {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.recap-year__winner-banner p {
+  margin: 0;
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.recap-year__winner-banner em {
+  font-family: var(--font-inter);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.recap-year__guest-card {
+  flex: 0 0 min(788px, 85vw);
+  scroll-snap-align: center;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.recap-year__guest-placeholder,
+.recap-year__mc-dj-placeholder {
+  flex: 1;
+  min-height: 400px;
+  background: #c4c4c4;
+}
+
+.recap-year__deco-right {
+  position: absolute;
+  right: -10%;
+  top: 20%;
+  width: min(50%, 500px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.recap-year__mc-dj h2 {
+  margin: 0 0 48px;
+  text-align: center;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+}
+
+.recap-year__mc-dj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.recap-year__mc-dj-card {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  object-fit: cover;
+}
+
+.recap-year__deco-star {
+  position: absolute;
+  left: -5%;
+  bottom: 10%;
+  width: min(300px, 30vw);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.recap-year__deco-cassette {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(400px, 35vw);
+  opacity: 0.9;
+  transform: rotate(-7.39deg);
+  pointer-events: none;
+}
+
+.recap-year[data-year='2025'] .recap-year__winner--champion .recap-year__winner-banner {
+  background: var(--ghost-white);
+  color: var(--charcoal-black);
+}
+
+.recap-year[data-year='2025'] .recap-year__winner--runner-up .recap-year__winner-banner {
+  background: var(--gold-accent);
+  color: var(--charcoal-black);
+}
+
+.recap-year__scroll-top {
+  position: fixed;
+  right: 40px;
+  bottom: 180px;
+  z-index: 10;
+  width: 75px;
+  height: 86px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.recap-year__scroll-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.recap-year__scroll-top:hover {
+  transform: translateY(-4px);
+  opacity: 0.85;
+}
+
+@media (max-width: 1023px) {
+  .recap-year__gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recap-year__gallery-item--7 {
+    grid-column: 1 / -1;
+  }
+
+  .recap-year__stats-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .recap-year__mc-dj-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .recap-year__main {
+    padding: 16px 16px 96px;
+  }
+
+  .recap-year__gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-year__gallery-item--4,
+  .recap-year__gallery-item--5,
+  .recap-year__gallery-item--6,
+  .recap-year__gallery-item--7 {
+    grid-column: auto;
+  }
+
+  .recap-year__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .recap-year__winner-banner {
+    flex-direction: column;
+    text-align: center;
+    margin-top: -24px;
+    padding: 16px 20px;
+  }
+
+  .recap-year__scroll-top {
+    right: 20px;
+    bottom: 140px;
+    width: 56px;
+    height: 64px;
+  }
+}

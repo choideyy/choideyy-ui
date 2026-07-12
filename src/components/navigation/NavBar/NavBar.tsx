@@ -1,26 +1,29 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import logoChoideyy from '../../../assets/figma/logo-choideyy.png';
 import { Button } from '../../ui/Button';
 import './NavBar.css';
 
 const NAV_LINKS = [
-  { label: 'EVENT', href: '#event' },
-  { label: 'RECAP', href: '#recap' },
-  { label: 'ABOUT US', href: '#about' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'EVENT', to: '/event' },
+  { label: 'RECAP', to: '/recap' },
+  { label: 'ABOUT US', to: '/about-us' },
+  { label: 'CONTACT', to: '/contact' },
 ] as const;
 
-const MENU_LINKS = [
-  { label: 'HOME', href: '#' },
-  ...NAV_LINKS,
-] as const;
+const MENU_LINKS = [{ label: 'HOME', to: '/' }, ...NAV_LINKS] as const;
 
 type NavBarInnerProps = {
   isMenuOpen: boolean;
   onMenuToggle: () => void;
+  onLinkClick: () => void;
 };
 
-const NavBarInner = ({ isMenuOpen, onMenuToggle }: NavBarInnerProps) => (
+const NavBarInner = ({
+  isMenuOpen,
+  onMenuToggle,
+  onLinkClick,
+}: NavBarInnerProps) => (
   <div className="navbar__inner">
     <button
       type="button"
@@ -36,17 +39,26 @@ const NavBarInner = ({ isMenuOpen, onMenuToggle }: NavBarInnerProps) => (
       </span>
     </button>
 
-    <a href="#" className="navbar__logo" aria-label="Chọi Deyyy home">
+    <Link
+      to="/"
+      className="navbar__logo"
+      aria-label="Chọi Deyyy home"
+      onClick={onLinkClick}
+    >
       <img src={logoChoideyy} alt="Chọi Deyyy" width={138} height={90} />
-    </a>
+    </Link>
 
     <nav className="navbar__nav" aria-label="Main navigation">
       <ul className="navbar__links">
         {NAV_LINKS.map((link) => (
           <li key={link.label}>
-            <a href={link.href} className="navbar__link">
+            <Link
+              to={link.to}
+              className="navbar__link"
+              onClick={onLinkClick}
+            >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -71,10 +83,12 @@ export const NavBar = () => {
 
   return (
     <>
-      <header
-        className={`navbar${isMenuOpen ? ' navbar--menu-open' : ''}`}
-      >
-        <NavBarInner isMenuOpen={isMenuOpen} onMenuToggle={toggleMenu} />
+      <header className={`navbar${isMenuOpen ? ' navbar--menu-open' : ''}`}>
+        <NavBarInner
+          isMenuOpen={isMenuOpen}
+          onMenuToggle={toggleMenu}
+          onLinkClick={closeMenu}
+        />
 
         <div
           className="navbar__overlay"
@@ -85,13 +99,13 @@ export const NavBar = () => {
             <ul className="navbar__overlay-links">
               {MENU_LINKS.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.to}
                     className="navbar__overlay-link"
                     onClick={closeMenu}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -100,7 +114,11 @@ export const NavBar = () => {
       </header>
 
       <div className="navbar__placeholder" aria-hidden="true">
-        <NavBarInner isMenuOpen={false} onMenuToggle={() => {}} />
+        <NavBarInner
+          isMenuOpen={false}
+          onMenuToggle={() => {}}
+          onLinkClick={() => {}}
+        />
       </div>
     </>
   );

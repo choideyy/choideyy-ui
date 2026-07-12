@@ -1,0 +1,21 @@
+.about-us-hero {
+  position: relative;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about-us-hero__banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .about-us-hero__banner {
+    min-height: 200px;
+  }
+}
