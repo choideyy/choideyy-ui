@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   margin: 0 auto;
   padding: 8px 30px;
   box-sizing: border-box;
