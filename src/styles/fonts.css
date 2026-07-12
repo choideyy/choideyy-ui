@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: "SVN A Love of Thunder";
-    src: url("../../otf/SVN-A-Love-of-Thunder.otf") format("opentype");
+    src: url("../../otf/SVN-A-Love-of-Thunder.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 
