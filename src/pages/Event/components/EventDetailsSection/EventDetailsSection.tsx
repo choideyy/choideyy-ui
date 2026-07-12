@@ -1,8 +1,8 @@
 import spiritMore from '../../../../assets/figma/event/spirit-more.png';
 import spirit from '../../../../assets/figma/event/spirit.png';
 import dancerImage from '../../../../assets/figma/event/dancer.png';
-import duoCrewBadge from '../../../../assets/figma/event/duo-crew-badge.png';
-import peopleIcon from '../../../../assets/figma/event/people-icon.png';
+import crewIcon from '../../../../assets/figma/event/duo-crew-badge.svg';
+import duoIcon from '../../../../assets/figma/event/people-icon.svg';
 import './EventDetailsSection.css';
 
 export const EventDetailsSection = () => {
@@ -16,20 +16,27 @@ export const EventDetailsSection = () => {
 
       <div className="event-details__grid">
         <div className="event-details__left">
-          <img
-            className="event-details__people-icon"
-            src={peopleIcon}
-            alt=""
-            aria-hidden="true"
-          />
-          <img
-            className="event-details__badge"
-            src={duoCrewBadge}
-            alt=""
-            aria-hidden="true"
-          />
-          <p className="event-details__category event-details__category--duo">DUO</p>
-          <p className="event-details__category event-details__category--crew">CREW</p>
+          <div className="event-details__categories" aria-label="Competition categories">
+            <div className="event-details__category-item">
+              <img
+                className="event-details__category-icon event-details__category-icon--duo"
+                src={duoIcon}
+                alt=""
+                aria-hidden="true"
+              />
+              <p className="event-details__category-label">DUO</p>
+            </div>
+
+            <div className="event-details__category-item">
+              <img
+                className="event-details__category-icon event-details__category-icon--crew"
+                src={crewIcon}
+                alt=""
+                aria-hidden="true"
+              />
+              <p className="event-details__category-label">CREW</p>
+            </div>
+          </div>
 
           <img
             className="event-details__spirit"

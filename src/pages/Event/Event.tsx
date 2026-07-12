@@ -1,5 +1,4 @@
 import eventBg from '../../assets/figma/event/event-bg.png';
-import bottomDeco from '../../assets/figma/event/bottom-deco.png';
 import { EventDetailsSection } from './components/EventDetailsSection';
 import { FacebookSection } from './components/FacebookSection';
 import { JudgesCarousel } from './components/JudgesCarousel';
@@ -36,13 +35,6 @@ export const Event = () => {
         <SponsorsSection />
         <ScrollToTop />
       </main>
-
-      <img
-        className="event__bottom-deco"
-        src={bottomDeco}
-        alt=""
-        aria-hidden="true"
-      />
     </div>
   );
 };

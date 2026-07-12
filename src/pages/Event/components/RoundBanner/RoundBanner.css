@@ -1,0 +1,39 @@
+.round-banner {
+  display: inline-block;
+  padding: 20px 48px;
+  background: var(--gold-accent);
+  box-shadow: 5px 5px 0 rgba(248, 248, 255, 0.5);
+  transform: rotate(var(--banner-rotation, -2.42deg));
+}
+
+.round-banner--center {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.round-banner--right {
+  margin-left: auto;
+}
+
+.round-banner__text {
+  margin: 0;
+  color: var(--charcoal-black);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(28px, 4vw, 50px);
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .round-banner {
+    padding: 16px 28px;
+  }
+
+  .round-banner__text {
+    white-space: normal;
+    text-align: center;
+  }
+}

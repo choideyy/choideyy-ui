@@ -7,8 +7,8 @@ import './NavBar.css';
 const NAV_LINKS = [
   { label: 'EVENT', to: '/event' },
   { label: 'RECAP', to: '/recap' },
-  { label: 'ABOUT US', to: '/#about' },
-  { label: 'CONTACT', to: '/#contact' },
+  { label: 'ABOUT US', to: '/about-us' },
+  { label: 'CONTACT', to: '/contact' },
 ] as const;
 
 const MENU_LINKS = [{ label: 'HOME', to: '/' }, ...NAV_LINKS] as const;

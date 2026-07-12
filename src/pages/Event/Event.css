@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100svh;
   background: var(--charcoal-black);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .event__bg {
@@ -25,28 +25,7 @@
 .event__hero {
   position: relative;
   width: 100%;
-}
-
-.event__bottom-deco {
-  position: absolute;
-  left: -120px;
-  bottom: 420px;
-  width: min(40%, 464px);
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 0;
-  transform: rotate(-19deg);
-}
-
-@media (max-width: 1023px) {
-  .event__bottom-deco {
-    width: 280px;
-    bottom: 300px;
-  }
-}
-
-@media (max-width: 767px) {
-  .event__bottom-deco {
-    display: none;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

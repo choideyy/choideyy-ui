@@ -1,0 +1,248 @@
+import bgImage from '../../../assets/figma/event/two-vs-two/bg.png';
+import battleImage from '../../../assets/figma/event/two-vs-two/battle.png';
+import decoBottom from '../../../assets/figma/event/two-vs-two/deco-bottom.png';
+import decoLeft from '../../../assets/figma/event/two-vs-two/deco-left.png';
+import decoRight from '../../../assets/figma/event/two-vs-two/deco-right.png';
+import decoStar from '../../../assets/figma/event/two-vs-two/deco-star.png';
+import flowchartImage from '../../../assets/figma/event/two-vs-two/flowchart.png';
+import heroImage from '../../../assets/figma/event/two-vs-two/hero.png';
+import iconCards from '../../../assets/figma/event/two-vs-two/icon-cards.png';
+import iconPerson from '../../../assets/figma/event/two-vs-two/icon-person.png';
+import iconRegister from '../../../assets/figma/event/two-vs-two/icon-register.png';
+import prelimImage from '../../../assets/figma/event/two-vs-two/prelim.png';
+import recallBg from '../../../assets/figma/event/two-vs-two/recall-bg.png';
+import recallPin from '../../../assets/figma/event/two-vs-two/recall-pin.png';
+import recallShoes from '../../../assets/figma/event/two-vs-two/recall-shoes.png';
+import recallTape from '../../../assets/figma/event/two-vs-two/recall-tape.png';
+import { BackToEvent } from '../components/BackToEvent';
+import { ChampionCard } from '../components/ChampionCard';
+import { RoundBanner } from '../components/RoundBanner';
+import { ScrollToTop } from '../components/ScrollToTop';
+import './TwoVsTwo.css';
+
+const PRELIM_RULES = [
+  'Lần lượt các Duo sẽ thi đấu theo thứ tự do BTC sắp xếp',
+  'Mỗi Đuo có 1 lượt thi - 45 giây/lượt',
+  'BGK chấm điểm và chọn ra TOP 16',
+] as const;
+
+const TOP16_RULES = [
+  'Thứ tự các cặp đấu được đấu BTC sắp xếp',
+  'Mỗi Duo thi 02 lượt (tổng 04 lượt/trận, mỗi lượt 60 giây)',
+  'Mỗi trận hòa tối đa 1 lần',
+] as const;
+
+const TOP8_RULES = [
+  'Bốc thăm chọn cặp đấu',
+  'Mỗi trận gồm 04 lượt (02 lượt/Duo), 60 giây/lượt - tổng 4 phút/trận',
+  'Chấm hòa tối đa 01 lần',
+  'Sau 4 trận, trong 15 giây đếm ngược, các Duo thua trước đó có thể Recall (Thách Đấu) các Duo vừa thắng',
+] as const;
+
+const RECALL_CONDITIONS = [
+  {
+    icon: iconRegister,
+    title: 'Điểm số:',
+    value: 'Tổng điểm Prelim >= 45/60',
+  },
+  {
+    icon: iconCards,
+    title: 'Trạng thái:',
+    value: 'Duo đã thi đấu và thua ở vòng Top 8',
+  },
+  {
+    icon: iconPerson,
+    title: 'Đối tượng:',
+    value:
+      'Không Recall đội thắng tuyệt đối (full phiếu BGK) hoặc chính đối thủ vừa đấu',
+  },
+] as const;
+
+const RECALL_METHOD = [
+  'Đội bước ra trước sẽ được quyền Recall, nếu nhiều Duo cùng Recall, BTC sẽ tiến hành xoay chai để chọn ra một Duo duy nhất được quyền thách đấu',
+  'Mỗi đội thua chỉ được Recall 1 lần, mỗi đội thắng chỉ bị Recall 1 lần',
+  'Recall diễn ra 1 lượt 45 giây, không có kết quả hòa',
+  'Recall thắng: Thay thế vị trí Duo thắng và đi tiếp',
+  'Recall thua: Duo thắng ban đầu giữ nguyên vị trí',
+] as const;
+
+const FINAL_RULES = [
+  'TOP 4 Duo: 04 lượt/trận, 60 giây/lượt, tổng 4 phút/trận',
+  'TOP 2 Duo: 04 lượt/trận, 60 giây/lượt, tổng 4 phút/trận',
+] as const;
+
+export const TwoVsTwo = () => {
+  return (
+    <div className="two-vs-two">
+      <img className="two-vs-two__bg" src={bgImage} alt="" aria-hidden="true" />
+
+      <main className="two-vs-two__main">
+        <div className="two-vs-two__nav">
+          <BackToEvent />
+        </div>
+
+        <h1 className="two-vs-two__title">2 vs 2 all style</h1>
+
+        <div className="two-vs-two__hero">
+          <img src={heroImage} alt="" aria-hidden="true" />
+        </div>
+
+        <section className="two-vs-two__section" aria-labelledby="two-prelim-heading">
+          <RoundBanner label="Prelim & Duo Draw" rotation="-2.55deg" align="center" />
+
+          <div className="two-vs-two__prelim-grid">
+            <div className="two-vs-two__prelim-copy">
+              <p className="two-vs-two__stage-label two-vs-two__stage-label--prelim">
+                prelim
+              </p>
+              <ul className="two-vs-two__rules-list">
+                {PRELIM_RULES.map((rule) => (
+                  <li key={rule}>{rule}</li>
+                ))}
+              </ul>
+
+              <p className="two-vs-two__stage-label two-vs-two__stage-label--top16">
+                top 16
+              </p>
+              <ul className="two-vs-two__rules-list">
+                {TOP16_RULES.map((rule) => (
+                  <li key={rule}>{rule}</li>
+                ))}
+              </ul>
+            </div>
+
+            <img
+              className="two-vs-two__prelim-image"
+              src={prelimImage}
+              alt="2 vs 2 prelim performance"
+            />
+          </div>
+        </section>
+
+        <section className="two-vs-two__section" aria-labelledby="two-battle-heading">
+          <RoundBanner label="Vòng Battle" rotation="1.68deg" align="right" />
+
+          <div className="two-vs-two__battle-grid">
+            <img
+              className="two-vs-two__battle-image"
+              src={battleImage}
+              alt="2 vs 2 battle performance"
+            />
+
+            <div className="two-vs-two__battle-copy">
+              <h2 id="two-battle-heading" className="two-vs-two__battle-heading">
+                TOP 8
+              </h2>
+              <ul className="two-vs-two__rules-list">
+                {TOP8_RULES.map((rule) => (
+                  <li key={rule}>{rule}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="two-vs-two__recall" aria-labelledby="two-recall-heading">
+          <img
+            className="two-vs-two__recall-bg"
+            src={recallBg}
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            className="two-vs-two__recall-tape"
+            src={recallTape}
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            className="two-vs-two__recall-pin"
+            src={recallPin}
+            alt=""
+            aria-hidden="true"
+          />
+
+          <div className="two-vs-two__recall-inner">
+            <h2 id="two-recall-heading" className="two-vs-two__recall-title">
+              Cơ chế RECALL
+            </h2>
+
+            <div className="two-vs-two__recall-flow">
+              <img src={flowchartImage} alt="Recall flowchart" />
+            </div>
+
+            <div className="two-vs-two__recall-details">
+              <h3 className="two-vs-two__recall-subtitle">Điều kiện:</h3>
+              <ul className="two-vs-two__conditions">
+                {RECALL_CONDITIONS.map((item) => (
+                  <li key={item.title}>
+                    <img src={item.icon} alt="" aria-hidden="true" />
+                    <p>
+                      <strong>{item.title}</strong> {item.value}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="two-vs-two__recall-subtitle">Cách thức:</h3>
+              <ul className="two-vs-two__rules-list two-vs-two__rules-list--recall">
+                {RECALL_METHOD.map((rule) => (
+                  <li key={rule}>{rule}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <img
+            className="two-vs-two__recall-shoes"
+            src={recallShoes}
+            alt=""
+            aria-hidden="true"
+          />
+        </section>
+
+        <section className="two-vs-two__final-section" aria-labelledby="two-final-heading">
+          <p id="two-final-heading" className="two-vs-two__final-banner">
+            SEMI-FINAL & FINAL
+          </p>
+          <ul className="two-vs-two__rules-list two-vs-two__rules-list--final">
+            {FINAL_RULES.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="two-vs-two__champion" aria-label="Champion prize">
+          <ChampionCard amount="3.000.000" />
+        </section>
+
+        <ScrollToTop />
+      </main>
+
+      <img
+        className="two-vs-two__deco two-vs-two__deco--left"
+        src={decoLeft}
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        className="two-vs-two__deco two-vs-two__deco--right"
+        src={decoRight}
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        className="two-vs-two__deco two-vs-two__deco--bottom"
+        src={decoBottom}
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        className="two-vs-two__deco two-vs-two__deco--star"
+        src={decoStar}
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
+  );
+};

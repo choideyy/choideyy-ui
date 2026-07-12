@@ -52,9 +52,14 @@
 
 .event-judges__card {
   flex: 0 0 var(--card-width);
-  opacity: 0.55;
-  transform: scale(0.88);
+  opacity: 0.7;
+  transform: scale(0.9);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  visibility: visible;
+}
+
+.event-judges__track--instant .event-judges__card {
+  transition: none;
 }
 
 .event-judges__card--active {
