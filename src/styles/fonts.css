@@ -28,7 +28,6 @@
   src: url('../../otf/NeuePlak-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -36,7 +35,6 @@
   src: url('../../otf/NeuePlak-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 
