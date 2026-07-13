@@ -10,9 +10,11 @@
   --black: #000000;
   --gray-muted: #d9d9d9;
 
-  --font-neue-plak: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-neue-plak: 'Neue Plak', 'Arial Narrow', sans-serif;
   --font-thunder: 'Bebas Neue', 'Impact', sans-serif;
-  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-inter-regular: 'Inter Regular', system-ui, sans-serif;
+  --font-inter-black: 'Inter Black', system-ui, sans-serif;
+  --font-inter-extra-bold: 'Inter Extra Bold', system-ui, sans-serif;
   --font-slopdogz: 'Slopdogz', 'Permanent Marker', cursive;
   --font-aerosoldier: 'Aerosoldier', 'Bungee', cursive;
   --font-another-tag: 'Another Tag', 'Bangers', cursive;

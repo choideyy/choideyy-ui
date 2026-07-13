@@ -23,7 +23,7 @@
   justify-content: space-between;
   /* max-width: var(--page-max-width); */
   margin: 0 auto;
-  padding: 8px 30px;
+  padding: 5px 30px;
   box-sizing: border-box;
 }
 
@@ -72,7 +72,7 @@
 .navbar__logo {
   box-sizing: border-box;
   width: 197px;        /* 138 + 59 */
-  padding: 9px 0 8px 59px;
+  padding: 9px 0 8px 9px;
 }
 
 .navbar__logo img {
@@ -90,7 +90,7 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 56px;
+  gap: 112px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -98,9 +98,9 @@
 
 .navbar__link {
   color: var(--white);
-  font-family: 'Neue Plak';
+  font-family: 'Neue Plak Black';
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 400;
   text-decoration: none;
   line-height: normal;
   white-space: nowrap;
@@ -112,6 +112,11 @@
 
 .navbar__cta {
   flex-shrink: 0;
+  font-family: 'Neue Plak Black';
+  font-size: 20px;
+  font-weight: 400;
+  outline: 5px;
+  border-radius: 5px;
 }
 
 .navbar__overlay {
@@ -152,9 +157,9 @@
 .navbar__overlay-link {
   display: block;
   color: var(--white);
-  font-family: var(--font-neue-plak);
+  font-family: 'Neue Plak Black';
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 400;
   text-decoration: none;
   line-height: 1;
   text-align: center;

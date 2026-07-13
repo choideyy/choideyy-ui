@@ -32,17 +32,18 @@
 
 .contact-hero__accent {
   position: absolute;
-  left: 50%;
+  left: 48%;
   bottom: 8px;
   transform: translateX(-50%);
   width: min(100%, 423px);
-  height: 35px;
+  height: 30px;
   background: #3e96d0;
   z-index: 0;
 }
 
 .contact-hero__title {
   position: relative;
+  top: 25px;
   z-index: 1;
   display: inline-block;
   margin: 0 0 32px;
@@ -58,11 +59,10 @@
 .contact-hero__description {
   margin: 48px 0 0;
   color: var(--white);
-  font-family: var(--font-inter);
-  font-size: clamp(16px, 2.5vw, 24px);
-  font-weight: 400;
+  font-family: var(--font-inter-regular);
+  font-size: 24px;
+  font-weight: 200;
   font-style: italic;
-  line-height: 1.5;
 }
 
 @media (max-width: 1023px) {

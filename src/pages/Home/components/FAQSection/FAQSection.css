@@ -41,7 +41,7 @@
 .faq__body-inner {
   position: relative;
   width: 100%;
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   min-height: auto;
   margin: 0 auto;
   z-index: 1;
@@ -50,7 +50,7 @@
 .faq__vinyl {
   position: absolute;
   left: -4px;
-  bottom: 10%;
+  bottom: 0%;
   width: 606px;
   max-width: 42%;
   height: auto;
@@ -62,7 +62,8 @@
 .faq__deco {
   position: absolute;
   right: 0;
-  top: 5%;
+  left: 70%;
+  top: -5%;
   width: 750px;
   max-width: 52%;
   height: auto;
@@ -119,18 +120,18 @@
 
 .faq__question-text {
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-extra-bold);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: normal;
 }
 
 .faq__toggle {
   flex-shrink: 0;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-extra-bold);
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
   min-width: 40px;
   text-align: center;
@@ -144,7 +145,7 @@
 .faq__answer p {
   margin: 0;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
@@ -152,7 +153,7 @@
 }
 
 .faq__answer strong {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .faq__question:hover .faq__question-text {

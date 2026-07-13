@@ -8,17 +8,17 @@
 
 .intro__inner {
   display: grid;
-  grid-template-columns: 1fr 567px;
+  grid-template-columns: 1fr 600px;
   gap: 64px;
   align-items: start;
 }
 
 .intro__title {
-  margin: 0 0 48px;
+  margin: 0 0 25px;
   color: var(--white);
-  font-family: var(--font-inter);
-  font-size: 60px;
-  font-weight: 800;
+  font-family: var(--font-inter-extra-bold);
+  font-size: 64px;
+  font-weight: 700;
   font-style: italic;
   line-height: normal;
   white-space: pre-wrap;
@@ -26,16 +26,18 @@
 
 .intro__text {
   color: var(--white);
-  font-family: var(--font-inter);
+  gap:40px;
+  font-family: var(--font-inter-regular);
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
   text-align: justify;
   max-width: 665px;
+  max-height: 551px;
 }
 
 .intro__text p {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
 }
 
 .intro__text p:last-child {
@@ -43,12 +45,14 @@
 }
 
 .intro__text strong {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .intro__image-wrap {
   width: 100%;
-  max-width: 567px;
+  height: 100%;
+  /* max-width: 567px;
+  max-height: 834px; */
   border-radius: 30px;
   overflow: hidden;
 }

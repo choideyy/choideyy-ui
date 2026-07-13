@@ -1,4 +1,4 @@
-import iconEmail from '../../../../assets/figma/contact/icon-email.png';
+ import iconEmail from '../../../../assets/figma/contact/icon-email.png';
 import iconFacebook from '../../../../assets/figma/contact/icon-facebook.png';
 import iconPhone from '../../../../assets/figma/contact/icon-phone.png';
 import './ContactInfoCards.css';
