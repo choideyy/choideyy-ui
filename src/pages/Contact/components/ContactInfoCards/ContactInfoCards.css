@@ -12,15 +12,16 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 46px;
+  gap: 45px;
 }
 
 .contact-info-cards__card {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   height: 70px;
-  width: 30%%;
+  width: 360px;
   padding: 16px 24px;
   background: var(--gray-muted);
   border-radius: 20px;
@@ -62,7 +63,7 @@
 }
 
 .contact-info-cards__text--single {
-  text-align: left;
+  text-align: center;
 }
 
 .contact-info-cards__subtext {
