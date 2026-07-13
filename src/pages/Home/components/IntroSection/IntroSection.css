@@ -8,7 +8,7 @@
 
 .intro__inner {
   display: grid;
-  grid-template-columns: 1fr 567px;
+  grid-template-columns: 1fr 600px;
   gap: 64px;
   align-items: start;
 }
@@ -16,9 +16,9 @@
 .intro__title {
   margin: 0 0 25px;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-extra-bold);
   font-size: 64px;
-  font-weight: 800;
+  font-weight: 700;
   font-style: italic;
   line-height: normal;
   white-space: pre-wrap;
@@ -26,8 +26,8 @@
 
 .intro__text {
   color: var(--white);
-  gap:50px;
-  font-family: var(--font-inter);
+  gap:40px;
+  font-family: var(--font-inter-regular);
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
@@ -45,7 +45,7 @@
 }
 
 .intro__text strong {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .intro__image-wrap {
