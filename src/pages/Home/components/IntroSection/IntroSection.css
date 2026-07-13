@@ -14,10 +14,10 @@
 }
 
 .intro__title {
-  margin: 0 0 48px;
+  margin: 0 0 25px;
   color: var(--white);
   font-family: var(--font-inter);
-  font-size: 60px;
+  font-size: 64px;
   font-weight: 800;
   font-style: italic;
   line-height: normal;
@@ -26,16 +26,18 @@
 
 .intro__text {
   color: var(--white);
+  gap:50px;
   font-family: var(--font-inter);
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
   text-align: justify;
   max-width: 665px;
+  max-height: 551px;
 }
 
 .intro__text p {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
 }
 
 .intro__text p:last-child {
@@ -49,6 +51,7 @@
 .intro__image-wrap {
   width: 100%;
   max-width: 567px;
+  max-height: 834px;
   border-radius: 30px;
   overflow: hidden;
 }
