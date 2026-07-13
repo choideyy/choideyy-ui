@@ -104,35 +104,57 @@
   }
 
   .event-judges__title {
-    font-size: 48px;
+    font-size: 40px;
+  }
+
+  .event-judges__header {
+    margin-bottom: 32px;
   }
 
   .event-judges__track {
-    --card-width: min(68%, 560px);
+    --card-width: min(56%, 400px);
     --gap: 24px;
+  }
+
+  .event-judges__name {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 767px) {
   .event-judges {
     padding: 0 20px 96px;
+    overflow-x: clip;
   }
 
   .event-judges__header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
   }
 
   .event-judges__title {
-    font-size: 36px;
+    font-size: 20px;
   }
 
   .event-judges__track {
-    --card-width: 78%;
-    --gap: 16px;
+    --card-width: 51%;
+    --gap: 12px;
+  }
+
+  .event-judges__card {
+    opacity: 0.85;
+    transform: scale(0.95);
+  }
+
+  .event-judges__card--active {
+    opacity: 1;
+    transform: scale(1);
   }
 
   .event-judges__name {
-    font-size: 24px;
+    font-size: 16px;
+    margin-top: 12px;
   }
 }

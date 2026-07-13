@@ -159,61 +159,176 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
 @media (max-width: 1023px) {
   .event-details {
     padding: 0 40px 96px;
   }
 
+  .event-details__banner {
+    margin-bottom: 48px;
+    padding: 20px 36px;
+  }
+
+  .event-details__banner-text {
+    font-size: 60px;
+  }
+
   .event-details__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .event-details__right {
+    order: -1;
+  }
+
+  .event-details__left {
+    order: 1;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .event-details__spirit,
+  .event-details__spirit-more {
+    display: none;
   }
 
   .event-details__categories {
     justify-content: center;
-    gap: clamp(40px, 12vw, 120px);
+    align-items: center;
+    width: 100%;
+    gap: clamp(80px, 18vw, 160px);
+    margin-bottom: 32px;
   }
 
-  .event-details__spirit-more {
-    margin-left: 0;
-    margin-top: -24px;
-  }
-}
-
-@media (max-width: 767px) {
-  .event-details {
-    padding: 0 20px 72px;
-  }
-
-  .event-details__banner {
-    padding: 16px 24px;
-    margin-bottom: 40px;
-  }
-
-  .event-details__categories {
-    gap: 48px;
+  .event-details__category-item {
+    align-items: center;
+    text-align: center;
   }
 
   .event-details__category-icon--duo {
-    width: 72px;
-    height: 72px;
+    width: 70px;
+    height: 70px;
   }
 
   .event-details__category-icon--crew {
-    width: auto;
-    height: 72px;
+    height: 70px;
   }
 
   .event-details__category-label {
     font-size: 24px;
   }
 
-  .event-details__spirit {
-    width: min(100%, 520px);
+  .event-details__dancer {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .event-details__meta {
+    margin-top: 48px;
+  }
+
+  .event-details__date {
+    font-size: 32px;
+    padding: 12px 20px;
+  }
+
+  .event-details__venue {
+    font-size: 28px;
+    padding: 16px 20px;
+  }
+
+  .event-details__address {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .event-details {
+    padding: 0 20px 72px;
+    overflow-x: clip;
+  }
+
+  .event-details__banner {
+    padding: 12px 20px;
+    margin-bottom: 24px;
+  }
+
+  .event-details__banner-text {
+    font-size: 32px;
+  }
+
+  .event-details__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .event-details__right {
+    order: -1;
+    margin: 0 -20px 24px;
+  }
+
+  .event-details__dancer {
+    max-width: 100%;
+    mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+  }
+
+  .event-details__left {
+    order: 1;
+  }
+
+  .event-details__categories {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: clamp(48px, 22vw, 80px);
+    margin-bottom: 24px;
+  }
+
+  .event-details__category-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-details__category-icon--crew {
+    width: 55px;
+    height: 55px;
+  }
+
+  .event-details__category-label {
+    font-size: 20px;
+  }
+
+  .event-details__spirit,
+  .event-details__spirit-more {
+    display: none;
+  }
+
+  .event-details__meta {
     margin-top: 32px;
   }
 
-  .event-details__spirit-more {
-    width: min(100%, 480px);
-    margin-top: -40px;
+  .event-details__date {
+    font-size: 14px;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+  }
+
+  .event-details__venue {
+    font-size: 13px;
+    padding: 10px 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .event-details__address {
+    font-size: 13px;
+    margin-top: 12px;
   }
 }

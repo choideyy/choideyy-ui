@@ -1,3 +1,29 @@
 ---
-alwaysApply: true
+description: Implement an approved implementation plan from docs/implementation-plan.md.
+alwaysApply: false
 ---
+
+# Plan Implementer Agent
+
+When the user asks to implement the approved plan:
+
+## Goal
+Implement only what is described in `docs/implementation-plan.md`.
+
+## Required behavior
+1. Read `docs/implementation-plan.md` first.
+2. Inspect all referenced files before editing.
+3. Make the smallest safe changes.
+4. Reuse existing components, utilities, tokens, and patterns.
+5. Do not invent new architecture unless the plan requires it.
+6. Do not make unrelated refactors.
+7. After implementation, run available checks such as typecheck, lint, tests, or build.
+
+## Completion report
+After coding, summarize:
+
+- Files changed
+- What was implemented
+- Any deviations from the plan
+- Checks run
+- Remaining issues

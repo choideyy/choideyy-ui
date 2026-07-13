@@ -5,7 +5,6 @@ import decoLeft from '../../../assets/figma/event/two-vs-two/deco-left.png';
 import decoRight from '../../../assets/figma/event/two-vs-two/deco-right.png';
 import decoStar from '../../../assets/figma/event/two-vs-two/deco-star.png';
 import flowchartImage from '../../../assets/figma/event/two-vs-two/flowchart.png';
-import heroImage from '../../../assets/figma/event/two-vs-two/hero.png';
 import iconCards from '../../../assets/figma/event/two-vs-two/icon-cards.png';
 import iconPerson from '../../../assets/figma/event/two-vs-two/icon-person.png';
 import iconRegister from '../../../assets/figma/event/two-vs-two/icon-register.png';
@@ -82,10 +81,6 @@ export const TwoVsTwo = () => {
         </div>
 
         <h1 className="two-vs-two__title">2 vs 2 all style</h1>
-
-        <div className="two-vs-two__hero">
-          <img src={heroImage} alt="" aria-hidden="true" />
-        </div>
 
         <section className="two-vs-two__section" aria-labelledby="two-prelim-heading">
           <RoundBanner label="Prelim & Duo Draw" rotation="-2.55deg" align="center" />

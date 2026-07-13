@@ -17,7 +17,7 @@ export const EventDetailsSection = () => {
       <div className="event-details__grid">
         <div className="event-details__left">
           <div className="event-details__categories" aria-label="Competition categories">
-            <div className="event-details__category-item">
+            <div className="event-details__category-item event-details__category-item--duo">
               <img
                 className="event-details__category-icon event-details__category-icon--duo"
                 src={duoIcon}
@@ -27,7 +27,7 @@ export const EventDetailsSection = () => {
               <p className="event-details__category-label">DUO</p>
             </div>
 
-            <div className="event-details__category-item">
+            <div className="event-details__category-item event-details__category-item--crew">
               <img
                 className="event-details__category-icon event-details__category-icon--crew"
                 src={crewIcon}

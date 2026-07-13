@@ -3,10 +3,9 @@ import battleImage from '../../../assets/figma/event/crew-vs-crew/battle.png';
 import decoBottom from '../../../assets/figma/event/crew-vs-crew/deco-bottom.png';
 import decoLeft from '../../../assets/figma/event/crew-vs-crew/deco-left.png';
 import decoRight from '../../../assets/figma/event/crew-vs-crew/deco-right.png';
-import heroImage from '../../../assets/figma/event/crew-vs-crew/hero.png';
-import iconAward from '../../../assets/figma/event/crew-vs-crew/icon-award.png';
-import iconGroups from '../../../assets/figma/event/crew-vs-crew/icon-groups.png';
-import iconTime from '../../../assets/figma/event/crew-vs-crew/icon-time.png';
+import iconAward from '../../../assets/figma/event/crew-vs-crew/icon-award.svg';
+import iconGroups from '../../../assets/figma/event/crew-vs-crew/icon-groups.svg';
+import iconTime from '../../../assets/figma/event/crew-vs-crew/icon-time.svg';
 import showcaseImage from '../../../assets/figma/event/crew-vs-crew/showcase.png';
 import { BackToEvent } from '../components/BackToEvent';
 import { ChampionCard } from '../components/ChampionCard';
@@ -57,10 +56,6 @@ export const CrewVsCrew = () => {
         </div>
 
         <h1 className="crew-vs-crew__title">CREW VS CREW</h1>
-
-        <div className="crew-vs-crew__hero">
-          <img src={heroImage} alt="" aria-hidden="true" />
-        </div>
 
         <section className="crew-vs-crew__section" aria-labelledby="crew-showcase-heading">
           <RoundBanner label="Vòng Showcase" />

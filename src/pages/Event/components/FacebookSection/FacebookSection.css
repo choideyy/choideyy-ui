@@ -43,21 +43,22 @@
 
 @media (max-width: 1023px) {
   .event-facebook {
-    margin-top: -56px;
-    margin-bottom: 64px;
-    padding: 0 20px;
+    margin-top: -48px;
+    margin-bottom: 56px;
+    padding: 0 29px;
+    max-width: 100%;
   }
 
   .event-facebook__inner {
-    min-height: 420px;
+    min-height: 437px;
   }
 }
 
 @media (max-width: 767px) {
   .event-facebook {
-    margin-top: -36px;
-    margin-bottom: 48px;
-    padding: 0 16px;
+    margin-top: -28px;
+    margin-bottom: 40px;
+    padding: 0 29px;
   }
 
   .event-facebook__inner {

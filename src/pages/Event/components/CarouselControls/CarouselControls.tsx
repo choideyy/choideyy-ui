@@ -1,4 +1,4 @@
-import carouselArrow from '../../../../assets/figma/event/carousel-arrow.png';
+import carouselArrow from '../../../../assets/figma/event/carousel-arrow.svg';
 import './CarouselControls.css';
 
 type CarouselControlsProps = {
