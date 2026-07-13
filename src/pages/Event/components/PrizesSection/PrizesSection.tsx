@@ -14,6 +14,12 @@ const PRIZES = [
     rotation: '2.26deg',
   },
   {
+    title: 'Giải Nhì hạng mục Crew vs Crew',
+    amount: '2.000.000 VND',
+    rotation: '-0.64deg',
+    responsiveOnly: true,
+  },
+  {
     title: 'Giải Nhất hạng mục 2 vs 2 All Style',
     amount: '3.000.000 VND',
     rotation: '-0.64deg',
@@ -31,7 +37,11 @@ export const PrizesSection = () => {
         {PRIZES.map((prize) => (
           <li
             key={prize.title}
-            className="event-prizes__item"
+            className={
+              'responsiveOnly' in prize && prize.responsiveOnly
+                ? 'event-prizes__item event-prizes__item--responsive-only'
+                : 'event-prizes__item'
+            }
             style={
               { '--prize-rotation': prize.rotation } as CSSProperties
             }

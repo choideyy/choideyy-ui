@@ -12,3 +12,18 @@
   object-fit: contain;
   object-position: center top;
 }
+
+@media (max-width: 1023px) {
+  .event-new-post__image {
+    max-height: 257px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .event-new-post__image {
+    max-height: 58px;
+    object-fit: contain;
+  }
+}

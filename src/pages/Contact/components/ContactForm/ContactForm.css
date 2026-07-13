@@ -121,19 +121,50 @@
 
 @media (max-width: 1023px) {
   .contact-form {
-    padding: 0 40px 96px;
+    padding: 0 33px 96px;
+  }
+
+  .contact-form__label p {
+    font-size: 55px;
+    background: var(--gold-accent);
+    color: var(--charcoal-black);
+    box-shadow: 1px 1px 1px var(--ghost-white);
   }
 
   .contact-form__panel {
-    padding: 64px 32px 40px;
+    padding: 56px 32px 40px;
+    gap: 20px;
   }
 
   .contact-form__row--split {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .contact-form__field-label {
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  .contact-form__field input {
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 12px;
+    min-height: 47px;
+  }
+
+  .contact-form__field--textarea textarea {
+    min-height: 189px;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  .contact-form__submit {
+    font-size: 18px;
+    padding: 16px 32px;
+    margin-top: 8px;
+    background: #8f2231;
+    color: rgba(26, 26, 27, 0.8);
   }
 }
 
@@ -142,24 +173,49 @@
     padding: 0 20px 80px;
   }
 
+  .contact-form__label {
+    margin-bottom: -16px;
+  }
+
+  .contact-form__label p {
+    font-size: 36px;
+    padding: 6px 16px;
+    background: var(--gold-accent);
+    color: var(--charcoal-black);
+  }
+
   .contact-form__panel {
-    padding: 56px 20px 32px;
-    gap: 20px;
+    padding: 48px 20px 32px;
+    gap: 16px;
+  }
+
+  .contact-form__row--split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .contact-form__field-label {
+    font-size: 14px;
   }
 
   .contact-form__field input,
   .contact-form__field textarea {
-    font-size: 16px;
-    padding: 16px 18px;
+    font-size: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    min-height: 40px;
   }
 
   .contact-form__field--textarea textarea {
-    min-height: 220px;
+    min-height: 160px;
+    border-radius: 15px;
   }
 
   .contact-form__submit {
-    width: 100%;
-    font-size: 24px;
-    padding: 18px 24px;
+    width: auto;
+    font-size: 16px;
+    padding: 14px 28px;
+    background: #8f2231;
+    color: rgba(26, 26, 27, 0.8);
   }
 }

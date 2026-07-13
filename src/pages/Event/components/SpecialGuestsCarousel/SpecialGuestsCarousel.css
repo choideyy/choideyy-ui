@@ -55,25 +55,20 @@
   }
 
   .event-guests__title {
-    font-size: 48px;
+    font-size: 40px;
+  }
+
+  .event-guests__card {
+    width: min(100%, 560px);
+  }
+
+  .event-guests__name {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 767px) {
   .event-guests {
-    padding: 0 20px 96px;
-  }
-
-  .event-guests__header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .event-guests__title {
-    font-size: 36px;
-  }
-
-  .event-guests__name {
-    font-size: 24px;
+    display: none;
   }
 }

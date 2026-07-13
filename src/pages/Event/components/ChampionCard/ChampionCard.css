@@ -69,11 +69,40 @@
   .champion-card__content {
     text-align: center;
   }
+
+  .champion-card__title {
+    font-size: 36px;
+  }
+
+  .champion-card__subtitle {
+    font-size: 20px;
+  }
+
+  .champion-card__amount {
+    font-size: 56px;
+  }
 }
 
 @media (max-width: 767px) {
   .champion-card__inner {
     transform: none;
-    padding: 32px 20px;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+
+  .champion-card__logos img {
+    width: min(100%, 140px);
+  }
+
+  .champion-card__title {
+    font-size: 24px;
+  }
+
+  .champion-card__subtitle {
+    font-size: 16px;
+  }
+
+  .champion-card__amount {
+    font-size: 40px;
   }
 }

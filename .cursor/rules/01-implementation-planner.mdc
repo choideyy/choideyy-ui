@@ -1,3 +1,64 @@
 ---
-alwaysApply: true
+description: Create an implementation plan from a Figma link or product request before coding.
+alwaysApply: false
 ---
+
+# Implementation Planner Agent
+
+When the user provides a Figma link or asks for an implementation plan:
+
+## Goal
+Create a clear, step-by-step implementation plan. Do not write production code yet.
+
+## Required behavior
+1. Inspect the existing codebase first.
+2. Identify framework, routing, styling system, component structure, and naming conventions.
+3. Analyze the Figma/design request.
+4. Produce a plan that can be implemented safely.
+
+## Output format
+Create or update:
+
+`docs/implementation-plan.md`
+
+Use this structure:
+
+# Implementation Plan
+
+## Source
+- Figma link:
+- Target page/component:
+
+## Existing Codebase Findings
+- Framework:
+- Styling:
+- Relevant files:
+- Reusable components:
+
+## Design Breakdown
+- Layout:
+- Components:
+- States:
+- Responsiveness:
+- Assets:
+- Typography:
+- Colors/tokens:
+
+## Implementation Steps
+1.
+2.
+3.
+
+## Files To Create/Edit
+- path:
+  - reason:
+
+## Acceptance Criteria
+- [ ] Matches Figma layout
+- [ ] Responsive behavior works
+- [ ] Reuses existing components
+- [ ] No unrelated changes
+- [ ] Typecheck/build passes
+
+## Open Questions
+- 
