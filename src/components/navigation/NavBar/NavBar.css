@@ -72,7 +72,7 @@
 .navbar__logo {
   box-sizing: border-box;
   width: 197px;        /* 138 + 59 */
-  padding: 9px 0 8px 59px;
+  padding: 9px 0 8px 9px;
 }
 
 .navbar__logo img {

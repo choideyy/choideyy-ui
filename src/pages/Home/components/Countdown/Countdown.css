@@ -20,16 +20,16 @@
 
 .countdown__number {
   font-family: var(--font-neue-plak);
-  font-size: 80px;
+  font-size: 100px;
   font-weight: 700;
   line-height: normal;
-  min-width: 164px;
+  min-width: 180px;
   text-align: center;
 }
 
 .countdown__separator {
   font-family: var(--font-neue-plak);
-  font-size: 80px;
+  font-size: 100px;
   font-weight: 600;
   line-height: normal;
   margin: 0 8px;
@@ -37,17 +37,17 @@
 
 .countdown__labels {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 32px;
-  padding: 0 6px;
+
 }
 
 .countdown__label {
   font-family: var(--font-neue-plak);
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
   line-height: normal;
-  flex: 1;
+  flex: 180px;
   text-align: center;
 }
 
