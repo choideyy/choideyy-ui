@@ -50,8 +50,9 @@
 
 .intro__image-wrap {
   width: 100%;
-  max-width: 567px;
-  max-height: 834px;
+  height: 100%;
+  /* max-width: 567px;
+  max-height: 834px; */
   border-radius: 30px;
   overflow: hidden;
 }

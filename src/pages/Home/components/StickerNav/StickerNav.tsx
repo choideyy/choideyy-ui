@@ -28,8 +28,8 @@ const STICKERS: StickerItem[] = [
     label: 'contact',
     href: '#contact',
     fontFamily: 'var(--font-aerosoldier)',
-    fontSize: 90,
-    stickerWidth: 469,
+    fontSize: 96,
+    stickerWidth: 481,
     labelMaxWidth: 287,
     color: 'var(--black)',
     textTransform: 'lowercase',
@@ -43,7 +43,7 @@ const STICKERS: StickerItem[] = [
     href: '#event',
     fontFamily: 'var(--font-slopdogz)',
     fontSize: 180,
-    stickerWidth: 469,
+    stickerWidth: 481,
     labelMaxWidth: 319,
     color: 'var(--charcoal-black)',
     textTransform: 'lowercase',
@@ -56,8 +56,8 @@ const STICKERS: StickerItem[] = [
     label: 'about us',
     href: '#about',
     fontFamily: 'var(--font-slopdogz)',
-    fontSize: 120,
-    stickerWidth: 469,
+    fontSize: 128,
+    stickerWidth: 481,
     labelMaxWidth: 272,
     color: 'var(--black)',
     textTransform: 'lowercase',
@@ -70,8 +70,8 @@ const STICKERS: StickerItem[] = [
     label: 'recap',
     href: '#recap',
     fontFamily: 'var(--font-another-tag)',
-    fontSize: 120,
-    stickerWidth: 469,
+    fontSize: 150,
+    stickerWidth: 481,
     labelMaxWidth: 225,
     color: 'var(--charcoal-black)',
     textTransform: 'uppercase',
@@ -106,7 +106,9 @@ export const StickerNav = () => {
               href={sticker.href}
               className={`sticker-nav__item${
                 sticker.id === 'event' ? ' sticker-nav__item--event' : ''
-              }`}
+              }${
+                sticker.id === 'contact' ? ' sticker-nav__item--contact' : ''
+                }`}
               style={stickerStyle(sticker)}
             >
               <div
