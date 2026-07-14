@@ -4,6 +4,7 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
+  top: 50px;
   padding: 80px 90px 120px;
   box-sizing: border-box;
 }
@@ -25,10 +26,11 @@
 .event-theme__label {
   position: relative;
   margin: 0;
+  left: 30px;/* slight adjustment to align with the star */
   text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
   transform: rotate(-5.81deg);
@@ -56,7 +58,7 @@
   margin: 0 0 16px;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 96px;
+  font-size: 75px;
   font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
@@ -66,7 +68,7 @@
   margin: 0 0 48px;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
   line-height: normal;
   text-transform: capitalize;
@@ -74,6 +76,7 @@
 
 .event-theme__content {
   display: grid;
+  margin-top: -90px;
   grid-template-columns: repeat(2, minmax(0, 1fr)); /* keep as-is — this is already your 2-column content */
   gap: 40px;
   padding: 32px 0; /* top and bottom space before/after the lines */
