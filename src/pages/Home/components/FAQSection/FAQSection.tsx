@@ -42,6 +42,7 @@ const FAQ_ITEMS: FAQItem[] = [
   },
 ];
 
+
 export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -52,6 +53,7 @@ export const FAQSection = () => {
   return (
     <section className="faq" id="faq" aria-labelledby="faq-heading">
       <div className="faq__body">
+        <div className="faq__crop-overlay" aria-hidden="true" />
         <div className="faq__torn-paper" aria-hidden="true">
           <div className="faq__torn-paper-rotator">
             <img src={tornPaper} alt="" />

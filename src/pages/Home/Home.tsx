@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { IntroSection } from './components/IntroSection';
 import { ReadyBanner } from './components/ReadyBanner';
 import { StickerNav } from './components/StickerNav';
+import { TornEdgeClip } from './components/TornEdgeClip/TornEdegeClip';
 import './Home.css';
 
 export const Home = () => {
@@ -24,6 +25,7 @@ export const Home = () => {
         </section>
         <IntroSection />
         <StickerNav />
+        <TornEdgeClip/>
         <FAQSection />
       </main>
     </div>

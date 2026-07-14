@@ -8,7 +8,18 @@
   width: 100%;
   background-color: var(--faq-bg-60);
 }
-
+.faq__crop-overlay {
+  position: absolute;
+  top: -100px; 
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1440 / 1746;
+  background: rgba(59, 13, 20, 0.6);
+  /* opacity: 0.6; */
+  clip-path: url(#torn-edge-clip);
+  z-index: 0;
+  pointer-events: none;
+}
 .faq__torn-paper {
   position: relative;
   width: 100vw;
