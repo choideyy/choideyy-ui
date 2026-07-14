@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+.event-theme__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); /* title col : content area (2x width since it holds 2 columns) */
+  gap: 48px;
+  align-items: start;
+}
+
 .event-theme__header {
   display: flex;
   align-items: center;
@@ -16,14 +23,27 @@
 }
 
 .event-theme__label {
+  position: relative;
   margin: 0;
+  text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 800;
   text-transform: uppercase;
   transform: rotate(-5.81deg);
+}
+
+.event-theme__label::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke-width: 16px; /* roughly double, since half gets covered */
+  -webkit-text-stroke-color: #8F2231;
+  color: #8F2231; /* fallback fill so gaps in letter counters don't show gray */
+  z-index: -1;
 }
 
 .event-theme__star {
@@ -37,7 +57,7 @@
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: 96px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -47,23 +67,24 @@
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: normal;
   text-transform: capitalize;
 }
 
 .event-theme__content {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 48px;
-  padding-top: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* keep as-is — this is already your 2-column content */
+  gap: 40px;
+  padding: 32px 0; /* top and bottom space before/after the lines */
   border-top: 3px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.35);
 }
 
 .event-theme__content p {
   margin: 0;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
