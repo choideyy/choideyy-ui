@@ -4,19 +4,20 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 90px 120px;
+  padding: 200px 90px 120px;
   box-sizing: border-box;
 }
 
 .event-details__banner {
   position: relative;
+  z-index: 2;
   width: fit-content;
   max-width: 100%;
   margin: 0 auto 64px;
-  padding: 24px 48px;
+  padding: 15px 48px;
   background: #8f2231;
   box-shadow: 3px 4px 10px rgba(248, 248, 255, 0.5);
-  transform: rotate(3.5deg);
+  transform: rotate(3.5deg) translateX(80px);
 }
 
 .event-details__banner-text {
@@ -47,7 +48,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: clamp(48px, 10vw, 160px);
-  margin-bottom: 40px;
+  margin-left: 100px;
+  margin-top: 30px;
+/* slight adjustment to align with the star */
 }
 
 .event-details__category-item {
@@ -64,6 +67,7 @@
 }
 
 .event-details__category-icon--duo {
+  margin-top: -10px;
   width: 94px;
   height: 94px;
 }
@@ -73,7 +77,15 @@
   height: 94px;
 }
 
-.event-details__category-label {
+.event-details__category-label-duo {
+  margin-top: 10px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.event-details__category-label-crew {
   margin: 0;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
@@ -87,9 +99,10 @@
   display: block;
   position: relative;
   z-index: 2;
-  width: 540px;
+  width: 640px;
   max-width: none;
-  margin-top: 48px;
+  margin-top: -70px;
+  margin-left: -30px;
   height: auto;
   object-fit: contain;
 }
@@ -98,10 +111,10 @@
   display: block;
   position: relative;
   z-index: 3;
-  width: 480px;
+  width: 680px;
   max-width: none;
-  margin-top: -56px;
-  margin-left: clamp(0px, 8vw, 140px);
+  margin-top: -130px;
+  margin-left: 50px;
   height: auto;
   object-fit: contain;
 }
@@ -117,10 +130,11 @@
   height: auto;
   object-fit: cover;
   mask-image: linear-gradient(to bottom, #000 85%, transparent 100%);
+  transform: translate(35px, -80px);
 }
 
 .event-details__meta {
-  margin-top: 64px;
+  margin-top: 10px;
 }
 
 .event-details__date {
@@ -131,14 +145,15 @@
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: 36px;
   font-weight: 400;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   transform: rotate(-3.54deg);
 }
 
 .event-details__venue {
-  margin: 0 0 12px;
+  margin: -28px 0 12px;
+  margin-left: 200px;
   padding: 20px 28px;
   background: var(--ghost-white);
   color: var(--charcoal-black);
@@ -152,9 +167,10 @@
 
 .event-details__address {
   margin: 16px 0 0;
+  margin-left: 150px;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: clamp(22px, 3vw, 40px);
+  font-size: clamp(22px, 3vw, 36px);
   font-weight: 400;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }

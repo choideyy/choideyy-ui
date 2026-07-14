@@ -24,7 +24,7 @@ export const EventDetailsSection = () => {
                 alt=""
                 aria-hidden="true"
               />
-              <p className="event-details__category-label">DUO</p>
+              <p className="event-details__category-label-duo">DUO</p>
             </div>
 
             <div className="event-details__category-item event-details__category-item--crew">
@@ -34,7 +34,7 @@ export const EventDetailsSection = () => {
                 alt=""
                 aria-hidden="true"
               />
-              <p className="event-details__category-label">CREW</p>
+              <p className="event-details__category-label-crew">CREW</p>
             </div>
           </div>
 
