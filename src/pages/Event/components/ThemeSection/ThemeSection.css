@@ -5,7 +5,7 @@
   max-width: var(--page-max-width);
   margin: 0 auto;
   top: 50px;
-  padding: 80px 90px 120px;
+  padding: 0 90px 120px;
   box-sizing: border-box;
 }
 
@@ -25,11 +25,10 @@
 
 .event-theme__label {
   position: absolute;
-  left: 52%;
   top: 50%;
   z-index: 1;
   margin: 0;
-  left: 30px;/* slight adjustment to align with the star */
+  left: 50px;/* slight adjustment to align with the star */
   text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
@@ -44,9 +43,11 @@
 }
 
 .event-theme__star {
+  display: block;
   width: 220px;
   height: auto;
   object-fit: contain;
+  margin-left: -30px;
 }
 
 .event-theme__title {
@@ -99,13 +100,14 @@
   }
 
   .event-theme__label {
-    left: 50%;
+    left: 35%;
     font-size: 25px;
     -webkit-text-stroke: 8px rgba(143, 34, 49, 1);
   }
 
   .event-theme__star {
     width: 140px;
+    margin-left: -20px;
   }
 
   .event-theme__title {
@@ -138,13 +140,14 @@
   }
 
   .event-theme__label {
-    left: 48%;
+    left: 35%;
     font-size: 16px;
     -webkit-text-stroke: 5px rgba(143, 34, 49, 1);
   }
 
   .event-theme__star {
     width: 80px;
+    margin-left: -12px;
   }
 
   .event-theme__title {
