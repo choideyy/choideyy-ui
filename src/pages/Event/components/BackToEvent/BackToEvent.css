@@ -1,7 +1,8 @@
 .back-to-event {
   display: inline-flex;
   align-items: center;
-  margin: 0 auto 32px;
+  margin: 0 auto 32px 0;
+  margin-right: auto;
   padding: 12px 24px;
   color: var(--ghost-white);
   font-family: var(--font-neue-plak);
