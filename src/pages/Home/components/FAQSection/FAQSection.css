@@ -20,7 +20,7 @@
 }
 .faq__fill {
   position: absolute;
-  top: 80px; /* wherever the seam's wavy shape visually ends — tune to match */
+  top: 50px; /* wherever the seam's wavy shape visually ends — tune to match */
   left: 0;
   right: 0;
   bottom: 0;
