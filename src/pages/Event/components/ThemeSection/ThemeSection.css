@@ -25,10 +25,10 @@
 
 .event-theme__label {
   position: absolute;
-  top: 50%;
+  top: 220px;
   z-index: 1;
   margin: 0;
-  left: 50px;/* slight adjustment to align with the star */
+  left: 100px;/* slight adjustment to align with the star */
   text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
@@ -44,7 +44,11 @@
 
 .event-theme__star {
   display: block;
-  width: 220px;
+  position: relative;
+  left: -30px;
+  top: 100px;
+  z-index: -1;
+  width: 300px;
   height: auto;
   object-fit: contain;
   margin-left: -30px;
