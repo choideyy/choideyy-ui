@@ -45,6 +45,7 @@
   height: 40px;
   flex-shrink: 0;
   object-fit: contain;
+  translate: var(--icon-offset-x, 0px) var(--icon-offset-y, 0px);
 }
 
 .contact-info-cards__text-group {
