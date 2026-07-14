@@ -59,7 +59,6 @@ export const CrewVsCrew = () => {
 
         <section className="crew-vs-crew__section" aria-labelledby="crew-showcase-heading">
           <RoundBanner label="Vòng Showcase" />
-
           <div className="crew-vs-crew__showcase-grid">
             <div className="crew-vs-crew__showcase-copy">
               <div className="crew-vs-crew__theme">

@@ -1,6 +1,6 @@
 .event-guests {
   position: relative;
-  top: 500px;
+  top: 400px;
   z-index: 1;
   width: 100%;
   max-width: var(--page-max-width);

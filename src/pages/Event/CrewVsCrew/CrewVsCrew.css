@@ -33,9 +33,9 @@
 }
 
 .crew-vs-crew__title {
-  margin: 0 0 48px;
+  margin: 0 0 80px;
   color: var(--white);
-  font-family: var(--font-thunder);
+  font-family: 'SVN A Love Of Thunder';
   font-size: clamp(48px, 6vw, 80px);
   font-weight: 400;
   line-height: normal;
@@ -50,6 +50,8 @@
   object-fit: cover;
 }
 
+
+
 .crew-vs-crew__section {
   margin-bottom: 96px;
 }
@@ -60,7 +62,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(280px, 610px);
   gap: 48px;
   align-items: start;
-  margin-top: 48px;
+  margin-top: 80px;
 }
 
 .crew-vs-crew__theme {
