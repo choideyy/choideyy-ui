@@ -1,5 +1,6 @@
 .event-new-post {
   position: relative;
+  top: -80px;
   z-index: 2;
   width: 100%;
   overflow: visible;

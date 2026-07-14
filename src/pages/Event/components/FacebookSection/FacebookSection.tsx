@@ -51,7 +51,7 @@ export const FacebookSection = () => {
             data-href={FACEBOOK_PAGE_URL}
             data-tabs="timeline"
             data-width="903"
-            data-height="620"
+            data-height="1189"
             data-small-header="true"
             data-adapt-container-width="true"
             data-hide-cover="true"
