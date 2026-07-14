@@ -33,17 +33,20 @@
   font-size: 100px;
   font-weight: 700;
   line-height: 1;
+  font-family: var(--font-neue-plak);
 }
 
 .countdown__label {
   margin-top: 32px;
   font-size: 45px;
+  font-family: var(--font-neue-plak);
   font-weight: 600;
   line-height: 1;
 }
 
 .countdown__separator {
   font-size: 100px;
+  font-family: var(--font-neue-plak);
   font-weight: 600;
   line-height: 1;
   margin: 0 8px;
