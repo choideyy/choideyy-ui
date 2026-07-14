@@ -11,6 +11,8 @@ type StickerItem = {
   fontSize: number;
   stickerWidth: number;
   labelMaxWidth: number;
+  labelOffsetX?: number; // in px, at design scale (481-wide sticker)
+  labelOffsetY?: number;
   color: string;
   textTransform?: 'lowercase' | 'uppercase' | 'none';
   textShadow?: string;
@@ -79,6 +81,7 @@ const STICKERS: StickerItem[] = [
     rotation: -1.19,
     stickerRotation: -5.68,
     position: { top: '27.5%', left: '60.1%' },
+    labelOffsetY: 25,
   },
 ];
 
@@ -87,6 +90,8 @@ const stickerStyle = (sticker: StickerItem): CSSProperties =>
     '--sticker-width': sticker.stickerWidth,
     '--label-font-size': sticker.fontSize,
     '--label-max-width': sticker.labelMaxWidth,
+    '--offset-x': `${(sticker.labelOffsetX ?? 0)}px`,
+    '--offset-y': `${(sticker.labelOffsetY ?? 0)}px`,
     top: sticker.position.top,
     left: sticker.position.left,
   }) as CSSProperties;
