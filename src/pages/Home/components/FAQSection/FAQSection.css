@@ -6,20 +6,30 @@
 .faq__body {
   position: relative;
   width: 100%;
-  background-color: var(--faq-bg-60);
+  /* background-color: var(--faq-bg-60); */
 }
-.faq__crop-overlay {
+.torn-edge-seam {
+  display: block;
   position: absolute;
-  top: -100px; 
+  top: -70px; /* nudge to sit on the seam, tune by eye */
   left: 0;
   width: 100%;
-  aspect-ratio: 1440 / 1746;
-  background: rgba(59, 13, 20, 0.6);
-  /* opacity: 0.6; */
-  clip-path: url(#torn-edge-clip);
+  height: 150px; /* fixed, matches viewBox height — never grows with content */
+  pointer-events: none;
+  z-index: 0;
+}
+.faq__fill {
+  position: absolute;
+  top: 80px; /* wherever the seam's wavy shape visually ends — tune to match */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #520E18;
+  opacity: 0.6;
   z-index: 0;
   pointer-events: none;
 }
+
 .faq__torn-paper {
   position: relative;
   width: 100vw;
