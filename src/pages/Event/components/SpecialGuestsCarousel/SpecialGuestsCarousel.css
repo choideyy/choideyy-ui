@@ -1,5 +1,6 @@
 .event-guests {
   position: relative;
+  top: 500px;
   z-index: 1;
   width: 100%;
   max-width: var(--page-max-width);
@@ -11,9 +12,9 @@
 .event-guests__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 65px;
 }
 
 .event-guests__title {
@@ -40,10 +41,10 @@
 }
 
 .event-guests__name {
-  margin: 16px 0 0;
+  margin: 25px 0 0;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 32px;
+  font-size: 50px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;

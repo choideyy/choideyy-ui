@@ -1,25 +1,33 @@
 .event-judges {
   position: relative;
+  top: 300px;
   z-index: 1;
   width: 100%;
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   margin: 0 auto;
-  padding: 0 90px 160px;
+  /* padding: 0 90px 160px; */
   box-sizing: border-box;
 }
 
 .event-judges__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
+}
+
+.event-judges__header > :last-child {
+  margin-right: 24px;
 }
 
 .event-judges__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
   color: var(--white);
-  font-family: var(--font-thunder);
+  font-family: 'SVN A Love of Thunder', var(--font-neue-plak);
   font-size: 64px;
   font-weight: 400;
   line-height: normal;

@@ -9,9 +9,9 @@
 }
 
 .event-prizes__title {
-  margin: 0 0 64px;
+  margin: 150px 0 64px;
   color: var(--white);
-  font-family: var(--font-thunder);
+  font-family: 'SVN A Love of Thunder';
   font-size: 64px;
   font-weight: 400;
   line-height: normal;
@@ -22,21 +22,23 @@
 .event-prizes__list {
   list-style: none;
   margin: 0 auto;
+  margin-bottom: 80px;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
   width: fit-content;
   max-width: 100%;
+  gap: 8px;
 }
+
 
 .event-prizes__item {
   width: fit-content;
   max-width: 100%;
-  padding: 24px 48px;
+  padding: 20px 80px;
   background: var(--charcoal-black);
-  box-shadow: 2px 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 0 5px rgba(255, 255, 255, 0.75);
   transform: rotate(var(--prize-rotation, 0deg));
 }
 
@@ -62,11 +64,12 @@
 
 .event-prizes__decoration {
   position: absolute;
-  right: 0;
-  bottom: 40px;
+  right: -80px;
+  bottom: -380px;
   width: min(35%, 497px);
   opacity: 0.7;
   pointer-events: none;
+  z-index: 3;
 }
 
 .event-prizes__item--responsive-only {

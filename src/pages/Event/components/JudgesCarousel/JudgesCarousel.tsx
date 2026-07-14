@@ -11,17 +11,17 @@ const JUDGES = [
   {
     id: 'judge-1',
     image: judge1,
-    name: 'JUDGE',
+    name: 'JUDGE Crazy Monkey',
   },
   {
     id: 'judge-2',
     image: judge2,
-    name: 'JUDGE OK ANIMATION',
+    name: 'JUDGE C2 Low',
   },
   {
     id: 'judge-3',
     image: judge3,
-    name: 'JUDGE',
+    name: 'JUDGE CK Animation ',
   },
   {
     id: 'judge-4',
@@ -175,7 +175,6 @@ export const JudgesCarousel = () => {
                   src={judge.image}
                   alt={judge.name}
                 />
-                <p className="event-judges__name">{judge.name}</p>
               </article>
             );
           })}
