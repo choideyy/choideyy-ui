@@ -11,7 +11,7 @@
 .torn-edge-seam {
   display: block;
   position: absolute;
-  top: -70px; /* nudge to sit on the seam, tune by eye */
+  top: -100px; /* nudge to sit on the seam, tune by eye */
   left: 0;
   width: 100%;
   height: 150px; /* fixed, matches viewBox height — never grows with content */
