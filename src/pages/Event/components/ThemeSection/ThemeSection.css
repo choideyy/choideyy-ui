@@ -5,7 +5,7 @@
   max-width: var(--page-max-width);
   margin: 0 auto;
   top: 50px;
-  padding: 80px 90px 120px;
+  padding: 0 90px 120px;
   box-sizing: border-box;
 }
 
@@ -17,41 +17,37 @@
 }
 
 .event-theme__header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 16px;
 }
 
 .event-theme__label {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
   margin: 0;
-  left: 30px;/* slight adjustment to align with the star */
+  left: 50px;/* slight adjustment to align with the star */
   text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: 30px;
   font-weight: 800;
+  line-height: 1;
   text-transform: uppercase;
-  transform: rotate(-5.81deg);
-}
-
-.event-theme__label::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  -webkit-text-stroke-width: 16px; /* roughly double, since half gets covered */
-  -webkit-text-stroke-color: #8F2231;
-  color: #8F2231; /* fallback fill so gaps in letter counters don't show gray */
-  z-index: -1;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-5.81deg);
+  -webkit-text-stroke: 12px rgba(143, 34, 49, 1);
+  paint-order: stroke fill;
 }
 
 .event-theme__star {
+  display: block;
   width: 220px;
   height: auto;
   object-fit: contain;
+  margin-left: -30px;
 }
 
 .event-theme__title {
@@ -104,11 +100,14 @@
   }
 
   .event-theme__label {
-    font-size: 22px;
+    left: 35%;
+    font-size: 25px;
+    -webkit-text-stroke: 8px rgba(143, 34, 49, 1);
   }
 
   .event-theme__star {
     width: 140px;
+    margin-left: -20px;
   }
 
   .event-theme__title {
@@ -137,15 +136,18 @@
   }
 
   .event-theme__header {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   .event-theme__label {
-    font-size: 13px;
+    left: 35%;
+    font-size: 16px;
+    -webkit-text-stroke: 5px rgba(143, 34, 49, 1);
   }
 
   .event-theme__star {
     width: 80px;
+    margin-left: -12px;
   }
 
   .event-theme__title {

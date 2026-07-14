@@ -4,14 +4,12 @@ import decoBottom from '../../../assets/figma/event/two-vs-two/deco-bottom.png';
 import decoLeft from '../../../assets/figma/event/two-vs-two/deco-left.png';
 import decoRight from '../../../assets/figma/event/two-vs-two/deco-right.png';
 import decoStar from '../../../assets/figma/event/two-vs-two/deco-star.png';
-import flowchartImage from '../../../assets/figma/event/two-vs-two/flowchart.png';
-import iconCards from '../../../assets/figma/event/two-vs-two/icon-cards.png';
-import iconPerson from '../../../assets/figma/event/two-vs-two/icon-person.png';
-import iconRegister from '../../../assets/figma/event/two-vs-two/icon-register.png';
+import iconCards from '../../../assets/figma/event/two-vs-two/icon-cards.svg';
+import iconPerson from '../../../assets/figma/event/two-vs-two/icon-person.svg';
+import iconRegister from '../../../assets/figma/event/two-vs-two/icon-register.svg';
 import prelimImage from '../../../assets/figma/event/two-vs-two/prelim.png';
 import recallBg from '../../../assets/figma/event/two-vs-two/recall-bg.png';
 import recallPin from '../../../assets/figma/event/two-vs-two/recall-pin.png';
-import recallShoes from '../../../assets/figma/event/two-vs-two/recall-shoes.png';
 import recallTape from '../../../assets/figma/event/two-vs-two/recall-tape.png';
 import { BackToEvent } from '../components/BackToEvent';
 import { ChampionCard } from '../components/ChampionCard';
@@ -144,27 +142,24 @@ export const TwoVsTwo = () => {
             alt=""
             aria-hidden="true"
           />
-          <img
-            className="two-vs-two__recall-tape"
-            src={recallTape}
-            alt=""
-            aria-hidden="true"
-          />
-          <img
-            className="two-vs-two__recall-pin"
-            src={recallPin}
-            alt=""
-            aria-hidden="true"
-          />
 
           <div className="two-vs-two__recall-inner">
+            <img
+              className="two-vs-two__recall-tape"
+              src={recallTape}
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              className="two-vs-two__recall-pin"
+              src={recallPin}
+              alt=""
+              aria-hidden="true"
+            />
+
             <h2 id="two-recall-heading" className="two-vs-two__recall-title">
               Cơ chế RECALL
             </h2>
-
-            <div className="two-vs-two__recall-flow">
-              <img src={flowchartImage} alt="Recall flowchart" />
-            </div>
 
             <div className="two-vs-two__recall-details">
               <h3 className="two-vs-two__recall-subtitle">Điều kiện:</h3>
@@ -187,13 +182,6 @@ export const TwoVsTwo = () => {
               </ul>
             </div>
           </div>
-
-          <img
-            className="two-vs-two__recall-shoes"
-            src={recallShoes}
-            alt=""
-            aria-hidden="true"
-          />
         </section>
 
         <section className="two-vs-two__final-section" aria-labelledby="two-final-heading">

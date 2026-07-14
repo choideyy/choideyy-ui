@@ -5,13 +5,13 @@ export const ThemeSection = () => {
   return (
     <section className="event-theme" aria-labelledby="event-theme-heading">
       <div className="event-theme__header">
-        <p className="event-theme__label" data-text="CHỦ ĐỀ">CHỦ ĐỀ</p>
         <img
           className="event-theme__star"
           src={themeStar}
           alt=""
           aria-hidden="true"
         />
+        <p className="event-theme__label">CHỦ ĐỀ</p>
       </div>
 
       <div className="event-theme__body">
