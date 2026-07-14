@@ -1,0 +1,1 @@
+export { OrganizerPartnerCard } from './OrganizerPartnerCard';

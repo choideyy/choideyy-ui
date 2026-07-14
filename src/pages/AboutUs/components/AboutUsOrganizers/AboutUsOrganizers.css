@@ -28,16 +28,18 @@
 
 .about-us-organizers__partners {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   gap: 50px;
+  width: min(1034px, 100%);
+  padding-top: 44px;
+  position: relative;
+  overflow: visible;
 }
 
-.about-us-organizers__partners img {
-  width: min(492px, 100%);
-  height: auto;
-  object-fit: contain;
+.about-us-organizers__partners.has-active {
+  align-items: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -46,7 +48,13 @@
     gap: 48px;
   }
 
-  .about-us-organizers__partners {
+  .about-us-organizers__partners:not(.has-active) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .about-us-organizers__partners.has-active {
     flex-direction: column;
     gap: 32px;
   }
