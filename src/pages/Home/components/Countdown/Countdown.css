@@ -5,13 +5,24 @@
   text-align: center;
   color: var(--white);
 }
-
 .countdown__values {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 0;
 }
+
+.countdown__item-wrap {
+  display: flex;
+  align-items: flex-start; /* keep separator top-aligned with number */
+}
+
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+}
+
 
 .countdown__group {
   display: flex;
@@ -19,20 +30,27 @@
 }
 
 .countdown__number {
-  font-family: var(--font-neue-plak);
   font-size: 100px;
   font-weight: 700;
-  line-height: normal;
-  min-width: 180px;
-  text-align: center;
+  line-height: 1;
+  font-family: var(--font-neue-plak);
+}
+
+.countdown__label {
+  margin-top: 32px;
+  font-size: 45px;
+  font-family: var(--font-neue-plak);
+  font-weight: 600;
+  line-height: 1;
 }
 
 .countdown__separator {
-  font-family: var(--font-neue-plak);
   font-size: 100px;
+  font-family: var(--font-neue-plak);
   font-weight: 600;
-  line-height: normal;
+  line-height: 1;
   margin: 0 8px;
+  align-self: flex-start;
 }
 
 .countdown__labels {
@@ -42,14 +60,12 @@
 
 }
 
-.countdown__label {
-  font-family: var(--font-neue-plak);
+/* .countdown__label {
+  margin-top: 32px;
   font-size: 45px;
   font-weight: 600;
-  line-height: normal;
-  flex: 180px;
-  text-align: center;
-}
+  line-height: 1;
+} */
 
 /* Tablet: 768px–1023px */
 @media (max-width: 1023px) {

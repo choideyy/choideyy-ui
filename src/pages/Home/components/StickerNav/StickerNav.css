@@ -53,8 +53,8 @@
 
 .sticker-nav__label {
   position: absolute;
-  top: 52%;
-  left: 50%;
+  top: calc(52% + var(--offset-y, 0px) * var(--sticker-scale));
+  left: calc(50% + var(--offset-x, 0px) * var(--sticker-scale));
   translate: -50% -50%;
   line-height: 0.9;
   white-space: nowrap;

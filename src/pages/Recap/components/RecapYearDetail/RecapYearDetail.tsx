@@ -2,6 +2,9 @@ import scrollTopIcon from '../../../../assets/figma/scroll-top.svg';
 import type { RecapYearData } from '../../types/recapYearData';
 import { BackToRecap } from '../BackToRecap';
 import './RecapYearDetail.css';
+import type { CSSProperties } from 'react';
+import { useLoopCarousel } from '../../../../hooks/useLoopCarousel';
+import { CarouselControls } from '../../../../components/ui/CarouselControls';
 
 type RecapYearDetailProps = {
   data: RecapYearData;
@@ -11,6 +14,22 @@ export const RecapYearDetail = ({ data }: RecapYearDetailProps) => {
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+const judgeCount = data.judges.length;
+const extendedJudges =
+  judgeCount > 0
+    ? [data.judges[judgeCount - 1], ...data.judges, data.judges[0]]
+    : [];
+
+const judgesCarousel = useLoopCarousel(judgeCount);
+
+const guestCount = data.specialGuests.length;
+const extendedGuests =
+  guestCount > 0
+    ? [data.specialGuests[guestCount - 1], ...data.specialGuests, data.specialGuests[0]]
+    : [];
+
+const guestsCarousel = useLoopCarousel(guestCount);
 
   return (
     <div className="recap-year" data-year={data.year}>
@@ -71,21 +90,46 @@ export const RecapYearDetail = ({ data }: RecapYearDetailProps) => {
         <section className="recap-year__judges" aria-labelledby="recap-judges">
           <div className="recap-year__section-header">
             <h2 id="recap-judges">JUDGES</h2>
-            <div className="recap-year__arrows" aria-hidden="true">
-              <img src={data.arrows.left} alt="" />
-              <img src={data.arrows.right} alt="" />
-            </div>
-          </div>
-          <div className="recap-year__judges-track">
-            {data.judges.map((image, index) => (
-              <img
-                key={`judge-${index}`}
-                src={image}
-                alt={`Judge ${index + 1}`}
-                className="recap-year__judge-card"
+            {judgeCount > 0 && (
+              <CarouselControls
+                onPrevious={judgesCarousel.goToPrevious}
+                onNext={judgesCarousel.goToNext}
+                previousLabel="Previous judge"
+                nextLabel="Next judge"
               />
-            ))}
+            )}
           </div>
+
+          {judgeCount > 0 && (
+            <div className="recap-year__judges-viewport">
+              <div
+                className={`recap-year__judges-track${
+                  judgesCarousel.enableTransition ? '' : ' recap-year__judges-track--instant'
+                }`}
+                style={{ '--track-index': judgesCarousel.trackIndex } as CSSProperties}
+                onTransitionEnd={judgesCarousel.handleTransitionEnd}
+              >
+                {extendedJudges.map((image, index) => {
+                  const isActive = index === judgesCarousel.trackIndex;
+                  return (
+                    <article
+                      key={`judge-${index}`}
+                      className={`recap-year__judge-card${
+                        isActive ? ' recap-year__judge-card--active' : ''
+                      }`}
+                      aria-hidden={!isActive}
+                    >
+                      <img
+                        className="recap-year__judge-image"
+                        src={image}
+                        alt={`Judge ${(index % judgeCount) + 1}`}
+                      />
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </section>
 
         <section className="recap-year__winners" aria-labelledby="recap-winners">
@@ -99,7 +143,7 @@ export const RecapYearDetail = ({ data }: RecapYearDetailProps) => {
                 className={`recap-year__winner recap-year__winner--${winner.variant}`}
                 style={
                   winner.rotation
-                    ? { '--winner-rotation': winner.rotation }
+                    ? ({ '--winner-rotation': winner.rotation } as React.CSSProperties)
                     : undefined
                 }
               >
@@ -123,44 +167,53 @@ export const RecapYearDetail = ({ data }: RecapYearDetailProps) => {
             ))}
           </ul>
         </section>
-
-        <section
-          className="recap-year__guests"
-          aria-labelledby="recap-special-guests"
-        >
+        {guestCount >0 &&(
+        <section className="recap-year__guests" aria-labelledby="recap-guests">
           <div className="recap-year__section-header">
-            <h2 id="recap-special-guests">SPECIAL GUESTS</h2>
-            <div className="recap-year__arrows" aria-hidden="true">
-              <img src={data.arrows.left} alt="" />
-              <img src={data.arrows.right} alt="" />
-            </div>
-          </div>
-          <div className="recap-year__guests-track">
-            {data.specialGuests.length > 0 ? (
-              data.specialGuests.map((image, index) => (
-                <img
-                  key={`guest-${index}`}
-                  src={image}
-                  alt={`Special guest ${index + 1}`}
-                  className="recap-year__guest-card"
-                />
-              ))
-            ) : (
-              <>
-                <div className="recap-year__guest-placeholder" />
-                <div className="recap-year__guest-placeholder" />
-                <div className="recap-year__guest-placeholder" />
-              </>
+            <h2 id="recap-guests">SPECIAL GUESTS</h2>
+            {guestCount > 0 && (
+              <CarouselControls
+                onPrevious={guestsCarousel.goToPrevious}
+                onNext={guestsCarousel.goToNext}
+                previousLabel="Previous guest"
+                nextLabel="Next guest"
+              />
             )}
           </div>
-          <img
-            className="recap-year__deco-right"
-            src={data.decorations.rightDeco}
-            alt=""
-            aria-hidden="true"
-          />
-        </section>
 
+          {guestCount > 0 && (
+            <div className="recap-year__guests-viewport">
+              <div
+                className={`recap-year__guests-track${
+                  guestsCarousel.enableTransition ? '' : ' recap-year__guests-track--instant'
+                }`}
+                style={{ '--track-index': guestsCarousel.trackIndex } as CSSProperties}
+                onTransitionEnd={guestsCarousel.handleTransitionEnd}
+              >
+                {extendedGuests.map((image, index) => {
+                  const isActive = index === guestsCarousel.trackIndex;
+                  return (
+                    <article
+                      key={`Guest-${index}`}
+                      className={`recap-year__guest-card${
+                        isActive ? ' recap-year__guest-card--active' : ''
+                      }`}
+                      aria-hidden={!isActive}
+                    >
+                      <img
+                        className="recap-year__guest-image"
+                        src={image}
+                        alt={`Guest ${(index % guestCount) + 1}`}
+                      />
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </section>)
+        }
+        {data.mcDjImages.length>0 &&(
         <section className="recap-year__mc-dj" aria-labelledby="recap-mc-dj">
           <h2 id="recap-mc-dj">MC &amp; DJ</h2>
           <div className="recap-year__mc-dj-grid">
@@ -192,7 +245,8 @@ export const RecapYearDetail = ({ data }: RecapYearDetailProps) => {
             alt=""
             aria-hidden="true"
           />
-        </section>
+        </section>)
+        }
 
         <button
           type="button"

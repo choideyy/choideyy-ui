@@ -2,6 +2,7 @@ import { useState, type ReactNode } from 'react';
 import faqVinyl from '../../../../assets/figma/faq-vinyl.png';
 import faqDeco from '../../../../assets/figma/faq-deco.png';
 import tornPaper from '../../../../assets/figma/torn-paper.png';
+import { TornEdgeSeam } from '../TornEdgeSeam/TornEdegeSeam';
 import './FAQSection.css';
 
 type FAQItem = {
@@ -42,6 +43,7 @@ const FAQ_ITEMS: FAQItem[] = [
   },
 ];
 
+
 export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -52,6 +54,8 @@ export const FAQSection = () => {
   return (
     <section className="faq" id="faq" aria-labelledby="faq-heading">
       <div className="faq__body">
+        <TornEdgeSeam />
+        <div className="faq__fill" aria-hidden="true" />
         <div className="faq__torn-paper" aria-hidden="true">
           <div className="faq__torn-paper-rotator">
             <img src={tornPaper} alt="" />

@@ -202,31 +202,96 @@
   object-fit: contain;
 }
 
-.recap-year__judges,
-.recap-year__guests,
+
 .recap-year__mc-dj {
   position: relative;
   width: 100%;
   margin-bottom: 120px;
 }
 
-.recap-year__judges-track,
-.recap-year__guests-track {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 16px;
+.recap-year__judges-viewport,
+.recap-year__guests-viewport {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 70px;
 }
 
-.recap-year__judge-card {
-  flex: 0 0 min(620px, 80vw);
+.recap-year__judges-track,
+.recap-year__guests-track {
+  --card-width: min(52%, 788px);
+  --gap: 32px;
+  display: flex;
+  gap: var(--gap);
+  transition: transform 0.6s ease;
+  will-change: transform;
+  transform: translateX(
+    calc(
+      (100% - var(--card-width)) / 2 -
+      var(--track-index) * (var(--card-width) + var(--gap))
+    )
+  );
+}
+
+/* Guests decide their own card width */
+.recap-year__guests-track {
+  --card-width: min(788px, 85vw);
+}
+
+.recap-year__judges-track--instant,
+.recap-year__guests-track--instant {
+  transition: none;
+}
+
+.recap-year__judge-card,
+.recap-year__guest-card {
+  flex: 0 0 var(--card-width);
+  opacity: 0.7;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+.recap-year__guest-card {
+  flex: 0 0 min(788px, 85vw);
   scroll-snap-align: center;
-  border-radius: 50%;
   aspect-ratio: 1;
   object-fit: cover;
 }
 
+.recap-year__judges-track--instant .recap-year__judge-card,
+.recap-year__guests-track--instant .recap-year__guest-card {
+  transition: none;
+}
+
+.recap-year__judge-card--active,
+.recap-year__guest-card--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.recap-year__judge-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px; /* was 50% — this removes the circle crop */
+}
+.recap-year__guest-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px; /* was 50% — this removes the circle crop */
+}
+.recap-year__guest-image {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+}
 .recap-year__winners {
   width: 100%;
   margin-bottom: 120px;
@@ -335,12 +400,7 @@
   font-weight: 700;
 }
 
-.recap-year__guest-card {
-  flex: 0 0 min(788px, 85vw);
-  scroll-snap-align: center;
-  aspect-ratio: 1;
-  object-fit: cover;
-}
+
 
 .recap-year__guest-placeholder,
 .recap-year__mc-dj-placeholder {

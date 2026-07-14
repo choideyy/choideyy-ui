@@ -10,6 +10,7 @@ import './Home.css';
 export const Home = () => {
   return (
     <div className="home">
+
       <img
         className="home__bg"
         src={homeBg}

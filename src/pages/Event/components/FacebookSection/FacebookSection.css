@@ -3,7 +3,7 @@
   z-index: 3;
   width: 100%;
   max-width: 903px;
-  margin: -100px auto 80px;
+  margin: -180px auto 200px;
   padding: 0 24px;
   box-sizing: border-box;
 }
@@ -12,6 +12,7 @@
   width: 100%;
   margin: 0 auto;
   min-height: 500px;
+  max-height : 720px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -44,7 +45,7 @@
 @media (max-width: 1023px) {
   .event-facebook {
     margin-top: -48px;
-    margin-bottom: 56px;
+    margin-bottom: 80px;
     padding: 0 29px;
     max-width: 100%;
   }
@@ -57,7 +58,7 @@
 @media (max-width: 767px) {
   .event-facebook {
     margin-top: -28px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     padding: 0 29px;
   }
 

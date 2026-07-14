@@ -4,8 +4,16 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
+  top: 50px;
   padding: 80px 90px 120px;
   box-sizing: border-box;
+}
+
+.event-theme__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); /* title col : content area (2x width since it holds 2 columns) */
+  gap: 48px;
+  align-items: start;
 }
 
 .event-theme__header {
@@ -21,10 +29,12 @@
   top: 50%;
   z-index: 1;
   margin: 0;
+  left: 30px;/* slight adjustment to align with the star */
+  text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
@@ -43,8 +53,8 @@
   margin: 0 0 16px;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 96px;
-  font-weight: 400;
+  font-size: 75px;
+  font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -53,24 +63,26 @@
   margin: 0 0 48px;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 800;
   line-height: normal;
   text-transform: capitalize;
 }
 
 .event-theme__content {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 48px;
-  padding-top: 32px;
+  margin-top: -90px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* keep as-is — this is already your 2-column content */
+  gap: 40px;
+  padding: 32px 0; /* top and bottom space before/after the lines */
   border-top: 3px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.35);
 }
 
 .event-theme__content p {
   margin: 0;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: 20px;
   font-weight: 400;
   line-height: normal;

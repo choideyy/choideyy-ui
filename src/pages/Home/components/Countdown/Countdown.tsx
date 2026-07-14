@@ -59,24 +59,20 @@ export const Countdown = ({ targetDate }: CountdownProps) => {
   ];
 
   return (
-    <div className="countdown" aria-label="Event countdown">
-      <div className="countdown__values">
-        {values.map((value, index) => (
-          <span key={LABELS[index]} className="countdown__group">
+  <div className="countdown" aria-label="Event countdown">
+    <div className="countdown__values">
+      {values.map((value, index) => (
+        <span key={LABELS[index]} className="countdown__item-wrap">
+          <span className="countdown__item">
             <span className="countdown__number">{value}</span>
-            {index < values.length - 1 && (
-              <span className="countdown__separator">:</span>
-            )}
+            <span className="countdown__label">{LABELS[index]}</span>
           </span>
-        ))}
-      </div>
-      <div className="countdown__labels">
-        {LABELS.map((label) => (
-          <span key={label} className="countdown__label">
-            {label}
-          </span>
-        ))}
-      </div>
+          {index < values.length - 1 && (
+            <span className="countdown__separator">:</span>
+          )}
+        </span>
+      ))}
     </div>
-  );
+  </div>
+);
 };
