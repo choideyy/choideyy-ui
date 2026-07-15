@@ -69,10 +69,10 @@
   border-radius: 4px;
   background: rgba(26, 26, 27, 0.92);
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.5;
   text-align: center;
   text-transform: lowercase;
   white-space: nowrap;
@@ -118,6 +118,7 @@
 .organizer-partner-card__description {
   flex: 1;
   min-width: 0;
+
   animation: organizer-partner-description-in 0.35s ease;
 }
 

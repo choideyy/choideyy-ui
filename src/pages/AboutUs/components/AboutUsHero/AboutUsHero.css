@@ -1,7 +1,7 @@
 .about-us-hero {
   position: relative;
   width: 100%;
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   margin: 0 auto;
   padding: 0;
 }

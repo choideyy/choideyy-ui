@@ -48,10 +48,10 @@ export const OrganizerPartnerCard = ({
       <div className="organizer-partner-card__inner">
         <div className="organizer-partner-card__logo-wrap">
           <span className="organizer-partner-card__logo-hint organizer-partner-card__logo-hint--expand">
-            bấm để xem thêm chi tiết
+            Bấm để xem thêm
           </span>
           <span className="organizer-partner-card__logo-hint organizer-partner-card__logo-hint--collapse">
-            bấm để quay lại
+            Bấm để quay lại
           </span>
           <div className="organizer-partner-card__logo-stage">
             <img className="organizer-partner-card__logo" src={logo} alt={logoAlt} />
