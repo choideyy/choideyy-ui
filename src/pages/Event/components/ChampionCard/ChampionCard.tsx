@@ -11,8 +11,8 @@ export const ChampionCard = ({ amount }: ChampionCardProps) => {
     <div className="champion-card">
       <div className="champion-card__inner">
         <div className="champion-card__logos">
-          <img src={logoChoideyy} alt="" aria-hidden="true" />
-          <img src={mascotSpeaker} alt="" aria-hidden="true" />
+          <img className='champion-card__logos--logo' src={logoChoideyy} alt="" aria-hidden="true" />
+          <img className= 'champion-card__logos--speaker' src={mascotSpeaker} alt="" aria-hidden="true" />
         </div>
         <div className="champion-card__content">
           <p className="champion-card__title">CHAMPION</p>
