@@ -60,9 +60,6 @@ const guestsCarousel = useLoopCarousel(guestCount);
               />
             ))}
           </div>
-          <button type="button" className="recap-year__see-more">
-            XEM THÊM
-          </button>
         </section>
 
         <section className="recap-year__stats" aria-label="Event statistics">
