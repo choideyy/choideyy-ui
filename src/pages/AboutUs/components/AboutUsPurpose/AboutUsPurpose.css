@@ -3,6 +3,7 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
+  margin-top: 250px;
   padding: 80px 120px 160px;
   box-sizing: border-box;
   display: grid;
@@ -23,18 +24,19 @@
 .about-us-purpose__text p {
   margin: 0;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: clamp(16px, 2.5vw, 24px);
   line-height: 1.5;
   text-align: justify;
 }
 
 .about-us-purpose__image {
-  width: min(1062px, 100%);
-  max-width: 520px;
+  max-width: 1062px;
   justify-self: center;
   opacity: 0.8;
   transform: rotate(-10.16deg);
+  margin-top: -450px;
+  margin-right: -300px;
 }
 
 @media (max-width: 1023px) {

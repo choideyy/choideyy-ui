@@ -1,4 +1,4 @@
-import decoLip from '../../../../assets/figma/about-us/deco-lip.png';
+ import decoLip from '../../../../assets/figma/about-us/deco-lip.png';
 import decoStar from '../../../../assets/figma/about-us/deco-star.png';
 import './AboutUsStory.css';
 
@@ -31,25 +31,27 @@ export const AboutUsStory = () => {
         <h2 id="about-us-story-heading" className="visually-hidden">
           Our story
         </h2>
-
-        <p>
-          <strong>Chọi Deyyy</strong> được hình thành từ cảm hứng văn hoá đặc
-          trưng của Hải Phòng, thành phố vốn nổi tiếng với{' '}
-          <strong>lễ hội Chọi Trâu Đồ Sơn</strong> – một biểu tượng gắn liền với
-          tinh thần mạnh mẽ, quyết liệt và giàu bản sắc. Từ “Chọi” được giữ lại
-          như một dấu ấn về sự đối đầu, bản lĩnh và tinh thần thi đấu, đồng thời
-          phù hợp với tính chất của một giải hiphop
-        </p>
-
-        <p>
-          Hình ảnh <strong>gà trống</strong> được lựa chọn làm mascot vì liên
-          hệ trực tiếp với từ lóng <strong>“gáy”</strong> – một cách biểu đạt
-          phổ biến trong giới trẻ và cộng đồng hiphop, thể hiện sự tự tin, khí
-          thế và tinh thần thách thức. Gà trống cũng gợi nhắc đến{' '}
-          <strong>văn hoá Chọi Gà</strong> dân gian, nơi sức mạnh và bản lĩnh
-          được phô diễn rõ nét. Sự kết hợp giữa “Chọi” và hình tượng gà trống
-          tạo nên một biểu tượng vừa gần gũi, vừa giàu tính biểu trưng.
-        </p>
+        <div className="about-us-story__para1">
+          <p>
+            <strong>Chọi Deyyy</strong> được hình thành từ cảm hứng văn hoá đặc
+            trưng của Hải Phòng, thành phố vốn nổi tiếng với{' '}
+            <strong>lễ hội Chọi Trâu Đồ Sơn</strong> – một biểu tượng gắn liền với
+            tinh thần mạnh mẽ, quyết liệt và giàu bản sắc. Từ “Chọi” được giữ lại
+            như một dấu ấn về sự đối đầu, bản lĩnh và tinh thần thi đấu, đồng thời
+            phù hợp với tính chất của một giải hiphop
+          </p>
+        </div>
+        <div className="about-us-story__para2">
+          <p>
+            Hình ảnh <strong>gà trống</strong> được lựa chọn làm mascot vì liên
+            hệ trực tiếp với từ lóng <strong>“gáy”</strong> – một cách biểu đạt
+            phổ biến trong giới trẻ và cộng đồng hiphop, thể hiện sự tự tin, khí
+            thế và tinh thần thách thức. Gà trống cũng gợi nhắc đến{' '}
+            <strong>văn hoá Chọi Gà</strong> dân gian, nơi sức mạnh và bản lĩnh
+            được phô diễn rõ nét. Sự kết hợp giữa “Chọi” và hình tượng gà trống
+            tạo nên một biểu tượng vừa gần gũi, vừa giàu tính biểu trưng.
+          </p>
+        </div>
 
         <div className="about-us-story__deyyy">
           <p>

@@ -17,7 +17,7 @@ const STATS = [
   },
   {
     id: 'partners',
-    value: '20+',
+    value: '30+',
     label: 'SỐ ĐƠN VỊ',
     description: 'Thương hiệu đã đồng hành cùng sự kiện trong suốt hành trình.',
   },
@@ -31,7 +31,7 @@ export const AboutUsStats = () => {
           THÀNH TÍCH
         </h2>
         <p className="about-us-stats__intro">
-          Những con số nói lên sự phát triển không ngừng của Chọi Deyyy trong
+          Những con số nói lên sự phát triển không ngừng của <strong>Chọi Deyyy</strong> trong
           hành trình trở thành một trong những giải đấu hàng đầu của thành phố
           Hải Phòng.
         </p>

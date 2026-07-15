@@ -2,6 +2,7 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
+  margin-top: 200px;
   padding: 0 52px 120px;
   box-sizing: border-box;
   display: flex;
@@ -28,12 +29,13 @@
 
 .about-us-organizers__partners {
   display: flex;
+  font-family: var(--font-inter-regular);
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  /* gap: 20px; */
   width: min(1034px, 100%);
-  padding-top: 44px;
+  padding-top: 20px;
   position: relative;
   overflow: visible;
 }
