@@ -79,16 +79,31 @@
 }
 
 .crew-vs-crew__theme-label {
+  position: absolute;
+  bottom: -30px;  /* nudges it down past the banner's bottom edge */
+  right: -55px;    /* pulls it in from the right edge, onto the corner */
   margin: 0;
+  text-align: justify;
   color: var(--ghost-white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 800;
+  line-height: 1;
   text-transform: uppercase;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  -webkit-text-stroke: 12px rgba(143, 34, 49, 1);
+  paint-order: stroke fill;
   transform: rotate(6.29deg);
   width: fit-content;
+  z-index: 1;
 }
+
+.crew-vs-crew__banner-wrap {
+  position: relative;
+  display: inline-block; /* matches round-banner's own inline-block sizing */
+}
+
+
 
 .crew-vs-crew__requirements {
   list-style: none;
@@ -165,18 +180,62 @@
   font-weight: 400;
 }
 
-.crew-vs-crew__showcase-image{
+.crew-vs-crew__showcase-image-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden; /* Clips both image and gradient */
+}
+
+.crew-vs-crew__showcase-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.crew-vs-crew__showcase-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+  to bottom,
+  rgba(26, 26, 27, 0) 70%,
+  rgba(26, 26, 27, 0.5) 90%,
+  #1A1A1B 100%
+);
+}
+
+
+.crew-vs-crew__battle-image-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.crew-vs-crew__battle-image {
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
 }
 
-.crew-vs-crew__battle-image{
-   width: 100%;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
+.crew-vs-crew__battle-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 27, 0) 0%,
+    rgba(26, 26, 27, 0) 88.23%,
+    #1A1A1B 100%
+  );
 }
 
 .crew-vs-crew__battle-heading {
@@ -193,7 +252,7 @@
   margin: 0;
   padding-left: 1.25rem;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: clamp(24px, 3vw, 34px);
   font-weight: 400;
   line-height: 1.4;
@@ -205,6 +264,9 @@
 
 .crew-vs-crew__final {
   margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .crew-vs-crew__final-label {
@@ -285,7 +347,12 @@
     gap: 32px;
     margin-top: 32px;
   }
-
+ .crew-vs-crew__showcase-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 610px);
+  gap: 48px;
+  align-items: stretch;
+ }
   .crew-vs-crew__theme-title {
     font-size: 40px;
   }
