@@ -4,7 +4,7 @@ import './BackToRecap.css';
 export const BackToRecap = () => {
   return (
     <Link to="/recap" className="back-to-recap">
-      ← Quay lại Recap
+      ← Quay lại
     </Link>
   );
 };
