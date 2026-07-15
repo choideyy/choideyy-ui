@@ -27,6 +27,7 @@ import winner2 from '../../../assets/figma/recap/2022/winner-2.png';
 import winner3 from '../../../assets/figma/recap/2022/winner-3.png';
 import winner4 from '../../../assets/figma/recap/2022/winner-4.png';
 import type { RecapYearData } from '../types/recapYearData';
+import { RECAP_2022_SPONSORS } from '../../../components/SponsorsSection';
 
 export const RECAP_2022_DATA: RecapYearData = {
   year: '2022',
@@ -93,4 +94,6 @@ export const RECAP_2022_DATA: RecapYearData = {
     left: arrowLeft,
     right: arrowRight,
   },
+  sponsors: RECAP_2022_SPONSORS,
+  sponsorsDecoration: decoRight,
 };

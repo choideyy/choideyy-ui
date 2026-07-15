@@ -64,35 +64,31 @@ export const CrewVsCrew = () => {
           </div>
 
           <div className="crew-vs-crew__showcase-grid">
-            <div className="crew-vs-crew__showcase-copy">
-              <div className="crew-vs-crew__theme">
-                <h2 id="crew-showcase-heading" className="crew-vs-crew__theme-title">
-                  Học đường
-                </h2>
-              </div>
-
-              <ul className="crew-vs-crew__requirements">
-                {REQUIREMENTS.map((item) => (
-                  <li key={item.title}>
-                    <img src={item.icon} alt="" aria-hidden="true" />
-                    <div>
-                      <p className="crew-vs-crew__req-title">{item.title}</p>
-                      <p className="crew-vs-crew__req-value">{item.value}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
-              
+            <div className="crew-vs-crew__theme">
+              <h2 id="crew-showcase-heading" className="crew-vs-crew__theme-title">
+                Học đường
+              </h2>
             </div>
 
+            <ul className="crew-vs-crew__requirements">
+              {REQUIREMENTS.map((item) => (
+                <li key={item.title}>
+                  <img src={item.icon} alt="" aria-hidden="true" />
+                  <div>
+                    <p className="crew-vs-crew__req-title">{item.title}</p>
+                    <p className="crew-vs-crew__req-value">{item.value}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
             <div className="crew-vs-crew__showcase-image-wrapper">
-                <img
-                  className="crew-vs-crew__showcase-image"
-                  src={showcaseImage}
-                  alt="Crew showcase performance"
-                />
-              </div>
+              <img
+                className="crew-vs-crew__showcase-image"
+                src={showcaseImage}
+                alt="Crew showcase performance"
+              />
+            </div>
           </div>
         </section>
 
@@ -112,23 +108,21 @@ export const CrewVsCrew = () => {
 
           <div className="crew-vs-crew__battle-grid">
             <div className="crew-vs-crew__battle-image-wrapper">
-                <img
-                  className="crew-vs-crew__battle-image"
-                  src={battleImage}
-                  alt="Crew battle performance"
-                />
-              </div>
-
-            <div className="crew-vs-crew__battle-copy">
-              <h2 id="crew-battle-heading" className="crew-vs-crew__battle-heading">
-                TOP 8 VÀ BÁN KẾT
-              </h2>
-              <ul className="crew-vs-crew__rules-list">
-                {BATTLE_RULES.map((rule,index) => (
-                  <li key={index}>{rule}</li>
-                ))}
-              </ul>
+              <img
+                className="crew-vs-crew__battle-image"
+                src={battleImage}
+                alt="Crew battle performance"
+              />
             </div>
+
+            <h2 id="crew-battle-heading" className="crew-vs-crew__battle-heading">
+              TOP 8 VÀ BÁN KẾT
+            </h2>
+            <ul className="crew-vs-crew__rules-list">
+              {BATTLE_RULES.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
+            </ul>
           </div>
 
           <div className="crew-vs-crew__final">

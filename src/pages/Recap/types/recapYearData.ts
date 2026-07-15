@@ -1,3 +1,5 @@
+import type { Sponsor } from '../../../components/SponsorsSection';
+
 export type RecapWinnerVariant =
   | 'champion'
   | 'runner-up'
@@ -42,4 +44,6 @@ export type RecapYearData = {
     left: string;
     right: string;
   };
+  sponsors: Sponsor[];
+  sponsorsDecoration?: string;
 };

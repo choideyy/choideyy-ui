@@ -1,4 +1,5 @@
 import scrollTopIcon from '../../../../assets/figma/scroll-top.svg';
+import { SponsorsSection } from '../../../../components/SponsorsSection';
 import type { RecapYearData } from '../../types/recapYearData';
 import { BackToRecap } from '../BackToRecap';
 import './RecapYearDetail.css';
@@ -247,6 +248,15 @@ const guestsCarousel = useLoopCarousel(guestCount);
           />
         </section>)
         }
+
+        {data.sponsors.length > 0 && (
+          <SponsorsSection
+            variant="recap"
+            sponsors={data.sponsors}
+            decorationSrc={data.sponsorsDecoration}
+            className={`recap-year__sponsors recap-year__sponsors--${data.year}`}
+          />
+        )}
 
         <button
           type="button"
