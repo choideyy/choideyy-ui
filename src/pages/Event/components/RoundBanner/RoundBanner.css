@@ -1,14 +1,17 @@
 .round-banner {
+  position: relative;
   display: block;
   width: fit-content;
-  padding: 20px 48px 15px;
+  padding: 20px 30px 15px;
   background: var(--gold-accent);
   box-shadow: 5px 5px 0 rgba(248, 248, 255, 0.5);
   transform: rotate(var(--banner-rotation, -2.42deg));
+  z-index: 1;
 }
 
 .round-banner--left {
   margin-right: auto;
+  margin-left: -35px;
 }
 
 .round-banner--center {
@@ -18,10 +21,10 @@
 
 .round-banner--right {
   margin-left: auto;
+  top: 20px;
 }
 .round-banner__text {
   margin: 0;
-
   color: var(--charcoal-black);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: clamp(28px, 4vw, 50px);
