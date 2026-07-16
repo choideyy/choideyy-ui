@@ -35,7 +35,7 @@
 .two-vs-two__title {
   margin: 0 0 48px;
   color: var(--white);
-  font-family: var(--font-thunder);
+  font-family: 'SVN A Love Of Thunder';
   font-size: clamp(48px, 6vw, 80px);
   font-weight: 400;
   line-height: normal;
@@ -65,17 +65,23 @@
   text-transform: uppercase;
 }
 
+.two-vs-two__prelim-copy {
+  display: flex;
+  flex-direction: column;
+}
 .two-vs-two__stage-label--top16 {
   margin-top: 48px;
+  margin-right: 30px;
   font-family: var(--font-another-tag);
   font-size: clamp(56px, 8vw, 96px);
+  align-self: flex-end;
 }
 
 .two-vs-two__rules-list {
   margin: 0;
   padding-left: 1.25rem;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: clamp(22px, 3vw, 34px);
   font-weight: 400;
   line-height: 1.45;
@@ -178,7 +184,7 @@
 .two-vs-two__recall-title {
   margin: 0 0 40px;
   color: var(--ghost-white);
-  font-family: var(--font-thunder);
+  font-family: 'SVN A Love Of Thunder';
   font-size: clamp(48px, 6vw, 75px);
   font-weight: 400;
   text-align: center;
@@ -220,7 +226,7 @@
 .two-vs-two__conditions p {
   margin: 0;
   color: var(--white);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 400;
   line-height: 1.4;
@@ -257,8 +263,19 @@
   font-weight: 800;
 }
 
+
 .two-vs-two__champion {
   margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.two-vs-two__prize-image {
+  display: block;
+  width: 100%;
+  max-width: 922px;
+  height: auto;
+  object-fit: cover;
 }
 
 .two-vs-two__deco {
@@ -331,6 +348,7 @@
   .two-vs-two__stage-label--top16 {
     font-size: 36px;
     margin-top: 24px;
+    align-self: flex-start;
   }
 
   .two-vs-two__rules-list {
@@ -455,6 +473,7 @@
   .two-vs-two__stage-label--top16 {
     font-size: 26px;
     margin-top: 20px;
+    align-self: flex-start;
   }
 
   .two-vs-two__rules-list {

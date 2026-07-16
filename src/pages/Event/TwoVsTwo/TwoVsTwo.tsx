@@ -11,8 +11,8 @@ import prelimImage from '../../../assets/figma/event/two-vs-two/prelim.png';
 import recallBg from '../../../assets/figma/event/two-vs-two/recall-bg.png';
 import recallPin from '../../../assets/figma/event/two-vs-two/recall-pin.png';
 import recallTape from '../../../assets/figma/event/two-vs-two/recall-tape.png';
+import ChampionCard from '../../../assets/figma/event/prize-champion.png';
 import { BackToEvent } from '../components/BackToEvent';
-import { ChampionCard } from '../components/ChampionCard';
 import { RoundBanner } from '../components/RoundBanner';
 import { ScrollToTop } from '../components/ScrollToTop';
 import './TwoVsTwo.css';
@@ -196,7 +196,11 @@ export const TwoVsTwo = () => {
         </section>
 
         <section className="two-vs-two__champion" aria-label="Champion prize">
-          <ChampionCard amount="3.000.000" />
+          <img
+                className="two-vs-two__prize-image"
+                src={ChampionCard}
+                alt="Champion Card prize"
+              />
         </section>
 
         <ScrollToTop />

@@ -7,8 +7,9 @@ import iconAward from '../../../assets/figma/event/crew-vs-crew/icon-award.svg';
 import iconGroups from '../../../assets/figma/event/crew-vs-crew/icon-groups.svg';
 import iconTime from '../../../assets/figma/event/crew-vs-crew/icon-time.svg';
 import showcaseImage from '../../../assets/figma/event/crew-vs-crew/showcase.png';
+import ChampionCard from '../../../assets/figma/event/crew-vs-crew/prize-champion.png';
 import { BackToEvent } from '../components/BackToEvent';
-import { ChampionCard } from '../components/ChampionCard';
+// import { ChampionCard } from '../components/ChampionCard';
 import { RoundBanner } from '../components/RoundBanner';
 import { ScrollToTop } from '../components/ScrollToTop';
 import './CrewVsCrew.css';
@@ -136,7 +137,11 @@ export const CrewVsCrew = () => {
         </section>
 
         <section className="crew-vs-crew__champion" aria-label="Champion prize">
-          <ChampionCard amount="5.000.000" />
+          <img
+                className="crew-vs-crew__prize-image"
+                src={ChampionCard}
+                alt="Champion Card prize"
+              />
         </section>
 
         <ScrollToTop />

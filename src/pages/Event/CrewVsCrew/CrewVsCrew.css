@@ -216,6 +216,8 @@
   object-fit: cover;
 }
 
+
+
 .crew-vs-crew__battle-image-wrapper {
   position: relative;
   width: 100%;
@@ -287,6 +289,16 @@
 
 .crew-vs-crew__champion {
   margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.crew-vs-crew__prize-image {
+  display: block;
+  width: 100%;
+  max-width: 922px;
+  height: auto;
+  object-fit: cover;
 }
 
 .crew-vs-crew__deco {
