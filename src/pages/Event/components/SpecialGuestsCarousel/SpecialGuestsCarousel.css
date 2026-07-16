@@ -53,6 +53,7 @@
 @media (max-width: 1023px) {
   .event-guests {
     padding: 0 40px 120px;
+    top: 40px;
   }
 
   .event-guests__title {
@@ -70,6 +71,20 @@
 
 @media (max-width: 767px) {
   .event-guests {
-    display: none;
+    padding: 40px 20px 0;
+    top: 20px;
+  }
+
+  
+  .event-guests__title {
+    font-size: 20px;
+  }
+
+  .event-guests__card {
+    width: min(100%, 320px);
+  }
+
+  .event-guests__name {
+    font-size: 16px;
   }
 }

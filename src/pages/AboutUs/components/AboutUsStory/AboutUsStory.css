@@ -132,6 +132,12 @@
     padding: 64px 40px 96px;
   }
 
+  .about-us-story__para1,
+  .about-us-story__para2,
+  .about-us-story__deyyy {
+    margin: 0;
+  }
+
   .about-us-story__labels {
     display: none;
   }

@@ -7,7 +7,7 @@
 }
 
 .sponsors-section--event {
-  margin: 500px auto;
+  margin: 400px auto;
   margin-bottom: 260px;
 }
 
@@ -156,6 +156,10 @@
 }
 
 @media (max-width: 1023px) {
+  .sponsors-section {
+    margin: 100px auto;
+  }
+
   .sponsors-section--event {
     padding: 0 40px 200px;
   }
@@ -203,13 +207,13 @@
 
 @media (max-width: 767px) {
   .sponsors-section--event {
-    padding: 0 20px 160px;
+    padding: 0 20px 0;
     overflow-x: clip;
   }
 
   .sponsors-section--recap {
     padding: 0 20px;
-    margin-bottom: 80px;
+    margin: 40px 0 20px;
     overflow-x: clip;
   }
 

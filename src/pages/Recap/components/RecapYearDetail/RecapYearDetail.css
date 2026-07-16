@@ -527,7 +527,7 @@
 
   .recap-year__section-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
   }
 

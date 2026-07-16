@@ -38,7 +38,7 @@
   left: calc(50% - 440px);
   line-height: normal;
   top: 286px;
-  white-space: nowrap;
+  width: 100%;
 }
 
 .recap__year-links {
@@ -116,5 +116,13 @@
   .recap__hero {
     padding: 48px 20px 64px;
     min-height: auto;
+  }
+  
+  .recap__hero h1 {
+    font-size: 24px;
+  }
+
+  .recap__year-card span {
+    font-size: 64px;
   }
 }

@@ -123,9 +123,16 @@
   .contact-info-cards__list {
     grid-template-columns: 1fr;
     gap: 16px;
+    justify-items: center;
+  }
+
+  .contact-info-cards__list > li {
+    width: 100%;
+    max-width: 360px;
   }
 
   .contact-info-cards__card {
+    width: 100%;
     min-height: 55px;
     padding: 12px 16px;
   }

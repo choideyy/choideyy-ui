@@ -189,6 +189,8 @@
   .navbar__logo {
     grid-column: 2;
     justify-self: center;
+    display: flex;
+    justify-content: center;
   }
 
   .navbar__nav {

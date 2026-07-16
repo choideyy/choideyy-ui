@@ -223,7 +223,7 @@
     align-items: center;
     width: 100%;
     gap: clamp(80px, 18vw, 160px);
-    margin-bottom: 32px;
+    margin: 0 0 32px 0;
   }
 
   .event-details__category-item {
@@ -234,14 +234,20 @@
   .event-details__category-icon--duo {
     width: 70px;
     height: 70px;
+    margin-top: 0;
   }
 
   .event-details__category-icon--crew {
     height: 70px;
   }
 
-  .event-details__category-label {
+  .event-details__category-label-duo,
+  .event-details__category-label-crew {
     font-size: 24px;
+  }
+
+  .event-details__category-label-crew {
+    margin: 10px 0 1em 0;
   }
 
   .event-details__dancer {
@@ -270,7 +276,7 @@
 
 @media (max-width: 767px) {
   .event-details {
-    padding: 0 20px 72px;
+    padding: 40px 20px 0;
     overflow-x: clip;
   }
 
@@ -314,6 +320,11 @@
   .event-details__category-item {
     align-items: center;
     text-align: center;
+  }
+
+  .event-details__category-icon--duo {
+    width: 55px;
+    height: 55px;
   }
 
   .event-details__category-icon--crew {

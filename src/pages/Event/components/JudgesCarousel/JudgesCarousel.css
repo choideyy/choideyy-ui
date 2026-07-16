@@ -109,6 +109,7 @@
 @media (max-width: 1023px) {
   .event-judges {
     padding: 0 40px 120px;
+    top: 40px;
   }
 
   .event-judges__title {
@@ -133,17 +134,23 @@
   .event-judges {
     padding: 0 20px 96px;
     overflow-x: clip;
+    top: 20px;
   }
 
   .event-judges__header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 24px;
   }
 
   .event-judges__title {
+    position: relative;
+    align-self: baseline;
     font-size: 20px;
+  }
+
+  .event-judges__header > :last-child {
+    margin-right: 0;
   }
 
   .event-judges__track {

@@ -15,16 +15,24 @@
 }
 
 @media (max-width: 1023px) {
+  .event-new-post {
+    top: -60px;
+  }
+
   .event-new-post__image {
-    max-height: 257px;
+    /* max-height: 257px; */
     object-fit: cover;
     object-position: center;
   }
 }
 
 @media (max-width: 767px) {
+  .event-new-post {
+    top: -20px;
+  }
+
   .event-new-post__image {
-    max-height: 58px;
+    /* max-height: 58px; */
     object-fit: contain;
   }
 }
