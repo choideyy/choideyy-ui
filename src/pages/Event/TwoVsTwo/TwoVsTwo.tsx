@@ -18,22 +18,22 @@ import { ScrollToTop } from '../components/ScrollToTop';
 import './TwoVsTwo.css';
 
 const PRELIM_RULES = [
-  'Lần lượt các Duo sẽ thi đấu theo thứ tự do BTC sắp xếp',
-  'Mỗi Đuo có 1 lượt thi - 45 giây/lượt',
-  'BGK chấm điểm và chọn ra TOP 16',
+  <>Lần lượt các Duo sẽ thi đấu theo thứ tự do BTC sắp xếp</>,
+  <>Mỗi Đuo có <strong>1 lượt thi - 45 giây/lượt</strong></>,
+  <>BGK chấm điểm và chọn ra <strong>TOP 16</strong></>,
 ] as const;
 
 const TOP16_RULES = [
-  'Thứ tự các cặp đấu được đấu BTC sắp xếp',
-  'Mỗi Duo thi 02 lượt (tổng 04 lượt/trận, mỗi lượt 60 giây)',
-  'Mỗi trận hòa tối đa 1 lần',
+  <>Thứ tự các cặp đấu được đấu BTC sắp xếp</>,
+  <>Mỗi Duo thi <strong>02 lượt (tổng 04 lượt/trận, mỗi lượt 60 giây)</strong> </>,
+  <>Mỗi trận <strong>hòa tối đa 1 lần</strong></>,
 ] as const;
 
 const TOP8_RULES = [
-  'Bốc thăm chọn cặp đấu',
-  'Mỗi trận gồm 04 lượt (02 lượt/Duo), 60 giây/lượt - tổng 4 phút/trận',
-  'Chấm hòa tối đa 01 lần',
-  'Sau 4 trận, trong 15 giây đếm ngược, các Duo thua trước đó có thể Recall (Thách Đấu) các Duo vừa thắng',
+  <>Bốc thăm chọn cặp đấu</>,
+  <>Mỗi trận gồm <strong>04 lượt (02 lượt/Duo), 60 giây/lượt - tổng 4 phút/trận</strong></>,
+  <><strong>Chấm hòa tối đa 01 lần</strong></>,
+  <>Sau 4 trận, trong <strong>15 giây đếm ngược</strong>, các Duo <strong>thua trước đó</strong> có thể <strong>Recall (Thách Đấu)</strong> các Duo vừa thắng</>,
 ] as const;
 
 const RECALL_CONDITIONS = [
@@ -56,16 +56,16 @@ const RECALL_CONDITIONS = [
 ] as const;
 
 const RECALL_METHOD = [
-  'Đội bước ra trước sẽ được quyền Recall, nếu nhiều Duo cùng Recall, BTC sẽ tiến hành xoay chai để chọn ra một Duo duy nhất được quyền thách đấu',
-  'Mỗi đội thua chỉ được Recall 1 lần, mỗi đội thắng chỉ bị Recall 1 lần',
-  'Recall diễn ra 1 lượt 45 giây, không có kết quả hòa',
-  'Recall thắng: Thay thế vị trí Duo thắng và đi tiếp',
-  'Recall thua: Duo thắng ban đầu giữ nguyên vị trí',
+  <>Đội bước ra trước sẽ được quyền Recall, nếu nhiều Duo cùng Recall, BTC sẽ tiến hành <strong>xoay chai</strong> để chọn ra một <strong>Duo duy nhất được quyền thách đấu</strong></>,
+  <>Mỗi đội thua chỉ được <strong>Recall 1 lần</strong>, mỗi đội thắng <strong>chỉ bị Recall 1 lần</strong></>,
+  <>Recall diễn ra <strong>1 lượt 45 giây, không có kết quả hòa</strong></>,
+  <><strong>Recall thắng</strong>: Thay thế vị trí Duo thắng và đi tiếp</>,
+  <><strong>Recall thua</strong>: Duo thắng ban đầu giữ nguyên vị trí</>,
 ] as const;
 
 const FINAL_RULES = [
-  'TOP 4 Duo: 04 lượt/trận, 60 giây/lượt, tổng 4 phút/trận',
-  'TOP 2 Duo: 04 lượt/trận, 60 giây/lượt, tổng 4 phút/trận',
+  <><strong>TOP 4 Duo</strong>: 04 lượt/trận, 60 giây/lượt, tổng 4 phút/trận</>,
+  <><strong>TOP 2 Duo</strong>: 04 lượt/trận, 60 giây/lượt, tổng 4 phút/trận</>,
 ] as const;
 
 export const TwoVsTwo = () => {
@@ -89,8 +89,8 @@ export const TwoVsTwo = () => {
                 prelim
               </p>
               <ul className="two-vs-two__rules-list">
-                {PRELIM_RULES.map((rule) => (
-                  <li key={rule}>{rule}</li>
+                {PRELIM_RULES.map((rule,index) => (
+                  <li key={index}>{rule}</li>
                 ))}
               </ul>
 
@@ -98,8 +98,8 @@ export const TwoVsTwo = () => {
                 top 16
               </p>
               <ul className="two-vs-two__rules-list">
-                {TOP16_RULES.map((rule) => (
-                  <li key={rule}>{rule}</li>
+                {TOP16_RULES.map((rule,index) => (
+                  <li key={index}>{rule}</li>
                 ))}
               </ul>
             </div>
@@ -113,7 +113,7 @@ export const TwoVsTwo = () => {
         </section>
 
         <section className="two-vs-two__section" aria-labelledby="two-battle-heading">
-          <RoundBanner label="Vòng Battle" rotation="1.68deg" align="right" />
+          
 
           <div className="two-vs-two__battle-grid">
             <img
@@ -123,12 +123,26 @@ export const TwoVsTwo = () => {
             />
 
             <div className="two-vs-two__battle-copy">
+              <div className="two-vs-two__battle-banner-wrap">
+              <img
+                className="two-vs-two__battle-star"
+                src={decoStar}
+                alt=""
+                aria-hidden="true"
+              />
+
+              <RoundBanner
+                label="Vòng Battle"
+                rotation="1.68deg"
+                align="right"
+              />
+            </div>
               <h2 id="two-battle-heading" className="two-vs-two__battle-heading">
                 TOP 8
               </h2>
               <ul className="two-vs-two__rules-list">
-                {TOP8_RULES.map((rule) => (
-                  <li key={rule}>{rule}</li>
+                {TOP8_RULES.map((rule,index) => (
+                  <li key={index}>{rule}</li>
                 ))}
               </ul>
             </div>
@@ -176,8 +190,8 @@ export const TwoVsTwo = () => {
 
               <h3 className="two-vs-two__recall-subtitle">Cách thức:</h3>
               <ul className="two-vs-two__rules-list two-vs-two__rules-list--recall">
-                {RECALL_METHOD.map((rule) => (
-                  <li key={rule}>{rule}</li>
+                {RECALL_METHOD.map((rule,index) => (
+                  <li key={index}>{rule}</li>
                 ))}
               </ul>
             </div>
@@ -189,8 +203,8 @@ export const TwoVsTwo = () => {
             SEMI-FINAL & FINAL
           </p>
           <ul className="two-vs-two__rules-list two-vs-two__rules-list--final">
-            {FINAL_RULES.map((rule) => (
-              <li key={rule}>{rule}</li>
+            {FINAL_RULES.map((rule,index) => (
+              <li key={index}>{rule}</li>
             ))}
           </ul>
         </section>
@@ -224,12 +238,7 @@ export const TwoVsTwo = () => {
         alt=""
         aria-hidden="true"
       />
-      <img
-        className="two-vs-two__deco two-vs-two__deco--star"
-        src={decoStar}
-        alt=""
-        aria-hidden="true"
-      />
+
     </div>
   );
 };
