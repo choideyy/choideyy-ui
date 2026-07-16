@@ -15,7 +15,32 @@ export const RecapYearDetail = ({ data }: RecapYearDetailProps) => {
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+// Galery constant and init
+// const halfway = Math.ceil(data.galleryImages.length / 2);
 
+const buildInfiniteRow = (images: string[], minItems = 20) => {
+  if (images.length === 0) return [];
+
+  const result: string[] = [];
+
+  while (result.length < minItems) {
+    result.push(...images);
+  }
+
+  return result;
+};
+
+const halfway = Math.ceil(data.galleryImages.length / 2);
+
+const galleryTop = buildInfiniteRow(
+  data.galleryImages.slice(0, halfway)
+);
+
+const galleryBottom = buildInfiniteRow(
+  data.galleryImages.slice(halfway)
+);
+
+  // Carousel constants
 const judgeCount = data.judges.length;
 const extendedJudges =
   judgeCount > 0
@@ -50,16 +75,41 @@ const guestsCarousel = useLoopCarousel(guestCount);
         </header>
 
         <section className="recap-year__gallery" aria-label="Event photos">
-          <div className="recap-year__gallery-grid">
-            {data.galleryImages.map((image, index) => (
-              <img
-                key={`gallery-${index}`}
-                src={image}
-                alt={`Recap ${data.year} photo ${index + 1}`}
-                className={`recap-year__gallery-item recap-year__gallery-item--${index + 1}`}
-              />
-            ))}
+
+          <div className="recap-year__gallery-row recap-year__gallery-row--left">
+            <div className="recap-year__gallery-track">
+              {galleryTop.map((image, index) => (
+                  <img
+                    key={`top-${index}`}
+                    src={image}
+                    alt={`Recap ${data.year} photo`}
+                    className="recap-year__gallery-image"
+                  />
+                ))}
+                {galleryBottom.map((image, index) => (
+                  <img
+                    key={`bottom-${index}`}
+                    src={image}
+                    alt={`Recap ${data.year} photo`}
+                    className="recap-year__gallery-image"
+                  />
+                ))}
+            </div>
           </div>
+
+          <div className="recap-year__gallery-row recap-year__gallery-row--right">
+            <div className="recap-year__gallery-track">
+              {[...galleryBottom, ...galleryBottom].map((image, index) => (
+                <img
+                  key={`bottom-${index}`}
+                  src={image}
+                  alt={`Recap ${data.year} photo`}
+                  className="recap-year__gallery-image"
+                />
+              ))}
+            </div>
+          </div>
+
         </section>
 
         <section className="recap-year__stats" aria-label="Event statistics">

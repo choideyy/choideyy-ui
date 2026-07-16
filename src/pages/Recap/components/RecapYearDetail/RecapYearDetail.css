@@ -20,7 +20,7 @@
 .recap-year__main {
   position: relative;
   z-index: 1;
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   margin: 0 auto;
   padding: 24px 24px 120px;
   display: flex;
@@ -53,45 +53,48 @@
   font-weight: 400;
   line-height: 1;
 }
-
 .recap-year__gallery {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 48px;
+  gap: 24px;
   margin-bottom: 80px;
 }
 
-.recap-year__gallery-grid {
+.recap-year__gallery-row {
+  overflow: hidden;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
 }
 
-.recap-year__gallery-item {
-  width: 100%;
+.recap-year__gallery-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}
+
+.recap-year__gallery-track:hover {
+  animation-play-state: paused;
+}
+
+.recap-year__gallery-image {
+  width: 420px;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.recap-year__gallery-item--4 {
-  grid-column: 1;
+.recap-year__gallery {
+  --gallery-speed: 90s;
 }
 
-.recap-year__gallery-item--5 {
-  grid-column: 2;
+.recap-year__gallery-row--left .recap-year__gallery-track {
+  animation: gallery-scroll-left var(--gallery-speed) linear infinite;
 }
 
-.recap-year__gallery-item--6 {
-  grid-column: 3;
-}
-
-.recap-year__gallery-item--7 {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 6;
+.recap-year__gallery-row--right .recap-year__gallery-track {
+  animation: gallery-scroll-right var(--gallery-speed) linear infinite;
 }
 
 .recap-year__see-more {
@@ -499,12 +502,8 @@
 }
 
 @media (max-width: 1023px) {
-  .recap-year__gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .recap-year__gallery-item--7 {
-    grid-column: 1 / -1;
+  .recap-year__gallery-image {
+    width: 300px;
   }
 
   .recap-year__stats-cards {
@@ -522,15 +521,8 @@
     padding: 16px 16px 96px;
   }
 
-  .recap-year__gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .recap-year__gallery-item--4,
-  .recap-year__gallery-item--5,
-  .recap-year__gallery-item--6,
-  .recap-year__gallery-item--7 {
-    grid-column: auto;
+  .recap-year__gallery-image {
+    width: 220px;
   }
 
   .recap-year__section-header {
@@ -551,5 +543,26 @@
     bottom: 140px;
     width: 56px;
     height: 64px;
+  }
+}
+
+
+@keyframes gallery-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gallery-scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
