@@ -49,6 +49,11 @@
     padding: 12px 20px;
   }
 
+  .round-banner--left {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
   .round-banner__text {
     font-size: 20px;
     white-space: normal;

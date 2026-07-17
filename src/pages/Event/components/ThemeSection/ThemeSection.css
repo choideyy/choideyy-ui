@@ -147,11 +147,14 @@
     left: 35%;
     font-size: 16px;
     -webkit-text-stroke: 5px rgba(143, 34, 49, 1);
+    top: 50%;
   }
 
   .event-theme__star {
     width: 80px;
     margin-left: -12px;
+    left: 0;
+    top: 0;
   }
 
   .event-theme__title {
