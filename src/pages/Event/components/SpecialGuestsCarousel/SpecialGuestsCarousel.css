@@ -5,6 +5,7 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
+  margin-bottom: 400px;
   padding: 0 90px 160px;
   box-sizing: border-box;
 }

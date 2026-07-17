@@ -7,7 +7,7 @@ import { PrizesSection } from './components/PrizesSection';
 import { RulesSection } from './components/RulesSection';
 import { ScrollToTop } from './components/ScrollToTop';
 import { SpecialGuestsCarousel } from './components/SpecialGuestsCarousel';
-import { SponsorsSection } from './components/SponsorsSection';
+// import { SponsorsSection } from './components/SponsorsSection';
 import { ThemeSection } from './components/ThemeSection';
 import './Event.css';
 
@@ -32,7 +32,7 @@ export const Event = () => {
         <RulesSection />
         <JudgesCarousel />
         <SpecialGuestsCarousel />
-        <SponsorsSection />
+        {/* <SponsorsSection /> */}
         <ScrollToTop />
       </main>
     </div>

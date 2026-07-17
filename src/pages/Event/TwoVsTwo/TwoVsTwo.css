@@ -23,7 +23,7 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 48px 90px 160px;
+  padding: 48px 50px 160px;
   box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .two-vs-two__title {
-  margin: 0 0 48px;
+  margin: 0 0 120px;
   color: var(--white);
   font-family: 'SVN A Love Of Thunder';
   font-size: clamp(48px, 6vw, 80px);
@@ -53,7 +53,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(280px, 607px);
   gap: 48px;
   align-items: start;
-  margin-top: 48px;
+  margin-top: 100px;
 }
 
 .two-vs-two__battle-grid {
@@ -77,7 +77,7 @@
   flex-direction: column;
 }
 .two-vs-two__stage-label--top16 {
-  margin-top: 48px;
+  margin-top: 169px;
   margin-right: 30px;
   font-family: var(--font-another-tag);
   font-size: clamp(56px, 8vw, 96px);
@@ -188,16 +188,19 @@
 
 .two-vs-two__recall-inner {
   position: relative;
+  width: 1204px;
   z-index: 1;
   margin: 50px auto 0;
-  padding: 32px 40px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding: 32px 80px;
   border: 5px solid var(--ghost-white);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.15);
 }
 
 .two-vs-two__recall-title {
-  margin: 0 0 40px;
+  margin: 60px 0 40px;
   color: var(--ghost-white);
   font-family: 'SVN A Love Of Thunder';
   font-size: clamp(48px, 6vw, 75px);
@@ -253,6 +256,7 @@
 
 .two-vs-two__rules-list--recall {
   font-size: clamp(22px, 3vw, 34px);
+  margin-bottom: 60px;
 }
 
 .two-vs-two__final-section {
@@ -303,13 +307,13 @@
 
 .two-vs-two__deco--left {
   left: -2px;
-  top: 500px;
+  top: 600px;
   width: min(35%, 509px);
 }
 
 .two-vs-two__deco--right {
-  right: -120px;
-  top: 4200px;
+  right: -280px;
+  top: 4500px;
   width: min(60%, 870px);
 }
 
