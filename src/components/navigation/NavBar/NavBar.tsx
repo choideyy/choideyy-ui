@@ -13,6 +13,12 @@ const NAV_LINKS = [
 
 const MENU_LINKS = [{ label: 'HOME', to: '/' }, ...NAV_LINKS] as const;
 
+const REGISTRATION_FORM_URL = 'https://forms.gle/8RvPmCbiEgKXB48Z8';
+
+const openRegistrationForm = () => {
+  window.open(REGISTRATION_FORM_URL, '_blank', 'noopener,noreferrer');
+};
+
 type NavBarInnerProps = {
   isMenuOpen: boolean;
   onMenuToggle: () => void;
@@ -64,7 +70,9 @@ const NavBarInner = ({
       </ul>
     </nav>
 
-    <Button className="navbar__cta">ĐĂNG KÍ</Button>
+    <Button className="navbar__cta" onClick={openRegistrationForm}>
+      ĐĂNG KÍ
+    </Button>
   </div>
 );
 

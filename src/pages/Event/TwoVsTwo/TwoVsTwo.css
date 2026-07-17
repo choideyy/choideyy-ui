@@ -337,7 +337,7 @@
   width: fit-content;
   margin-left: auto; /* because the banner is on the right */
   /* margin-top: 30px; */
-  margin-bottom: 180px;
+  margin-bottom: 100px;
 }
 
 .two-vs-two__battle-star {
@@ -511,7 +511,7 @@
   .two-vs-two__prelim-grid,
   .two-vs-two__battle-grid {
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .two-vs-two__prelim-image,

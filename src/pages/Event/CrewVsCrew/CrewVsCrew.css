@@ -500,13 +500,14 @@
 
   .crew-vs-crew__theme-title {
     font-size: 24px;
+    margin-left: 10vw;
   }
 
   .crew-vs-crew__theme-label {
-    font-size: 14px;
+    font-size: 18px;
     -webkit-text-stroke: 4px rgba(143, 34, 49, 1);
     bottom: -12px;
-    right: -8px;
+    right: -12px;
   }
 
   .crew-vs-crew__requirements {

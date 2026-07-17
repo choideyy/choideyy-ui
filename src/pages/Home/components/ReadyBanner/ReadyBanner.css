@@ -78,14 +78,18 @@
   }
 
   .ready-banner__shadow {
-    height: 56px;
+    height: 48px;
+    width: 300px;
   }
 
   .ready-banner__bar {
-    height: 64px;
+    height: 48px;
+    width: 300px;
   }
 
   .ready-banner__text {
     font-size: 24px;
+    translate: -5% -120%;
+    -webkit-text-stroke-width: 0.2px;
   }
 }

@@ -283,6 +283,7 @@
   .event-details__banner {
     padding: 12px 20px;
     margin-bottom: 24px;
+    transform: rotate(3.5deg) translateX(20px);
   }
 
   .event-details__banner-text {
@@ -302,7 +303,7 @@
 
   .event-details__dancer {
     max-width: 100%;
-    mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+    transform: translate(0, 0);
   }
 
   .event-details__left {
@@ -348,14 +349,14 @@
   .event-details__date {
     font-size: 14px;
     padding: 8px 14px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   .event-details__venue {
     font-size: 13px;
     padding: 10px 14px;
-    width: 100%;
     box-sizing: border-box;
+    margin-left: 10vw;
   }
 
   .event-details__address {
