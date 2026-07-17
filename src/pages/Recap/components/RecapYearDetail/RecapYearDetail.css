@@ -59,6 +59,7 @@
   flex-direction: column;
   gap: 24px;
   margin-bottom: 80px;
+  z-index:1;
 }
 
 .recap-year__gallery-row {
@@ -122,12 +123,13 @@
 
 .recap-year__stats-deco {
   position: absolute;
-  right: -10%;
-  top: 50%;
+  right: 10px;
+  top: 500px;
   transform: translateY(-50%) rotate(180deg) scaleY(-1);
   width: min(60%, 600px);
   opacity: 0.5;
   pointer-events: none;
+  z-index: 0;
 }
 
 .recap-year__stats-cards {
@@ -137,7 +139,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
+  margin-top: 300px;
+  margin-bottom: 250px;
 }
 
 .recap-year__stat {
@@ -152,13 +156,23 @@
   background: var(--ghost-white);
   transform: rotate(-0.39deg);
   color: var(--charcoal-black);
+
+  left: 15%;
+  position: absolute; /* <-- this becomes the anchor for participants */
 }
 
 .recap-year__stat--participants {
   background: #3e96d0;
-  transform: rotate(-2.61deg);
   color: var(--ghost-white);
   box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+  
+
+  position: absolute;
+  left: 40%;   /* left edge of participant = right edge of interests */
+  top: 100px;       /* temporary anchor point, corrected below */
+  transform: translateY(-100%) rotate(-2.61deg);
+  /* translateY(-100%) pushes it up by its own height,
+     so its BOTTOM edge ends up at top:0 instead of its top edge */
 }
 
 .recap-year__stat-value {
@@ -171,7 +185,7 @@
 
 .recap-year__stat-label {
   margin: 0;
-  font-family: var(--font-inter);
+  font-family: var(--font-inter-regular);
   font-size: clamp(20px, 3vw, 40px);
   font-weight: 600;
   line-height: 1.2;

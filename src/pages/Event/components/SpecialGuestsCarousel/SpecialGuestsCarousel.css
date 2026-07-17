@@ -4,7 +4,7 @@
   z-index: 1;
   width: 100%;
   max-width: var(--page-max-width);
-  margin: 0 auto 20px;
+  margin: 0 auto 60px;
   padding: 0 90px 160px;
   box-sizing: border-box;
 }
