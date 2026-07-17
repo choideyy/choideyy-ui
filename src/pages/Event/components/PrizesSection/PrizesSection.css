@@ -117,17 +117,17 @@
 
   .event-prizes__title {
     font-size: 20px;
-    margin-bottom: 32px;
+    margin: 54px 0 24px;
   }
 
   .event-prizes__list {
-    gap: 16px;
     width: 100%;
+    gap: 4px;
+    margin-bottom: 24px;
   }
-
   .event-prizes__item {
-    width: 100%;
     padding: 12px 20px;
+    min-width: 250px;
   }
 
   .event-prizes__item-title,

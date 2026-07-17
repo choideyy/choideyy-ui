@@ -1,6 +1,6 @@
 .event-rules {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
@@ -121,7 +121,7 @@
 
 @media (max-width: 767px) {
   .event-rules {
-    padding: 0 20px 96px;
+    padding: 0 20px 20px;
   }
 
   .event-rules__title {

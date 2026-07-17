@@ -32,7 +32,7 @@ export const Event = () => {
         <RulesSection />
         <JudgesCarousel />
         <SpecialGuestsCarousel />
-        <SponsorsSection />
+        {/* <SponsorsSection /> */}
         <ScrollToTop />
       </main>
     </div>

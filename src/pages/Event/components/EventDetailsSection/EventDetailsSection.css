@@ -303,7 +303,7 @@
 
   .event-details__dancer {
     max-width: 100%;
-    transform: translate(0, 0);
+    transform: translate(0, -50px);
   }
 
   .event-details__left {
@@ -343,7 +343,7 @@
   }
 
   .event-details__meta {
-    margin-top: 32px;
+    margin-top: 24px;
   }
 
   .event-details__date {
@@ -353,14 +353,14 @@
   }
 
   .event-details__venue {
-    font-size: 13px;
+    font-size: 12px;
     padding: 10px 14px;
     box-sizing: border-box;
-    margin-left: 10vw;
+    margin-left: 2vw;
   }
 
   .event-details__address {
-    font-size: 13px;
-    margin-top: 12px;
+    font-size: 11px;
+    margin: 12px 0 0 24px;
   }
 }
