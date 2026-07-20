@@ -107,11 +107,14 @@
     left: 35%;
     font-size: 25px;
     -webkit-text-stroke: 8px rgba(143, 34, 49, 1);
+    top:160px;
   }
 
   .event-theme__star {
     width: 140px;
     margin-left: -20px;
+    margin-left: 5px;
+    margin-bottom: 30px;
   }
 
   .event-theme__title {
@@ -161,6 +164,7 @@
     width: 80px;
     left: -30px;
     top: 0;
+    
   }
 
   .event-theme__body {
