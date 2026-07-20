@@ -1,0 +1,71 @@
+.snackbar-host {
+  position: fixed;
+  inset-inline: 0;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: center;
+  padding-inline: max(16px, env(safe-area-inset-left))
+    max(16px, env(safe-area-inset-right));
+  pointer-events: none;
+  z-index: 1100;
+}
+
+.snackbar {
+  pointer-events: auto;
+  max-width: min(520px, 100%);
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  font-family: 'Inter', var(--font-inter-regular), sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.snackbar--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.snackbar--success {
+  background: rgba(26, 26, 27, 0.96);
+  border: 2px solid #b8f5c3;
+  color: #b8f5c3;
+}
+
+.snackbar--error {
+  background: rgba(26, 26, 27, 0.96);
+  border: 2px solid #ffb4b4;
+  color: #ffb4b4;
+}
+
+.snackbar--info {
+  background: rgba(26, 26, 27, 0.96);
+  border: 2px solid var(--ghost-white);
+  color: var(--ghost-white);
+}
+
+.snackbar--warning {
+  background: rgba(26, 26, 27, 0.96);
+  border: 2px solid var(--gold-accent);
+  color: var(--gold-accent);
+}
+
+.snackbar__message {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snackbar {
+    transition: opacity 0.01ms linear;
+    transform: none;
+  }
+
+  .snackbar--visible {
+    transform: none;
+  }
+}

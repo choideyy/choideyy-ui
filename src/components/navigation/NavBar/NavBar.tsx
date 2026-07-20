@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logoChoideyy from '../../../assets/figma/logo-choideyy.png';
+import { env, openGoogleForm } from '../../../config/env';
 import { Button } from '../../ui/Button';
 import './NavBar.css';
 
@@ -12,12 +13,6 @@ const NAV_LINKS = [
 ] as const;
 
 const MENU_LINKS = [{ label: 'HOME', to: '/' }, ...NAV_LINKS] as const;
-
-const REGISTRATION_FORM_URL = 'https://forms.gle/8RvPmCbiEgKXB48Z8';
-
-const openRegistrationForm = () => {
-  window.open(REGISTRATION_FORM_URL, '_blank', 'noopener,noreferrer');
-};
 
 type NavBarInnerProps = {
   isMenuOpen: boolean;
@@ -70,7 +65,12 @@ const NavBarInner = ({
       </ul>
     </nav>
 
-    <Button className="navbar__cta" onClick={openRegistrationForm}>
+    <Button
+      className="navbar__cta"
+      onClick={openGoogleForm}
+      disabled={!env.googleFormUrl}
+      type="button"
+    >
       ĐĂNG KÍ
     </Button>
   </div>
