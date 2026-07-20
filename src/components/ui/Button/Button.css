@@ -22,8 +22,13 @@
   text-transform: uppercase;
 }
 
-.btn--outline:hover {
+.btn--outline:hover:not(:disabled) {
   background: rgba(248, 248, 255, 0.08);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 /* Mobile navbar CTA: 0–767px */

@@ -68,6 +68,13 @@
   font-weight: 700;
 }
 
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form button {
+  font-family: 'Inter', var(--font-inter-regular), sans-serif;
+}
+
 .contact-form__field input,
 .contact-form__field textarea {
   width: 100%;
@@ -75,10 +82,25 @@
   border-radius: 20px;
   background: rgba(217, 217, 217, 0.5);
   color: var(--charcoal-black);
-  font-family: var(--font-inter);
   font-size: 18px;
   padding: 20px 24px;
   box-sizing: border-box;
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+  font-family: 'Inter', var(--font-inter-regular), sans-serif;
+}
+
+.contact-form__field input:-webkit-autofill,
+.contact-form__field input:-webkit-autofill:hover,
+.contact-form__field input:-webkit-autofill:focus,
+.contact-form__field textarea:-webkit-autofill,
+.contact-form__field textarea:-webkit-autofill:hover,
+.contact-form__field textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--charcoal-black);
+  font-family: 'Inter', var(--font-inter-regular), sans-serif;
+  transition: background-color 9999s ease-out;
 }
 
 .contact-form__field--textarea textarea {
@@ -102,7 +124,6 @@
   background: rgba(184, 154, 89, 0.8);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   color: rgba(26, 26, 27, 0.8);
-  font-family: 'DC Monument Extended', var(--font-neue-plak);
   font-size: 32px;
   font-weight: 400;
   cursor: pointer;
@@ -117,6 +138,33 @@
 .contact-form__submit:focus-visible {
   outline: 2px solid var(--ghost-white);
   outline-offset: 4px;
+}
+
+.contact-form__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.contact-form__field-error {
+  color: #ffb4b4;
+  font-family: 'Inter', var(--font-inter-regular), sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.contact-form__field--invalid input,
+.contact-form__field--invalid textarea {
+  outline: 2px solid #ffb4b4;
+  outline-offset: 2px;
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 @media (max-width: 1023px) {
