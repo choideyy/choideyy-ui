@@ -136,8 +136,8 @@ const guestsCarousel = useLoopCarousel(guestCount);
         </section>
 
         <section className="recap-year__judges" aria-labelledby="recap-judges">
-          <div className="recap-year__section-header">
-            <h2 id="recap-judges">JUDGES</h2>
+          <div className="recap-judges__header">
+            <h2 id="recap-judges" className='recap-year__judges-title'>JUDGES</h2>
             {judgeCount > 0 && (
               <CarouselControls
                 onPrevious={judgesCarousel.goToPrevious}
@@ -217,8 +217,8 @@ const guestsCarousel = useLoopCarousel(guestCount);
         </section>
         {guestCount >0 &&(
         <section className="recap-year__guests" aria-labelledby="recap-guests">
-          <div className="recap-year__section-header">
-            <h2 id="recap-guests">SPECIAL GUESTS</h2>
+          <div className="recap-guest__header">
+            <h2 id="recap-guests" className='recap-year__guests-title'>SPECIAL GUESTS</h2>
             {guestCount > 0 && (
               <CarouselControls
                 onPrevious={guestsCarousel.goToPrevious}
