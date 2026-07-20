@@ -123,7 +123,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 30px;
   padding: 40px 0 0 0;
   margin-top: 300px;
   margin-bottom: 250px;
@@ -132,7 +132,7 @@
 .recap-year__stat {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: px;
   padding: 32px 40px;
   min-width: min(100%, 520px);
 }
@@ -141,7 +141,6 @@
   background: var(--ghost-white);
   transform: rotate(-0.39deg);
   color: var(--charcoal-black);
-
   left: 15%;
   position: absolute; /* <-- this becomes the anchor for participants */
 }
@@ -151,7 +150,7 @@
   color: var(--ghost-white);
   box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: 40%;   /* left edge of participant = right edge of interests */
+  left: 45%;   /* left edge of participant = right edge of interests */
   top: 100px;       /* temporary anchor point, corrected below */
   transform: translateY(-100%) rotate(-2.61deg);
   /* translateY(-100%) pushes it up by its own height,
@@ -510,14 +509,16 @@
   pointer-events: none;
 }
 
-.recap-year[data-year='2025'] .recap-year__winner--champion .recap-year__winner-banner {
-  background: var(--ghost-white);
-  color: var(--charcoal-black);
+.recap-year[data-year='2025'] .recap-year__winner--seven-to-smoke .recap-year__winner-banner {
+  background: var(--charcoal-black);
+  color: var(--ghost-white);
+  margin-left: 400px;
 }
 
 .recap-year[data-year='2025'] .recap-year__winner--runner-up .recap-year__winner-banner {
   background: var(--gold-accent);
   color: var(--charcoal-black);
+  margin-left: -30px;
 }
 
 .recap-year__scroll-top {
