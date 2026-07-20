@@ -17,9 +17,9 @@ export const ThemeSection = () => {
       <div className="event-theme__body">
         <div className="event-theme__text">
           <h2 id="event-theme-heading" className="event-theme__title">
-            Học<br/>đường
+            Học <br/>đường
           </h2>
-          <p className="event-theme__subtitle">Điểm bắt đầu<br/>của đam mê</p>
+          <p className="event-theme__subtitle">Điểm bắt đầu <br/>của đam mê</p>
         </div>
         <div className="event-theme__content">
           <p>

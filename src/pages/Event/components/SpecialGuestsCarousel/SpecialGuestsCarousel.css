@@ -4,8 +4,7 @@
   z-index: 1;
   width: 100%;
   max-width: var(--page-max-width);
-  margin: 0 auto;
-  margin-bottom: 400px;
+  margin: 0 auto 60px;
   padding: 0 90px 160px;
   box-sizing: border-box;
 }
@@ -72,11 +71,13 @@
 
 @media (max-width: 767px) {
   .event-guests {
-    padding: 40px 20px 0;
-    top: 20px;
+    padding: 20px;
   }
 
-  
+  .event-guests__header {
+    margin-bottom: 24px;
+  }
+
   .event-guests__title {
     font-size: 20px;
   }
