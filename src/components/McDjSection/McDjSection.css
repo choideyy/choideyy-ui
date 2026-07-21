@@ -1,0 +1,132 @@
+.mc-dj-section {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mc-dj-section__title {
+  margin: 0 0 48px;
+  text-align: center;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mc-dj-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mc-dj-section__card {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.mc-dj-section__deco {
+  position: absolute;
+  pointer-events: none;
+}
+
+.mc-dj-section--recap {
+  margin-bottom: 240px;
+}
+
+.mc-dj-section--recap .mc-dj-section__card {
+  max-height: 700px;
+}
+
+.mc-dj-section--recap .mc-dj-section__deco--star {
+  left: -5%;
+  bottom: 65%;
+  width: min(300px, 30vw);
+  opacity: 0.8;
+}
+
+.mc-dj-section--recap .mc-dj-section__deco--cassette {
+  right: 0;
+  bottom: -35%;
+  width: min(400px, 35vw);
+  opacity: 0.9;
+  transform: rotate(-7.39deg);
+}
+
+.mc-dj-section--event {
+  position: relative;
+  top: 120px;
+  z-index: 1;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 90px 320px;
+}
+
+.mc-dj-section--event .mc-dj-section__title {
+  margin-bottom: 65px;
+  text-transform: uppercase;
+}
+
+.mc-dj-section--event .mc-dj-section__card {
+  max-height: 600px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1023px) {
+  .mc-dj-section--event {
+    top: 80px;
+    padding: 0 33px 240px;
+  }
+
+  .mc-dj-section--event .mc-dj-section__title {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 40px;
+  }
+
+  .mc-dj-section--event .mc-dj-section__card {
+    min-height: 240px;
+  }
+
+  .mc-dj-section--recap {
+    margin-bottom: 96px;
+  }
+
+  .mc-dj-section__card {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mc-dj-section--event {
+    top: 48px;
+    padding: 0 20px 180px;
+  }
+
+  .mc-dj-section--event .mc-dj-section__title {
+    font-size: clamp(28px, 9vw, 36px);
+    margin-bottom: 28px;
+  }
+
+  .mc-dj-section__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mc-dj-section--event .mc-dj-section__card,
+  .mc-dj-section__card {
+    min-height: 200px;
+    max-width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .mc-dj-section--recap {
+    margin-bottom: 72px;
+  }
+
+  .mc-dj-section--recap .mc-dj-section__deco--star {
+    width: min(180px, 40vw);
+  }
+}

@@ -19,18 +19,20 @@
 .organizer-partner-card__inner {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 48px;
   width: 100%;
 }
 
 .organizer-partner-card__logo-wrap {
   position: relative;
-  flex: 0 0 min(492px, 100%);
-  width: min(492px, 100%);
+  flex: 0 0 min(300px, 100%);
+  width: min(300px, 100%);
   max-width: 492px;
   overflow: visible;
   cursor: zoom-in;
   z-index: 1;
+  transition: transform 0.35s ease;
 }
 
 .organizer-partner-card__logo-stage {
@@ -180,29 +182,38 @@
 
   .organizer-partner-card.is-active .organizer-partner-card__inner {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     align-items: flex-start;
     gap: 48px;
     width: 100%;
   }
 
-  .organizer-partner-card--partnerA.is-active .organizer-partner-card__inner {
-    flex-direction: row;
+  .organizer-partner-card--partnerB.is-active .organizer-partner-card__description {
+    order: 1;
   }
 
-  .organizer-partner-card--partnerB.is-active .organizer-partner-card__inner {
-    flex-direction: row-reverse;
+  .organizer-partner-card--partnerB.is-active .organizer-partner-card__logo-wrap {
+    order: 2;
+    margin-left: auto;
   }
 
   .organizer-partner-card.is-active .organizer-partner-card__logo-wrap {
-    flex: 0 0 492px;
-    width: 492px;
-    max-width: 492px;
+    flex: 0 0 min(300px, 100%);
+    width: min(300px, 100%);
+    max-width: 300px;
     margin: 0;
   }
 
+  .organizer-partner-card--partnerA.is-active .organizer-partner-card__logo-wrap {
+    transform: translateX(-50px);
+  }
+
+  .organizer-partner-card--partnerB.is-active .organizer-partner-card__logo-wrap {
+    transform: translateX(50px);
+  }
+
   .organizer-partner-card.is-active .organizer-partner-card__description {
-    flex: 1 1 0;
+    flex: 2 1 0;
     min-width: 0;
     align-self: flex-start;
   }
@@ -233,6 +244,7 @@
     width: min(360px, 100%);
     max-width: 100%;
     margin: 0 auto;
+    transform: none;
   }
 
   .organizer-partner-card__description p,
@@ -274,6 +286,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .organizer-partner-card,
+  .organizer-partner-card__logo-wrap,
   .organizer-partner-card__logo,
   .organizer-partner-card__logo-hint,
   .organizer-partner-card__description {

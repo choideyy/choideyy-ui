@@ -1,17 +1,25 @@
+import { Link } from 'react-router-dom';
 import type { CSSProperties } from 'react';
 import stickerBg from '../../../../assets/figma/sticker-bg.png';
 import stickerDeco from '../../../../assets/figma/sticker-deco.png';
 import './StickerNav.css';
 
+const STICKER_ROUTES = {
+  contact: '/contact',
+  event: '/event',
+  about: '/about-us',
+  recap: '/recap',
+} as const;
+
 type StickerItem = {
-  id: string;
+  id: keyof typeof STICKER_ROUTES;
   label: string;
-  href: string;
+  ariaLabel: string;
   fontFamily: string;
   fontSize: number;
   stickerWidth: number;
   labelMaxWidth: number;
-  labelOffsetX?: number; // in px, at design scale (481-wide sticker)
+  labelOffsetX?: number;
   labelOffsetY?: number;
   color: string;
   textTransform?: 'lowercase' | 'uppercase' | 'none';
@@ -28,10 +36,10 @@ const STICKERS: StickerItem[] = [
   {
     id: 'contact',
     label: 'contact',
-    href: '#contact',
+    ariaLabel: 'Navigate to Contact page',
     fontFamily: 'var(--font-aerosoldier)',
     fontSize: 96,
-    stickerWidth: 481,
+    stickerWidth: 450,
     labelMaxWidth: 287,
     color: 'var(--black)',
     textTransform: 'lowercase',
@@ -42,45 +50,45 @@ const STICKERS: StickerItem[] = [
   {
     id: 'event',
     label: 'event',
-    href: '#event',
+    ariaLabel: 'Navigate to Event page',
     fontFamily: 'var(--font-slopdogz)',
     fontSize: 180,
-    stickerWidth: 481,
+    stickerWidth: 450,
     labelMaxWidth: 319,
     color: 'var(--charcoal-black)',
     textTransform: 'lowercase',
     rotation: -15.7,
     stickerRotation: 2.23,
-    position: { top: '25.6%', left: '19.2%' },
+    position: { top: '35.6%', left: '16.2%' },
   },
   {
     id: 'about',
     label: 'about us',
-    href: '#about',
+    ariaLabel: 'Navigate to About Us page',
     fontFamily: 'var(--font-slopdogz)',
     fontSize: 128,
-    stickerWidth: 481,
+    stickerWidth: 450,
     labelMaxWidth: 272,
     color: 'var(--black)',
     textTransform: 'lowercase',
     rotation: 6.09,
     stickerRotation: 4.93,
-    position: { top: '6.7%', left: '45.2%' },
+    position: { top: '6.7%', left: '44.2%' },
   },
   {
     id: 'recap',
     label: 'recap',
-    href: '#recap',
+    ariaLabel: 'Navigate to Recap page',
     fontFamily: 'var(--font-another-tag)',
     fontSize: 150,
-    stickerWidth: 481,
+    stickerWidth: 450,
     labelMaxWidth: 225,
     color: 'var(--charcoal-black)',
     textTransform: 'uppercase',
     textShadow: '1px 2px 4px rgba(0, 0, 0, 0.25)',
     rotation: -1.19,
     stickerRotation: -5.68,
-    position: { top: '27.5%', left: '60.1%' },
+    position: { top: '32.5%', left: '60.1%' },
     labelOffsetY: 25,
   },
 ];
@@ -90,8 +98,8 @@ const stickerStyle = (sticker: StickerItem): CSSProperties =>
     '--sticker-width': sticker.stickerWidth,
     '--label-font-size': sticker.fontSize,
     '--label-max-width': sticker.labelMaxWidth,
-    '--offset-x': `${(sticker.labelOffsetX ?? 0)}px`,
-    '--offset-y': `${(sticker.labelOffsetY ?? 0)}px`,
+    '--offset-x': `${sticker.labelOffsetX ?? 0}px`,
+    '--offset-y': `${sticker.labelOffsetY ?? 0}px`,
     top: sticker.position.top,
     left: sticker.position.left,
   }) as CSSProperties;
@@ -106,15 +114,16 @@ export const StickerNav = () => {
           </div>
 
           {STICKERS.map((sticker) => (
-            <a
+            <Link
               key={sticker.id}
-              href={sticker.href}
+              to={STICKER_ROUTES[sticker.id]}
               className={`sticker-nav__item${
                 sticker.id === 'event' ? ' sticker-nav__item--event' : ''
               }${
                 sticker.id === 'contact' ? ' sticker-nav__item--contact' : ''
-                }`}
+              }`}
               style={stickerStyle(sticker)}
+              aria-label={sticker.ariaLabel}
             >
               <div
                 className="sticker-nav__sticker"
@@ -128,6 +137,7 @@ export const StickerNav = () => {
                 />
                 <span
                   className="sticker-nav__label"
+                  aria-hidden="true"
                   style={{
                     fontFamily: sticker.fontFamily,
                     color: sticker.color,
@@ -139,7 +149,7 @@ export const StickerNav = () => {
                   {sticker.label}
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

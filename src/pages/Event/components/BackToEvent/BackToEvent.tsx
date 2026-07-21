@@ -3,7 +3,7 @@ import './BackToEvent.css';
 
 export const BackToEvent = () => {
   return (
-    <Link to="/event" className="back-to-event">
+    <Link to="/event#rules" className="back-to-event">
       ← Quay lại
     </Link>
   );

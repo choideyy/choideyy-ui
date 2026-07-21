@@ -1,4 +1,5 @@
 import eventBg from '../../assets/figma/event/event-bg.png';
+import { DEFAULT_MC_DJ_MEMBERS, McDjSection } from '../../components/McDjSection';
 import { EventDetailsSection } from './components/EventDetailsSection';
 import { FacebookSection } from './components/FacebookSection';
 import { JudgesCarousel } from './components/JudgesCarousel';
@@ -32,6 +33,7 @@ export const Event = () => {
         <RulesSection />
         <JudgesCarousel />
         <SpecialGuestsCarousel />
+        <McDjSection variant="event" members={DEFAULT_MC_DJ_MEMBERS} />
         {/* <SponsorsSection /> */}
         <ScrollToTop />
       </main>

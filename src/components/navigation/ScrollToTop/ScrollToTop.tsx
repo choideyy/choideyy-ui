@@ -7,11 +7,17 @@ export const ScrollToTop = () => {
   useEffect(() => {
     if (hash) {
       const id = hash.replace('#', '');
-      const target = document.getElementById(id);
 
-      if (target) {
-        target.scrollIntoView();
-      }
+      const scrollToTarget = () => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: 'auto',
+          block: 'start',
+        });
+      };
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(scrollToTarget);
+      });
 
       return;
     }

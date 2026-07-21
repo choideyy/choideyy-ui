@@ -28,6 +28,7 @@ export const OrganizerPartnerCard = ({
         event.preventDefault();
         onToggle();
       }
+
     },
     [onToggle],
   );
