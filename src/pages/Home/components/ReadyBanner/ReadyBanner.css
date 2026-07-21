@@ -91,11 +91,14 @@
   }
 
   .ready-banner__shadow {
+    width: 304px;
     height: 48px;
     translate: -50% -85%;
+    left: 55%
   }
 
   .ready-banner__bar {
+    width: 305px;
     height: 48px;
     translate: -50% -120%;
   }
@@ -108,8 +111,7 @@
   top: 50%;
   transform: translate(-50%, -50%) rotate(-2.5deg);
 
-  color: var(--ghost-white);
-  font-family: 'SVN A Love of Thunder';
+
   font-size: 24px;
   white-space: nowrap;
   }
