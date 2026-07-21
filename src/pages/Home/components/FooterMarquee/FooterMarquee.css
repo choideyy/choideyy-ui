@@ -55,6 +55,13 @@
 }
 
 /* Tablet + mobile: 0–1023px */
+@media (max-width: 1280px) {
+  .footer-marquee__group {
+    gap: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 1023px) {
   .footer-marquee__group {
     gap: 32px;
