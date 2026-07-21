@@ -202,11 +202,11 @@
 }
 
 
-.recap-year__mc-dj {
+/* .recap-year__mc-dj {
   position: relative;
   width: 100%;
   margin-bottom: 120px;
-}
+} */
 
 .recap-judges,
 .recap-guest{
@@ -452,8 +452,7 @@
 
 
 
-.recap-year__guest-placeholder,
-.recap-year__mc-dj-placeholder {
+.recap-year__guest-placeholder {
   flex: 1;
   min-height: 400px;
   background: #c4c4c4;
@@ -468,8 +467,26 @@
   pointer-events: none;
 }
 
+.recap-year__mc-dj {
+  position: relative;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto; /* centers it, since it's no longer full-width */
+  margin-bottom: 120px;
+  box-sizing: border-box;
+  padding-left: 100px;
+}
+
+.recap-year__mc-dj-card {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 578 / 689; /* preserves your intended proportions, but scales responsively */
+  object-fit: cover;
+}
+
 .recap-year__mc-dj h2 {
-  margin: 0 0 48px;
+  margin: 0 0 80px;
+  margin-right: 80px;
   text-align: center;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
@@ -480,20 +497,14 @@
 .recap-year__mc-dj-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 8px;
 }
 
-.recap-year__mc-dj-card {
-  width: 100%;
-  height: auto;
-  min-height: 400px;
-  object-fit: cover;
-}
 
 .recap-year__deco-star {
   position: absolute;
   left: -5%;
-  bottom: 10%;
+  bottom: 550px;
   width: min(300px, 30vw);
   opacity: 0.8;
   pointer-events: none;
@@ -501,8 +512,8 @@
 
 .recap-year__deco-cassette {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -40px;
+  bottom: -250px;
   width: min(400px, 35vw);
   opacity: 0.9;
   transform: rotate(-7.39deg);
@@ -512,7 +523,7 @@
 .recap-year[data-year='2025'] .recap-year__winner--seven-to-smoke .recap-year__winner-banner {
   background: var(--charcoal-black);
   color: var(--ghost-white);
-  margin-left: 400px;
+  margin-left: 00px;
 }
 
 .recap-year[data-year='2025'] .recap-year__winner--runner-up .recap-year__winner-banner {
