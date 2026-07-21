@@ -241,7 +241,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .organizer-partner-card {
     --partner-logo-height: 280px;
 

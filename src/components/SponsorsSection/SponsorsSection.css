@@ -206,7 +206,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .sponsors-section--event {
     padding: 0 20px 0;
     overflow-x: clip;

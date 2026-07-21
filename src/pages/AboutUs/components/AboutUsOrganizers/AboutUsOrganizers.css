@@ -44,7 +44,7 @@
   align-items: flex-start;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-us-organizers {
     padding: 0 20px 80px;
     gap: 48px;

@@ -52,7 +52,7 @@
   outline-offset: 4px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .contact__scroll-top {
     right: 20px;
     bottom: 140px;

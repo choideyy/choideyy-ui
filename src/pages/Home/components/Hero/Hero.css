@@ -19,7 +19,7 @@
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero__image-wrap {
     aspect-ratio: 4 / 4;
   }

@@ -274,7 +274,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .event-details {
     padding: 40px 20px 0;
     overflow-x: clip;

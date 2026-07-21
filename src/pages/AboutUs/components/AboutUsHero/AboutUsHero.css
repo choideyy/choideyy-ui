@@ -14,7 +14,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-us-hero__banner {
     min-height: 200px;
   }

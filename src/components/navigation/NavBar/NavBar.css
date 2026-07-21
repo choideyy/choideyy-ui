@@ -203,7 +203,7 @@
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar__inner {
     padding: 10px 24px;
   }

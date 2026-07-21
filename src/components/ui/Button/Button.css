@@ -32,7 +32,7 @@
 }
 
 /* Mobile navbar CTA: 0–767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar__cta.btn--outline {
     width: 58px;
     height: 26px;

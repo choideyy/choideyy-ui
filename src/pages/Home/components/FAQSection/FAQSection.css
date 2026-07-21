@@ -18,6 +18,10 @@
   pointer-events: none;
   z-index: 0;
 }
+
+.torn-edge-seam--mobile{
+  display: none;
+}
 .faq__fill {
   position: absolute;
   top: 50px; /* wherever the seam's wavy shape visually ends — tune to match */
@@ -195,7 +199,7 @@
   .faq__question-text {
     font-size: 30px;
   }
-
+  
   .faq__toggle {
     font-size: 48px;
   }
@@ -207,10 +211,16 @@
   .faq__answer p {
     font-size: 24px;
   }
+  .torn-edge-seam--desktop{
+    top:-99.5px;
+  }
+  .faq__torn-paper{
+    top: -25px;
+  }
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .faq__vinyl,
   .faq__deco {
     display: none;
@@ -247,4 +257,17 @@
   .faq__answer p {
     font-size: 11px;
   }
+  .faq__torn-paper-rotator {
+    bottom: 30px;
 }
+  .torn-edge-seam--desktop {
+        display: none;
+    }
+
+  .torn-edge-seam--mobile {
+      display: block;
+      top: -45px;
+      padding: 0 0 55px;
+  }
+}
+

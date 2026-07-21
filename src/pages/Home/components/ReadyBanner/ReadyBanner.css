@@ -77,24 +77,40 @@
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .ready-banner {
+    width: 100%;
     height: 90px;
+  }
+
+  .ready-banner__shadow ,
+  .ready-banner__bar{
+    height: 48px;
+    width: 300px;
+    left: 50%;
   }
 
   .ready-banner__shadow {
     height: 48px;
-    width: 300px;
+    translate: -50% -85%;
   }
 
   .ready-banner__bar {
     height: 48px;
-    width: 300px;
+    translate: -50% -120%;
   }
 
   .ready-banner__text {
-    font-size: 24px;
-    translate: -5% -120%;
-    -webkit-text-stroke-width: 0.2px;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-2.5deg);
+
+  color: var(--ghost-white);
+  font-family: 'SVN A Love of Thunder';
+  font-size: 24px;
+  white-space: nowrap;
   }
 }

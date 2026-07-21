@@ -89,7 +89,7 @@
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .countdown__number {
     font-size: 28px;
     min-width: 52px;

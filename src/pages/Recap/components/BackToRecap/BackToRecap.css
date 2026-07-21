@@ -23,7 +23,7 @@
   outline-offset: 4px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .back-to-recap {
     font-size: 16px;
     padding: 10px 18px;

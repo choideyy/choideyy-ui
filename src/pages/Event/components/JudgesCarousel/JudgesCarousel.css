@@ -130,7 +130,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .event-judges {
     padding: 0 0 20px;
     overflow-x: clip;
