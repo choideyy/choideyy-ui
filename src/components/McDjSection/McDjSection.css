@@ -34,11 +34,33 @@
 }
 
 .mc-dj-section--recap {
-  margin-bottom: 240px;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  margin-bottom: 120px;
+  padding-left: 100px;
+}
+
+.mc-dj-section--recap .mc-dj-section__title {
+  margin: 0 0 80px;
+  margin-right: 80px;
+  text-align: center;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+}
+
+.mc-dj-section--recap .mc-dj-section__grid {
+  gap: 8px;
 }
 
 .mc-dj-section--recap .mc-dj-section__card {
-  max-height: 700px;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 578 / 689;
+  object-fit: cover;
+  min-height: 0;
+  max-height: none;
 }
 
 .mc-dj-section--recap .mc-dj-section__deco--star {
