@@ -20,6 +20,7 @@
   --font-another-tag: 'Another Tag', 'Bangers', cursive;
 
   --page-max-width: 1440px;
+  --navbar-height: 100px;
 
   --bp-desktop: 1281px;
   --bp-tablet-max: 1280px;
