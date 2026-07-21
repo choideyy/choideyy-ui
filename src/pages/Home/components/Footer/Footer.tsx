@@ -4,14 +4,18 @@ import socialFacebook from '../../../../assets/figma/social-facebook.png';
 import socialInstagram from '../../../../assets/figma/social-instagram.png';
 import socialYoutube from '../../../../assets/figma/social-youtube.png';
 import socialTiktok from '../../../../assets/figma/social-tiktok.png';
+import {
+  FOOTER_SOCIAL_LINKS,
+  SOCIAL_LINKS,
+} from '../../../../config/socialLinks';
 import './Footer.css';
 
-const SOCIAL_LINKS = [
-  { name: 'Facebook', icon: socialFacebook, href: '#' },
-  { name: 'Instagram', icon: socialInstagram, href: '#' },
-  { name: 'YouTube', icon: socialYoutube, href: '#' },
-  { name: 'TikTok', icon: socialTiktok, href: '#' },
-] as const;
+const SOCIAL_ICONS = {
+  facebook: socialFacebook,
+  instagram: socialInstagram,
+  youtube: socialYoutube,
+  tiktok: socialTiktok,
+} as const;
 
 export const Footer = () => {
 
@@ -39,14 +43,21 @@ export const Footer = () => {
         </div>
 
         <div className="footer__social">
-          {SOCIAL_LINKS.map((link) => (
+          {FOOTER_SOCIAL_LINKS.map((link) => (
             <a
-              key={link.name}
-              href={link.href}
+              key={link.platform}
+              href={SOCIAL_LINKS[link.platform]}
               className="footer__social-link"
-              aria-label={link.name}
+              aria-label={link.label}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img src={link.icon} alt="" width={93} height={93} />
+              <img
+                src={SOCIAL_ICONS[link.platform]}
+                alt=""
+                width={93}
+                height={93}
+              />
             </a>
           ))}
         </div>

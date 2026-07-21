@@ -1,4 +1,5 @@
 import scrollTopIcon from '../../../../assets/figma/scroll-top.svg';
+import { McDjSection } from '../../../../components/McDjSection';
 import { SponsorsSection } from '../../../../components/SponsorsSection';
 import type { RecapYearData } from '../../types/recapYearData';
 import { BackToRecap } from '../BackToRecap';
@@ -261,40 +262,19 @@ const guestsCarousel = useLoopCarousel(guestCount);
           )}
         </section>)
         }
-        {data.mcDjImages.length>0 &&(
-        <section className="recap-year__mc-dj" aria-labelledby="recap-mc-dj">
-          <h2 id="recap-mc-dj">MC &amp; DJ</h2>
-          <div className="recap-year__mc-dj-grid">
-            {data.mcDjImages.length > 0 ? (
-              data.mcDjImages.map((image, index) => (
-                <img
-                  key={`mc-dj-${index}`}
-                  src={image}
-                  alt={`MC & DJ ${index + 1}`}
-                  className="recap-year__mc-dj-card"
-                />
-              ))
-            ) : (
-              <>
-                <div className="recap-year__mc-dj-placeholder" />
-                <div className="recap-year__mc-dj-placeholder" />
-              </>
-            )}
-          </div>
-          <img
-            className="recap-year__deco-star"
-            src={data.decorations.starBurst}
-            alt=""
-            aria-hidden="true"
+        {data.mcDjImages.length > 0 && (
+          <McDjSection
+            variant="recap"
+            headingId="recap-mc-dj"
+            members={data.mcDjImages.map((image, index) => ({
+              id: `mc-dj-${index}`,
+              image,
+              alt: `MC & DJ ${index + 1}`,
+            }))}
+            decorationSrc={data.decorations.starBurst}
+            secondaryDecorationSrc={data.decorations.cassette}
           />
-          <img
-            className="recap-year__deco-cassette"
-            src={data.decorations.cassette}
-            alt=""
-            aria-hidden="true"
-          />
-        </section>)
-        }
+        )}
 
         {data.sponsors.length > 0 && (
           <SponsorsSection

@@ -19,7 +19,11 @@ const RULES = [
 
 export const RulesSection = () => {
   return (
-    <section className="event-rules" aria-labelledby="event-rules-heading">
+    <section
+      id="rules"
+      className="event-rules"
+      aria-labelledby="event-rules-heading"
+    >
       <div className="event-rules__deco-layer" aria-hidden="true">
         <img className="event__bottom-deco" src={bottomDeco} alt="" />
       </div>
