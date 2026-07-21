@@ -170,7 +170,7 @@
 }
 
 /* Tablet + mobile: 0–1023px */
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .navbar__inner {
     display: grid;
     grid-template-columns: 1fr auto 1fr;

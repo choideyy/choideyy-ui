@@ -98,21 +98,6 @@
   animation: gallery-scroll-right var(--gallery-speed) linear infinite;
 }
 
-.recap-year__see-more {
-  padding: 20px 48px;
-  border: 3px solid var(--ghost-white);
-  background: transparent;
-  color: var(--white);
-  font-family: var(--font-inter);
-  font-size: clamp(24px, 4vw, 36px);
-  font-weight: 800;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.recap-year__see-more:hover {
-  opacity: 0.85;
-}
 
 .recap-year__stats {
   position: relative;
@@ -124,9 +109,9 @@
 .recap-year__stats-deco {
   position: absolute;
   right: 50px;
-  top: 800px;
+  top: 900px;
   transform: translateY(-50%) rotate(180deg) scaleY(-1) scale(1.5);
-  width: min(60%, 600px);
+  width: min(60%, 700px);
   opacity: 0.5;
   pointer-events: none;
   z-index: 0;
@@ -138,7 +123,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 30px;
   padding: 40px 0 0 0;
   margin-top: 300px;
   margin-bottom: 250px;
@@ -147,7 +132,7 @@
 .recap-year__stat {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: px;
   padding: 32px 40px;
   min-width: min(100%, 520px);
 }
@@ -156,7 +141,6 @@
   background: var(--ghost-white);
   transform: rotate(-0.39deg);
   color: var(--charcoal-black);
-
   left: 15%;
   position: absolute; /* <-- this becomes the anchor for participants */
 }
@@ -165,10 +149,8 @@
   background: #3e96d0;
   color: var(--ghost-white);
   box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
-  
-
   position: absolute;
-  left: 40%;   /* left edge of participant = right edge of interests */
+  left: 45%;   /* left edge of participant = right edge of interests */
   top: 100px;       /* temporary anchor point, corrected below */
   transform: translateY(-100%) rotate(-2.61deg);
   /* translateY(-100%) pushes it up by its own height,
@@ -236,7 +218,7 @@
 .recap-year__guests-viewport {
   overflow: hidden;
   width: 100%;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .recap-judges__header,
@@ -341,11 +323,11 @@
 }
 .recap-year__winners {
   width: 100%;
-  margin-bottom: 120px;
+  margin-bottom: 250px;
 }
 
 .recap-year__winners-title {
-  margin: 0 0 64px;
+  margin: 0 0 100px;
   text-align: center;
   color: var(--white);
   font-family: var(--font-slopdogz);
@@ -361,7 +343,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 200px;
 }
 
 .recap-year__winner {
@@ -374,62 +356,76 @@
 .recap-year__winner-photo {
   width: min(1105px, 100%);
   height: auto;
+  z-index: 0;
   object-fit: cover;
   transform: rotate(var(--winner-rotation, -1.9deg));
 }
 
 .recap-year__winner--champion .recap-year__winner-photo {
   --winner-rotation: -1.9deg;
+  margin-left: -150px;
 }
 
 .recap-year__winner--runner-up .recap-year__winner-photo {
   --winner-rotation: 3.01deg;
+  margin-right: -120px;
 }
 
 .recap-year__winner--best-performance .recap-year__winner-photo {
   --winner-rotation: -1.41deg;
+  margin-left: 80px;
 }
 
 .recap-year__winner--cypher .recap-year__winner-photo,
 .recap-year__winner--seven-to-smoke .recap-year__winner-photo {
   --winner-rotation: 3.2deg;
+  margin-left: 170px;
 }
 
 .recap-year__winner-banner {
   display: flex;
+  z-index: 1;
   align-items: center;
   gap: 16px;
   margin-top: -48px;
-  padding: 24px 32px;
-  transform: rotate(-0.11deg);
-  box-shadow: 4px 4px 10px rgba(248, 248, 255, 0.5);
+  padding: 10px 30px;
+  /* transform: rotate(-0.11deg); */
+  box-shadow: 2px 3px 5px rgba(248, 248, 255, 0.5);
 }
 
 .recap-year__winner--champion .recap-year__winner-banner {
   background: #991b2d;
+  margin-top: -20px;
   color: var(--ghost-white);
+  transform: rotate(-0.113deg);
+  margin-right: -200px;
 }
 
 .recap-year__winner--runner-up .recap-year__winner-banner {
   background: var(--ghost-white);
   color: var(--charcoal-black);
+  transform: rotate(-0.6deg);
+  margin-left:-400px ;
 }
 
 .recap-year__winner--best-performance .recap-year__winner-banner {
   background: var(--gold-accent);
   color: var(--charcoal-black);
+  margin-top: 10px;
 }
 
 .recap-year__winner--cypher .recap-year__winner-banner,
 .recap-year__winner--seven-to-smoke .recap-year__winner-banner {
   background: var(--charcoal-black);
   color: var(--ghost-white);
-  box-shadow: 2px 0 10px rgba(248, 248, 255, 0.5);
+  transform: rotate(-2.027deg);
+  margin-left: -450px;
+  margin-top: -40px;
 }
 
 .recap-year__winner-medal {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -451,6 +447,7 @@
 
 
 .recap-year__guest-placeholder {
+.recap-year__guest-placeholder {
   flex: 1;
   min-height: 400px;
   background: #c4c4c4;
@@ -465,14 +462,69 @@
   pointer-events: none;
 }
 
-.recap-year[data-year='2025'] .recap-year__winner--champion .recap-year__winner-banner {
-  background: var(--ghost-white);
-  color: var(--charcoal-black);
+.recap-year__mc-dj {
+  position: relative;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto; /* centers it, since it's no longer full-width */
+  margin-bottom: 120px;
+  box-sizing: border-box;
+  padding-left: 100px;
+}
+
+.recap-year__mc-dj-card {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 578 / 689; /* preserves your intended proportions, but scales responsively */
+  object-fit: cover;
+}
+
+.recap-year__mc-dj h2 {
+  margin: 0 0 80px;
+  margin-right: 80px;
+  text-align: center;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+}
+
+.recap-year__mc-dj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+
+.recap-year__deco-star {
+  position: absolute;
+  left: -5%;
+  bottom: 550px;
+  width: min(300px, 30vw);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.recap-year__deco-cassette {
+  position: absolute;
+  right: -40px;
+  bottom: -250px;
+  width: min(400px, 35vw);
+  opacity: 0.9;
+  transform: rotate(-7.39deg);
+  pointer-events: none;
+}
+
+.recap-year[data-year='2025'] .recap-year__winner--seven-to-smoke .recap-year__winner-banner {
+  background: var(--charcoal-black);
+  color: var(--ghost-white);
+  margin-left: 00px;
 }
 
 .recap-year[data-year='2025'] .recap-year__winner--runner-up .recap-year__winner-banner {
   background: var(--gold-accent);
   color: var(--charcoal-black);
+  margin-left: -30px;
 }
 
 .recap-year__scroll-top {
@@ -500,7 +552,6 @@
 
 .recap-year__sponsors {
   align-self: stretch;
-
 
 }
 
