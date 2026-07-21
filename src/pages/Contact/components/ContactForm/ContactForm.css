@@ -70,8 +70,7 @@
 
 .contact-form input,
 .contact-form textarea,
-.contact-form select,
-.contact-form button {
+.contact-form select {
   font-family: 'Inter', var(--font-inter-regular), sans-serif;
 }
 
@@ -125,6 +124,7 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   color: rgba(26, 26, 27, 0.8);
   font-size: 32px;
+  font-family: 'DC Monument Extended';
   font-weight: 400;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
