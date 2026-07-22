@@ -4,6 +4,7 @@
   min-height: 100svh;
   background: var(--charcoal-black);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .recap-year__bg {

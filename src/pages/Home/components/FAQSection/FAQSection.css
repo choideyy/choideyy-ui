@@ -257,6 +257,9 @@
   .faq__answer p {
     font-size: 11px;
   }
+  .faq__torn-paper{
+    top: 25px;
+  }
   .faq__torn-paper-rotator {
     bottom: 30px;
 }

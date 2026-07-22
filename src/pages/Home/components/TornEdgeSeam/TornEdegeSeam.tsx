@@ -16,7 +16,7 @@ export const TornEdgeSeamDesktop = () => (
 export const TornEdgeSeamMobile = () => (
   <svg
     className="torn-edge-seam torn-edge-seam--mobile"
-    viewBox="0 0 390 539"
+    viewBox="0 0 390 60"
     preserveAspectRatio="none"
   >
     <path
