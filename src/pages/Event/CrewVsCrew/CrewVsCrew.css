@@ -331,150 +331,64 @@
   transform: rotate(-8.89deg);
 }
 
-@media (max-width: 1023px) {
-  .crew-vs-crew__main {
-    padding: 40px 40px 120px;
-  }
-
-  .crew-vs-crew__title {
-    font-size: 40px;
-    margin-bottom: 40px;
-  }
-
-  .crew-vs-crew__section {
-    margin-bottom: 64px;
-  }
-
-  .crew-vs-crew__showcase-grid,
-  .crew-vs-crew__battle-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    margin-top: 24px;
-  }
-
-  .crew-vs-crew__theme,
-  .crew-vs-crew__requirements,
-  .crew-vs-crew__showcase-image-wrapper,
-  .crew-vs-crew__battle-image-wrapper,
-  .crew-vs-crew__battle-heading,
-  .crew-vs-crew__battle-grid > .crew-vs-crew__rules-list {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
+@media (max-width: 1280px) {
   .crew-vs-crew__battle-image-wrapper {
-    order: -1;
-  }
-
-  .crew-vs-crew__theme {
-    margin-bottom: 24px;
-  }
-
-  .crew-vs-crew__theme-title {
-    margin-top: 0;
-    margin-left: 0;
-    font-size: 32px;
-    white-space: normal;
-  }
-
-  .crew-vs-crew__theme-label {
-    font-size: 20px;
-    -webkit-text-stroke: 6px rgba(143, 34, 49, 1);
-    bottom: -20px;
-    right: -16px;
-  }
-
-  .crew-vs-crew__requirements {
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 32px;
-    gap: 16px;
-  }
-
-  .crew-vs-crew__requirements img {
-    width: 56px;
-    height: 56px;
-  }
-
-  .crew-vs-crew__req-title {
-    font-size: 20px;
-  }
-
-  .crew-vs-crew__req-value {
-    font-size: 18px;
-  }
-
-  .crew-vs-crew__prize-box {
+    position: relative;
+    width: 120%;
     margin-top: 40px;
-    padding: 24px 20px;
+    margin-left: -40px;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
   }
+}
 
-  .crew-vs-crew__prize-label {
-    font-size: 28px;
-  }
-
-  .crew-vs-crew__prize-desc {
-    font-size: 18px;
-  }
-
-  .crew-vs-crew__prize-amount {
-    font-size: 36px;
-  }
-
+@media (max-width: 1024px) {
   .crew-vs-crew__showcase-image-wrapper {
-    width: 100%;
-    max-width: min(100%, 420px);
-    margin: 0 auto;
+    position: relative;
+    width: 130%;
+    margin-left: -20px;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
   }
-
-  .crew-vs-crew__battle-image-wrapper {
-    width: 100%;
-    max-width: min(100%, 420px);
-    margin: 0 auto;
+  .crew-vs-crew__requirements {
+    list-style: none;
+    margin: 0 0 48px;
+    /* margin-left: 50px; */
+    margin-right: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
-
-  .crew-vs-crew__battle-heading {
-    text-align: left;
-    font-size: 24px;
+  .crew-vs-crew__prize-desc {
     margin: 0 0 16px;
+    color: var(--ghost-white);
+    font-family: var(--font-inter-regular);
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
   }
-
+  .crew-vs-crew__battle-image-wrapper {
+    position: relative;
+    width: 140%;
+    margin-left: -90px;
+    margin-top: 100px;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
   .crew-vs-crew__rules-list {
-    font-size: 18px;
-    line-height: 1.35;
-  }
-
-  .crew-vs-crew__final {
-    margin-top: 48px;
-  }
-
-  .crew-vs-crew__final-label {
-    font-size: 32px;
-    padding: 10px 28px;
-  }
-
-  .crew-vs-crew__rules-list--final {
-    font-size: 22px;
-    margin-top: 24px;
-  }
-
-  .crew-vs-crew__champion {
-    margin-top: 48px;
-  }
-
-  .crew-vs-crew__deco--left {
-    left: -60px;
-    width: min(50%, 500px);
-  }
-
-  .crew-vs-crew__deco--right {
-    right: -60px;
-    width: min(55%, 560px);
-  }
-
-  .crew-vs-crew__deco--bottom {
-    left: -60px;
-    width: min(40%, 280px);
+    margin: 0;
+    margin-left: 10px;
+    color: var(--white);
+    font-family: var(--font-inter-regular);
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: justify;
   }
 }
 
