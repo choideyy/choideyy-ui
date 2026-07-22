@@ -34,9 +34,9 @@
 }
 
 .mc-dj-section--recap {
-  max-width: var(--page-max-width);
+  /* max-width: var(--page-max-width); */
   margin: 0 auto;
-  margin-bottom: 120px;
+  margin-bottom: 200px;
   padding-left: 100px;
 }
 
@@ -79,24 +79,47 @@
 }
 
 .mc-dj-section--event {
-  position: relative;
-  top: 120px;
-  z-index: 1;
-  max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 90px 320px;
+  margin-bottom: 400px;
+  padding-left: 100px;
 }
 
 .mc-dj-section--event .mc-dj-section__title {
-  margin-bottom: 65px;
-  text-transform: uppercase;
+  margin: 0 0 80px;
+  margin-right: 80px;
+  text-align: center;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
 }
-
+.mc-dj-section--event .mc-dj-section__grid {
+  gap: 8px;
+}
 .mc-dj-section--event .mc-dj-section__card {
-  max-height: 600px;
-  border-radius: 4px;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 578 / 689;
+  object-fit: cover;
+  min-height: 0;
+  max-height: none;
 }
 
+
+.mc-dj-section--event .mc-dj-section__deco--star {
+  left: -5%;
+  bottom: 65%;
+  width: min(300px, 30vw);
+  opacity: 0.8;
+}
+
+.mc-dj-section--event .mc-dj-section__deco--cassette {
+  right: 0;
+  bottom: -35%;
+  width: min(400px, 35vw);
+  opacity: 0.9;
+  transform: rotate(-7.39deg);
+}
 @media (max-width: 1023px) {
   .mc-dj-section--event {
     top: 80px;
@@ -121,34 +144,53 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mc-dj-section--event {
     top: 48px;
-    padding: 0 20px 180px;
+    padding: 0 12px 180px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 0;
   }
 
   .mc-dj-section--event .mc-dj-section__title {
-    font-size: clamp(28px, 9vw, 36px);
-    margin-bottom: 28px;
+    /* font-size: clamp(28px, 9vw, 36px); */
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: 35px;
   }
 
-  .mc-dj-section__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  .mc-dj-section--event .mc-dj-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+  gap: 12px;
+}
 
-  .mc-dj-section--event .mc-dj-section__card,
-  .mc-dj-section__card {
-    min-height: 200px;
-    max-width: min(100%, 420px);
-    margin: 0 auto;
-  }
+.mc-dj-section--event .mc-dj-section__card {
+  width: 100%;
+  aspect-ratio: 578 / 689;
+  min-height: 0;
+  margin: 0;
+}
 
-  .mc-dj-section--recap {
-    margin-bottom: 72px;
-  }
+.mc-dj-section--event .mc-dj-section__deco--star {
+  left: -40px;
+  top: 8px;
+  width: 120px;
+}
 
-  .mc-dj-section--recap .mc-dj-section__deco--star {
-    width: min(180px, 40vw);
-  }
+.mc-dj-section--event .mc-dj-section__deco--cassette {
+  right: -20px;
+  bottom: 90px;
+  width: 150px;
+}
+
+.mc-dj-section--recap {
+  margin-bottom: 72px;
+}
+
+.mc-dj-section--recap .mc-dj-section__deco--star {
+  width: min(180px, 40vw);
+}
 }

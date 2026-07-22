@@ -534,7 +534,7 @@
 
 @media (max-width: 768px) {
   .recap-year__main {
-    padding: 16px 16px 96px;
+    padding: 16px 8px 96px;
   }
 
   .recap-year__gallery-image {

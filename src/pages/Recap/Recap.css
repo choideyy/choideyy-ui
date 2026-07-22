@@ -93,6 +93,9 @@
 }
 
 @media (max-width: 768px) {
+  .recap{
+    min-height: 600px
+  }
   .recap__menu {
     flex-wrap: wrap;
     gap: 16px;

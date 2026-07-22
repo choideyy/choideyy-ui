@@ -132,25 +132,36 @@
 
 @media (max-width: 768px) {
   .event-judges {
+    margin-top: 50px;
     padding: 0 0 20px;
     overflow-x: clip;
     top: 20px;
   }
 
   .event-judges__header {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center; 
     margin-bottom: 24px;
+    min-height: 40px;
+    padding-right: 10px;
   }
 
   .event-judges__title {
-    position: relative;
-    align-self: baseline;
-    font-size: 20px;
+    position: static;
+    grid-column: 2;
+    justify-self: center;
+    /* top: 50%; */
+    transform: none;
+    margin: 0;
+    font-size: 35px;
+    width: max-content;
   }
 
   .event-judges__header > :last-child {
-    margin-right: 0;
+    grid-column: 3;           /* controls on the left */
+    justify-self: end;
+    margin: 0;
   }
 
   .event-judges__track {
