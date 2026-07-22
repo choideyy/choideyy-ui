@@ -352,6 +352,43 @@
   z-index: 2;
 }
 
+@media (max-width: 1280px) {
+  .two-vs-two__stage-label--top16 {
+    margin-top: 100px;
+    margin-right: 30px;
+    font-family: var(--font-another-tag);
+    font-size: clamp(56px, 8vw, 96px);
+    align-self: flex-end;
+  }
+
+  .two-vs-two__prelim-image{
+    width: 150%;
+    height: auto;
+    max-width: 650px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  .two-vs-two__deco--left {
+    left: -2px;
+    top: 700px;
+    width: min(35%, 509px);
+  }
+
+  .two-vs-two__recall-inner {
+    position: relative;
+    width: 1104px;
+    z-index: 1;
+    margin: 50px auto 0;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding: 32px 80px;
+    border: 5px solid var(--ghost-white);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
+
+
 @media (max-width: 1023px) {
   .two-vs-two__main {
     padding: 40px 40px 120px;
