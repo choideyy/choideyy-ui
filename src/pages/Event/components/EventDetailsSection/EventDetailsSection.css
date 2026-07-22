@@ -179,10 +179,108 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width:1280px) {
+  .event-details__banner {
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 64px;
+    padding: 15px 48px;
+    background: #8f2231;
+    box-shadow: 3px 4px 10px rgba(248, 248, 255, 0.5);
+    transform: rotate(3.5deg) translateX(80px);
+  }
 
-@media (max-width: 1023px) {
+  .event-details__categories {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: clamp(48px, 10vw, 160px);
+    margin-left: 30px;
+    margin-top: 30px;
+  /* slight adjustment to align with the star */
+  }
+
+  .event-details__spirit {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 640px;
+    max-width: none;
+    margin-top: -90px;
+    margin-left: -60px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .event-details__spirit-more {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 600px;
+    max-width: none;
+    margin-top: -120px;
+    margin-left: 20px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .event-details__dancer {
+    max-width: 750px;
+    /* margin: 0 auto; */
+    margin-left: 110px;
+  }
+
+  .event-details__date {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 24px;
+    z-index: 2;
+    padding: 16px 28px;
+    background: #3e96d0;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    font-family: 'DC Monument Extended', var(--font-neue-plak);
+    font-size: clamp(20px, 3vw, 36px);
+    font-weight: 400;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    transform: rotate(-3.54deg);
+  }
+
+  .event-details__venue {
+    position: relative;
+    margin: -28px 0 12px;
+    z-index: 1;
+    margin-left: clamp(20px, 15vw, 100px);
+    padding: 20px 28px;
+    background: var(--ghost-white);
+    color: var(--charcoal-black);
+    font-family: 'DC Monument Extended', var(--font-neue-plak);
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 400;
+    transform: rotate(0.83deg);
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .event-details__address {
+    margin: 26px 0 0;
+    margin-left: clamp(15px, 11vw, 70px);
+    color: var(--white);
+    font-family: 'DC Monument Extended', var(--font-neue-plak);
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 400;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+
+@media (max-width: 1024px) {
   .event-details {
     padding: 0 40px 96px;
+    margin-top: 80px;
   }
 
   .event-details__banner {
@@ -213,50 +311,90 @@
     width: 100%;
   }
 
-  .event-details__spirit,
-  .event-details__spirit-more {
-    display: none;
+  .event-details__spirit {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 540px;
+    max-width: none;
+    margin-top: -70px;
+    margin-left: -500px;
+    height: auto;
+    object-fit: contain;
+  }
+
+.event-details__spirit-more {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 450px;
+    max-width: none;
+    margin-top: -100px;
+    margin-left: -400px;
+    height: auto;
+    object-fit: contain;
   }
 
   .event-details__categories {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: clamp(80px, 18vw, 160px);
-    margin: 0 0 32px 0;
-  }
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(48px, 10vw, 160px);
+  margin-left: -500px;
+  margin-top: -800px;
+/* slight adjustment to align with the star */
+}
 
-  .event-details__category-item {
-    align-items: center;
-    text-align: center;
-  }
+.event-details__category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
 
-  .event-details__category-icon--duo {
-    width: 70px;
-    height: 70px;
-    margin-top: 0;
-  }
+.event-details__category-icon {
+  display: block;
+  object-fit: contain;
+}
 
-  .event-details__category-icon--crew {
-    height: 70px;
-  }
+.event-details__category-icon--duo {
+  margin-top: -10px;
+  width: 94px;
+  height: 94px;
+}
 
-  .event-details__category-label-duo,
-  .event-details__category-label-crew {
-    font-size: 24px;
-  }
+.event-details__category-icon--crew {
+  width: auto;
+  height: 94px;
+}
 
-  .event-details__category-label-crew {
-    margin: 10px 0 1em 0;
-  }
+.event-details__category-label-duo {
+  margin-top: 10px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.event-details__category-label-crew {
+  margin: 0;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
 
   .event-details__dancer {
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 550px;
+    /* margin: 0 auto; */
+    margin-left: 450px;
   }
 
   .event-details__meta {
-    margin-top: 48px;
+    margin-top: -90px;
   }
 
   .event-details__date {
@@ -265,12 +403,12 @@
   }
 
   .event-details__venue {
-    font-size: 28px;
+    font-size: 32px;
     padding: 16px 20px;
   }
 
   .event-details__address {
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 

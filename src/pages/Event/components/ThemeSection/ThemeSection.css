@@ -98,7 +98,109 @@
   font-weight: 800;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
+  .event-theme {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  top: 50px;
+  padding: 0 70px 120px;
+  box-sizing: border-box;
+}
+
+.event-theme__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); /* title col : content area (2x width since it holds 2 columns) */
+  gap: 40px;
+  align-items: start;
+}
+
+.event-theme__header {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.event-theme__label {
+  position: absolute;
+  top: 220px;
+  z-index: 1;
+  margin: 0;
+  left: 100px;/* slight adjustment to align with the star */
+  text-align: justify;
+  color: var(--ghost-white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-5.81deg);
+  -webkit-text-stroke: 12px rgba(143, 34, 49, 1);
+  paint-order: stroke fill;
+}
+
+.event-theme__star {
+  display: block;
+  position: relative;
+  left: -30px;
+  top: 100px;
+  z-index: -1;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin-left: -30px;
+}
+
+.event-theme__title {
+  margin: 0 0 16px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 70px;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.event-theme__subtitle {
+  margin: 0 0 48px;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.event-theme__content {
+  display: grid;
+  margin-top: -100px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* keep as-is — this is already your 2-column content */
+  gap: 20px;
+  padding: 32px 0; /* top and bottom space before/after the lines */
+  border-top: 3px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.35);
+}
+
+.event-theme__content p {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-inter-regular);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: justify;
+}
+
+.event-theme__content strong {
+  font-weight: 800;
+}
+}
+
+@media (max-width: 1024px) {
   .event-theme {
     padding: 56px 40px 80px;
   }
@@ -107,7 +209,7 @@
     left: 35%;
     font-size: 25px;
     -webkit-text-stroke: 8px rgba(143, 34, 49, 1);
-    top:160px;
+    top:120px;
   }
 
   .event-theme__star {
@@ -119,17 +221,19 @@
 
   .event-theme__title {
     font-size: 55px;
+    margin-top: -35px;
   }
 
   .event-theme__subtitle {
     font-size: 22px;
-    margin-bottom: 32px;
+    margin-bottom: 150px;
   }
 
   .event-theme__content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     padding-top: 24px;
+    margin-top: -70px;
   }
 
   .event-theme__content p {

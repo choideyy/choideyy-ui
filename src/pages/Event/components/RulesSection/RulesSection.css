@@ -94,9 +94,9 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .event-rules {
-    padding: 0 40px 120px;
+    padding: 30px 40px 120px;
   }
 
   .event-rules__title {
@@ -118,6 +118,7 @@
     bottom: 80px;
     width: min(36vw, 300px);
   }
+  
 }
 
 @media (max-width: 768px) {

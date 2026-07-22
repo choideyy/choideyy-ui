@@ -4,7 +4,7 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 90px 160px;
+  padding: 0 50px 160px;
   box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@
   margin: 0 0 8px;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 400;
   line-height: normal;
   text-align: center;
@@ -76,7 +76,7 @@
   display: none;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .event-prizes {
     padding: 0 40px 120px;
   }
@@ -104,10 +104,15 @@
   }
 
   .event-prizes__decoration {
-    width: min(42%, 320px);
-    bottom: 24px;
-    opacity: 0.55;
+    position: absolute;
+    right: -80px;
+    bottom: -300px;
+    width: min(35%, 497px);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 3;
   }
+
 }
 
 @media (max-width: 768px) {
