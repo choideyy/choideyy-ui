@@ -144,6 +144,59 @@
   }
 }
 
+
+@media (max-width: 950px) {
+  .mc-dj-section--event {
+    top: 48px;
+    padding: 0 12px 180px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 0;
+  }
+
+  .mc-dj-section--event .mc-dj-section__title {
+    /* font-size: clamp(28px, 9vw, 36px); */
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .mc-dj-section--event .mc-dj-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+  gap: 12px;
+}
+
+.mc-dj-section--event .mc-dj-section__card {
+  width: 100%;
+  aspect-ratio: 578 / 689;
+  min-height: 0;
+  margin: 0;
+}
+
+.mc-dj-section--event .mc-dj-section__deco--star {
+  left: -80px;
+  top: -20px;
+  width: min(200px, 30vw);
+}
+
+.mc-dj-section--event .mc-dj-section__deco--cassette {
+  right: -30px;
+  bottom: 45px;
+  width: min(200px, 30vw);
+}
+
+.mc-dj-section--recap {
+  margin-bottom: 72px;
+}
+
+.mc-dj-section--recap .mc-dj-section__deco--star {
+  width: min(180px, 40vw);
+}
+}
+
+
 @media (max-width: 768px) {
   .mc-dj-section--event {
     top: 48px;
@@ -182,7 +235,7 @@
 
 .mc-dj-section--event .mc-dj-section__deco--cassette {
   right: -20px;
-  bottom: 90px;
+  bottom: 66px;
   width: 150px;
 }
 
