@@ -41,7 +41,7 @@ export const RECAP_2025_DATA: RecapYearData = {
     gallery7,
   ],
   stats: {
-    participants: '20',
+    participants: '150+',
     interests: '200k+',
   },
   judges: [judge1, judge2, judge3],

@@ -43,8 +43,8 @@ export const RECAP_2022_DATA: RecapYearData = {
     gallery7,
   ],
   stats: {
-    participants: '~150',
-    interests: '~300',
+    participants: '100+',
+    interests: '300+',
   },
   judges: [judge1, judge2, judge3],
   winners: [
