@@ -105,7 +105,9 @@ export const CrewVsCrew = () => {
         </section>
 
         <section className="crew-vs-crew__section" aria-labelledby="crew-battle-heading">
-          <RoundBanner label="Vòng battle" rotation="1.68deg" align="right" />
+          <div className="crew-vs-crew__banner-wrap crew-vs-crew__banner-wrap--battle">
+            <RoundBanner label="Vòng battle" rotation="1.68deg" align="right" />
+          </div>
 
           <div className="crew-vs-crew__battle-grid">
             <div className="crew-vs-crew__battle-image-wrapper">
