@@ -1,7 +1,7 @@
 import eventBg from '../../assets/figma/event/event-bg.png';
 import decoStarBurst from '../../assets/figma/event/deco-star-burst.png'
 import decoCassette from '../../assets/figma/event/deco-cassette.png'
-import { DEFAULT_MC_DJ_MEMBERS, McDjSection } from '../../components/McDjSection';
+import { EVENT_MC_DJ_MEMBERS, McDjSection } from '../../components/McDjSection';
 import { EventDetailsSection } from './components/EventDetailsSection';
 import { FacebookSection } from './components/FacebookSection';
 import { JudgesCarousel } from './components/JudgesCarousel';
@@ -38,7 +38,7 @@ export const Event = () => {
         <McDjSection
             variant="event"
             headingId="event-mc-dj"
-            members={DEFAULT_MC_DJ_MEMBERS}
+            members={EVENT_MC_DJ_MEMBERS}
             decorationSrc= {decoStarBurst}
             secondaryDecorationSrc= {decoCassette}
           />

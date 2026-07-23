@@ -130,9 +130,66 @@
   }
 }
 
+@media (max-width: 900px) {
+  .event-judges {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 0 0 20px;
+    overflow-x: clip;
+    top: 20px;
+  }
+
+  .event-judges__header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center; 
+    margin-bottom: 24px;
+    min-height: 40px;
+    padding-right: 10px;
+  }
+
+  .event-judges__title {
+    position: static;
+    grid-column: 2;
+    justify-self: center;
+    /* top: 50%; */
+    transform: none;
+    margin: 0;
+    font-size: 35px;
+    width: max-content;
+  }
+
+  .event-judges__header > :last-child {
+    grid-column: 3;           /* controls on the left */
+    justify-self: end;
+    margin: 0;
+  }
+
+  .event-judges__track {
+    --card-width: 51%;
+    --gap: 12px;
+  }
+
+  .event-judges__card {
+    opacity: 0.85;
+    transform: scale(0.95);
+  }
+
+  .event-judges__card--active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .event-judges__name {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .event-judges {
     margin-top: 50px;
+    margin-bottom: 60px;
     padding: 0 0 20px;
     overflow-x: clip;
     top: 20px;
