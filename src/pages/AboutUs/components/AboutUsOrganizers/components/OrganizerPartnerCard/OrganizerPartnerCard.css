@@ -120,7 +120,7 @@
 .organizer-partner-card__description {
   flex: 1;
   min-width: 0;
-
+  
   animation: organizer-partner-description-in 0.35s ease;
 }
 
@@ -171,86 +171,6 @@
   opacity: 0;
   overflow: hidden;
   pointer-events: none;
-}
-
-@media (min-width: 1024px) {
-  .about-us-organizers__partners.has-active .organizer-partner-card.is-active {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .organizer-partner-card.is-active .organizer-partner-card__inner {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 48px;
-    width: 100%;
-  }
-
-  .organizer-partner-card--partnerB.is-active .organizer-partner-card__description {
-    order: 1;
-  }
-
-  .organizer-partner-card--partnerB.is-active .organizer-partner-card__logo-wrap {
-    order: 2;
-    margin-left: auto;
-  }
-
-  .organizer-partner-card.is-active .organizer-partner-card__logo-wrap {
-    flex: 0 0 min(300px, 100%);
-    width: min(300px, 100%);
-    max-width: 300px;
-    margin: 0;
-  }
-
-  .organizer-partner-card--partnerA.is-active .organizer-partner-card__logo-wrap {
-    transform: translateX(-50px);
-  }
-
-  .organizer-partner-card--partnerB.is-active .organizer-partner-card__logo-wrap {
-    transform: translateX(50px);
-  }
-
-  .organizer-partner-card.is-active .organizer-partner-card__description {
-    flex: 2 1 0;
-    min-width: 0;
-    align-self: flex-start;
-  }
-}
-
-@media (max-width: 1023px) {
-  .organizer-partner-card {
-    --partner-logo-height: 360px;
-
-    flex: 1 1 calc(50% - 25px);
-    max-width: calc(50% - 25px);
-  }
-
-  .about-us-organizers__partners.has-active .organizer-partner-card.is-active {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .about-us-organizers__partners.has-active .organizer-partner-card.is-active
-    .organizer-partner-card__inner {
-    flex-direction: column !important;
-    gap: 24px;
-  }
-
-  .about-us-organizers__partners.has-active .organizer-partner-card.is-active
-    .organizer-partner-card__logo-wrap {
-    flex: none;
-    width: min(360px, 100%);
-    max-width: 100%;
-    margin: 0 auto;
-    transform: none;
-  }
-
-  .organizer-partner-card__description p,
-  .organizer-partner-card--description-left .organizer-partner-card__description p {
-    font-size: 18px;
-  }
 }
 
 @media (max-width: 768px) {
