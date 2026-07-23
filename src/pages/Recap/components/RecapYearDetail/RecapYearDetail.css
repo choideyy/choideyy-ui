@@ -540,7 +540,7 @@
     background: var(--ghost-white);
     transform: rotate(-0.39deg);
     color: var(--charcoal-black);
-    left: 10%;
+    left: 5%;
     position: absolute; /* <-- this becomes the anchor for participants */
   }
 
