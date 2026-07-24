@@ -1,7 +1,7 @@
 .two-vs-two {
   position: relative;
   width: 100%;
-  min-height: 100svh;
+  min-height: auto;
   background: var(--charcoal-black);
   overflow-x: clip;
 }
@@ -347,7 +347,7 @@
 
 .two-vs-two__deco--right {
   right: -280px;
-  top: 4500px;
+  top: 450px;
   width: min(60%, 870px);
 }
 
@@ -973,7 +973,7 @@
   }
 
   .two-vs-two__recall{
-    margin: auto -20px auto;
+    margin: 0 -20px ;
   }
 
  .two-vs-two__recall-inner {
@@ -990,11 +990,22 @@
     font-size: clamp(24px, 3vw, 36px)
   }
 
+  .two-vs-two__final-banner{
+    margin-top: 100px;
+  }
   
   .two-vs-two__rules-list--final{
     width: 100%;
     max-width: 100%;
     font-size: clamp(22px, 3vw, 40px);
+  }
+  .two-vs-two__deco--right{
+    top: 3000px;
+    left: 60%;
+  }
+  .two-vs-two__deco--bottom{
+    z-index: 3;
+    left: -100px;
   }
 }
 
