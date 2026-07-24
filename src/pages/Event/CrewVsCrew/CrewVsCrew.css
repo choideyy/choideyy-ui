@@ -483,6 +483,20 @@
     line-height: 1.2;
     text-align: justify;
   }
+
+  .crew-vs-crew__deco--right {
+    right: -180px;
+    top: 1850px;
+    width: min(70%, 870px);
+  }
+
+  .crew-vs-crew__deco--bottom {
+    left: -74px;
+    bottom: 420px;
+    width: min(35%, 445px);
+    opacity: 0.5;
+    transform: rotate(-8.89deg);
+  }
 }
 
 @media (max-width: 768px) {
