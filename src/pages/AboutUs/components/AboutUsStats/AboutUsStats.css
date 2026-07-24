@@ -111,3 +111,17 @@
     padding: 64px 20px;
   }
 }
+
+
+
+@media (max-width: 450px) {
+  .about-us-stats {
+    justify-content: center;
+    
+    padding: 64px 20px;
+
+  }
+  .about-us-stats__title{
+    text-align: center;
+  }
+}
