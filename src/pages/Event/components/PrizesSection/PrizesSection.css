@@ -115,32 +115,37 @@
 
 }
 
+@media (max-width: 850px) {
+  .event-prizes__list {
+    gap: 0px;
+  }
+
+  .event-prizes {
+    padding: 0 20px 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .event-prizes {
-    padding: 0 20px 30px;
+    padding: 0 20px 80px;
   }
 
   .event-prizes__title {
-    font-size: 20px;
+    font-size: 35px;
     margin: 54px 0 24px;
   }
 
   .event-prizes__list {
-    width: 100%;
-    gap: 4px;
-    margin-bottom: 24px;
-  }
-  .event-prizes__item {
-    padding: 12px 20px;
-    min-width: 250px;
-  }
-
-  .event-prizes__item-title,
-  .event-prizes__item-amount {
-    font-size: 12px;
+    gap: 0px;
   }
 
   .event-prizes__decoration {
-    display: none;
+    position: absolute;
+    right: -80px;
+    bottom: -150px;
+    width: min(35%, 497px);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 3;
   }
 }

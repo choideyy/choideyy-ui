@@ -241,7 +241,7 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
   .event-theme {
     padding: 5px 40px 20px;
   }
@@ -286,7 +286,7 @@
 @media (max-width: 768px) {
   .event-theme {
     top: 0;
-    padding: 40px 20px 64px;
+    padding: 40px 20px 104px;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -301,14 +301,14 @@
 
   .event-theme__label {
     left: 40%;
-    font-size: 16px;
-    -webkit-text-stroke: 5px rgba(143, 34, 49, 1);
+    font-size: 24px;
+    -webkit-text-stroke: 8px rgba(143, 34, 49, 1);
     top: 50%;
   }
 
   .event-theme__star {
-    width: 80px;
-    left: -30px;
+    width: 100px;
+    left: -50px;
     top: 0;
     
   }
@@ -320,7 +320,7 @@
   }
 
   .event-theme__title {
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 8px;
   }
 
@@ -337,7 +337,7 @@
   }
 
   .event-theme__subtitle {
-    font-size: 12px;
+    font-size: 20px;
     margin-bottom: 0;
   }
 
@@ -351,7 +351,7 @@
   }
 
   .event-theme__content p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.35;
   }
 }

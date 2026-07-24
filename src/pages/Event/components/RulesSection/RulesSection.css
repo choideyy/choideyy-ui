@@ -123,7 +123,7 @@
 
 @media (max-width: 768px) {
   .event-rules {
-    padding: 0 20px 20px;
+    padding: 0 20px 80px;
     scroll-margin-top: 80px;
   }
 
@@ -142,13 +142,13 @@
   }
 
   .event-rules__label {
-    font-size: 12px;
-    padding: 12px 8px;
+    font-size: 16px;
+    padding: 18px 8px;
   }
 
   .event__bottom-deco {
     left: -40px;
-    bottom: 48px;
+    bottom: 78px;
     width: min(42vw, 180px);
     opacity: 0.4;
   }

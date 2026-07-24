@@ -71,7 +71,7 @@
 
 @media (max-width: 768px) {
   .event-guests {
-    padding: 20px;
+    padding: 50px;
   }
 
   .event-guests__header {
@@ -83,10 +83,10 @@
   }
 
   .event-guests__card {
-    width: min(100%, 320px);
+    width: min(100%, 420px);
   }
 
   .event-guests__name {
-    font-size: 16px;
+    font-size: 24px;
   }
 }

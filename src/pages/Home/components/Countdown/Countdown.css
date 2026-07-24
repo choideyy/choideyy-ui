@@ -68,7 +68,7 @@
 } */
 
 /* Tablet: 768px–1023px */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .countdown__number {
     font-size: 64px;
     min-width: 120px;
@@ -89,7 +89,7 @@
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .countdown__number {
     font-size: 28px;
     min-width: 52px;
@@ -108,4 +108,4 @@
     margin-top: 12px;
     padding: 0 2px;
   }
-}
+} */

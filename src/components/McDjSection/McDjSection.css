@@ -173,7 +173,7 @@
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
   .mc-dj-section--event {
     top: 48px;
     padding: 0 12px 180px;
@@ -184,7 +184,8 @@
 
   .mc-dj-section--event .mc-dj-section__title {
     /* font-size: clamp(28px, 9vw, 36px); */
-    margin: 0 0 28px;
+    margin: 0 0 40px;
+    margin-left: -40px;
     text-align: center;
     font-size: 35px;
   }
@@ -197,7 +198,7 @@
 }
 
 .mc-dj-section--event .mc-dj-section__card {
-  width: 100%;
+  width: 90%;
   aspect-ratio: 578 / 689;
   min-height: 0;
   margin: 0;
@@ -228,7 +229,7 @@
 @media (max-width: 768px) {
   .mc-dj-section--event {
     top: 48px;
-    padding: 0 12px 180px;
+    padding: 0 15px 180px;
     position: relative;
     overflow: visible;
     margin-bottom: 0;
@@ -237,41 +238,42 @@
   .mc-dj-section--event .mc-dj-section__title {
     /* font-size: clamp(28px, 9vw, 36px); */
     margin: 0 0 28px;
+    margin-left: -40px ;
     text-align: center;
     font-size: 35px;
   }
 
   .mc-dj-section--event .mc-dj-section__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  justify-content: center;
-  gap: 12px;
-}
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    gap: 10px;
+  }
 
-.mc-dj-section--event .mc-dj-section__card {
-  width: 100%;
-  aspect-ratio: 578 / 689;
-  min-height: 0;
-  margin: 0;
-}
+  .mc-dj-section--event .mc-dj-section__card {
+    width: 90%;
+    aspect-ratio: 578 / 689;
+    min-height: 0;
+    margin: 0;
+  }
 
-.mc-dj-section--event .mc-dj-section__deco--star {
-  left: -40px;
-  top: 8px;
-  width: 120px;
-}
+  .mc-dj-section--event .mc-dj-section__deco--star {
+    left: -40px;
+    top: 8px;
+    width: 120px;
+  }
 
-.mc-dj-section--event .mc-dj-section__deco--cassette {
-  right: -20px;
-  bottom: 66px;
-  width: 150px;
-}
+  .mc-dj-section--event .mc-dj-section__deco--cassette {
+    right: -20px;
+    bottom: 66px;
+    width: 150px;
+  }
 
-.mc-dj-section--recap {
-  margin-bottom: 72px;
-}
+  .mc-dj-section--recap {
+    margin-bottom: 72px;
+  }
 
-.mc-dj-section--recap .mc-dj-section__deco--star {
-  width: min(180px, 40vw);
-}
+  .mc-dj-section--recap .mc-dj-section__deco--star {
+    width: min(180px, 40vw);
+  }
 }
