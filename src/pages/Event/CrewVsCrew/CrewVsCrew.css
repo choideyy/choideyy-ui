@@ -466,15 +466,16 @@
     width: 105%
   }
   .crew-vs-crew__battle-heading{
+    margin-top: 40px;
     margin-bottom: -10px;
-    font-size: 30px;
+    font-size: 26px;
   }
   .crew-vs-crew__battle-image-wrapper {
     position: relative;
-    width: 140%;
+    width: 150%;
     height: 106%;
-    margin-left: -20px;
-    margin-top: 80px;
+    margin-left: -50px;
+    margin-top: -20px;
     max-width: 500px;
     border-radius: 15px;
     overflow: hidden;
@@ -485,7 +486,7 @@
     padding-left: 80px;
     color: var(--white);
     font-family: var(--font-inter-regular);
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 400;
     line-height: 1.2;
     text-align: justify;

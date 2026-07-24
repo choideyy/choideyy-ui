@@ -100,6 +100,10 @@
     border-radius: 16px;
     color: var(--charcoal-black);
   }
+
+  .about-us-stats__value, .about-us-stats__label, .about-us-stats__description {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
