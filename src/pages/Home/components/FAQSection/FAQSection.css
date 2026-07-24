@@ -221,10 +221,7 @@
 
 /* Mobile: 0–767px */
 @media (max-width: 768px) {
-  .faq__vinyl,
-  .faq__deco {
-    display: none;
-  }
+
 
   .faq__content {
     padding: 48px 20px 64px;
