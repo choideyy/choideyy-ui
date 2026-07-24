@@ -122,6 +122,13 @@
   display: inline-block; /* matches round-banner's own inline-block sizing */
 }
 
+.crew-vs-crew__banner-wrap--battle{
+  display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+}
+
 .crew-vs-crew__requirements {
   list-style: none;
   margin: 0 0 48px;
