@@ -148,8 +148,58 @@
 
 /* Mobile: 0–767px */
 @media (max-width: 450px) {
+  .footer {
+    height: auto;
+    min-height: 0;
+  }
+
+  .footer__inner {
+    grid-template-columns: 159px 1fr;
+    grid-template-areas:
+      "avatar contact"
+      "social social";
+    gap: 16px 20px;
+    min-height: 0;
+    padding: 24px 20px;
+  }
+
+  .footer__avatar-wrap {
+    grid-area: avatar;
+    width: 159px;
+    height: 159px;
+  }
+
+  .footer__avatar {
+    width: 159px;
+    height: 159px;
+  }
+
+  .footer__contact {
+    grid-area: contact;
+    align-self: center;
+  }
+
   .footer__heading {
     font-size: 17px;
     margin-bottom: 12px;
   }
+  
+  .footer__email{
+    font-size: 15px;
+  }
+  .footer__phone{
+    font-size: 15px;
+  }
+
+  .footer__social {
+    grid-area: social;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer__social-link img {
+    width: 49px;
+    height: 49px;
+  }
+  
 }

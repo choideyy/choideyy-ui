@@ -255,3 +255,13 @@
     opacity: 0.35;
   }
 }
+
+@media (max-width: 450px) {
+  .sponsors-section--recap .sponsors-section__title {
+    /* font-size: 20px; */
+    margin-bottom: 29px;
+  }
+  .sponsors-section__item, .sponsors-section--recap .sponsors-section__item{
+    --sponsor-logo-size: 100px;
+  }
+}

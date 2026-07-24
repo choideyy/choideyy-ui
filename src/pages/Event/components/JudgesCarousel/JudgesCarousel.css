@@ -186,7 +186,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .event-judges {
     margin-top: 50px;
     margin-bottom: 60px;

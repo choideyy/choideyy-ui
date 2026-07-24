@@ -624,9 +624,16 @@
   }
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 450px) {
   .recap-year__main {
     padding: 16px 8px 96px;
+  }
+
+  /* Galary section */
+  .recap-year__gallery{
+    margin-bottom: 0;
   }
 
   .recap-year__gallery-image {
@@ -639,11 +646,188 @@
     gap: 16px;
   }
 
+  /* Stat section */
+  .recap-year__stats{
+    min-height: 0;
+    margin-top: -150px;
+    margin-bottom: -100px;
+  }
+  .recap-year__stat-value {
+    font-size: 24px;
+  }
+
+  .recap-year__stat-label {
+    font-size: 13px;
+  }
+
+  .recap-year__stat {
+  min-width: unset;
+  width: fit-content;
+  max-width: 90vw;
+  padding: 16px 20px;
+  } 
+
+  .recap-year__stat-label {
+    font-size: 13px;
+    white-space: nowrap; /* Prevent the label from wrapping */
+  }
+
+  .recap-year__stat-value {
+    font-size: 24px;
+  }
+  .recap-year__stat--interests{
+    padding: 16px 18px;
+    left: 9px;
+  }
+  .recap-year__stat--participants{
+    left: 38%;
+  }
+
+  /* Judges section */
+
+  .recap-judges {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding: 0 0 20px;
+  overflow-x: clip;
+  top: 20px;
+}
+
+.recap-judges__header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 24px;
+  min-height: 40px;
+  padding-right: 10px;
+}
+
+.recap-year__judges-title {
+  position: static;
+  grid-column: 2;
+  justify-self: center;
+  transform: none;
+  margin: 0;
+  width: max-content;
+  font-size: 35px;
+}
+
+.recap-judges__header > :last-child {
+  grid-column: 3;
+  justify-self: end;
+  margin: 0;
+}
+
+.recap-year__judges-track {
+  --card-width: 51%;
+  --gap: 12px;
+}
+
+.recap-year__judge-card {
+  opacity: 0.85;
+  transform: scale(0.95);
+}
+
+.recap-year__judge-card--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.recap-year__judges-viewport {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+  /* Winner section */
+
+  .recap-year__winners{
+    margin-bottom: 150px;
+    /* margin-top: 150px; */
+  }
+  .recap-year__winners-title{
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+  .recap-year__winners-list {
+    gap: 80px; /* or 60px if you want them even closer */
+  }
+  .recap-year__winner-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .recap-year__winner--champion .recap-year__winner-photo {
+    margin-left: -20px;
+  }
+
+  .recap-year__winner--runner-up .recap-year__winner-photo {
+    margin-right: -20px;
+  }
+
+  .recap-year__winner--best-performance .recap-year__winner-photo {
+    margin-left: 20px;
+  }
+
+  .recap-year__winner--cypher .recap-year__winner-photo,
+  .recap-year__winner--seven-to-smoke .recap-year__winner-photo {
+    margin-left: 20px;
+  }
   .recap-year__winner-banner {
-    flex-direction: column;
+    flex-direction: line;
     text-align: center;
     margin-top: -24px;
-    padding: 16px 20px;
+    gap: 8px;
+    padding: 8px 14px;
+  }
+  .recap-year__winner-banner p {
+  font-size: 14px;
+  line-height: 1.3;
+  }
+  .recap-year__winner--champion .recap-year__winner-banner {
+  margin-right: clamp(-20px, -5vw, -80px);
+}
+
+  .recap-year__winner--runner-up .recap-year__winner-banner {
+    margin-left: -20px;
+  }
+
+  .recap-year__winner--best-performance .recap-year__winner-banner {
+    margin-left: 0;
+  }
+
+  .recap-year__winner--cypher .recap-year__winner-banner,
+  .recap-year__winner--seven-to-smoke .recap-year__winner-banner {
+    margin-left: -20px;
+  }
+  .recap-year__winner-medal {
+    width: 30px;
+    height: 30px;
+  }
+  /* Special Guests */
+  .recap-year__guests-title{
+    position: static;
+    grid-column: 2;
+    justify-self: center;
+    transform: none;
+    margin: 0;
+    width: max-content;
+    font-size: 35px;
+  }
+  .recap-guest__header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-bottom: 24px;
+    min-height: 40px;
+    padding-right: 10px;
+  }
+
+  .recap-year__guests-viewport{
+    margin-bottom: 0;
+  }
+  .recap-guest__header > :last-child {
+    grid-column: 3;
+    justify-self: end;
+    margin: 0;
   }
 
   .recap-year__scroll-top {
