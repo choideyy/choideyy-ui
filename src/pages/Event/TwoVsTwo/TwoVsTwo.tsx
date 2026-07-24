@@ -121,9 +121,7 @@ export const TwoVsTwo = () => {
               src={battleImage}
               alt="2 vs 2 battle performance"
             />
-
-            <div className="two-vs-two__battle-copy">
-              <div className="two-vs-two__battle-banner-wrap">
+            <div className="two-vs-two__battle-banner-wrap">
               <img
                 className="two-vs-two__battle-star"
                 src={decoStar}
@@ -137,7 +135,7 @@ export const TwoVsTwo = () => {
                 align="right"
               />
             </div>
-              <h2 id="two-battle-heading" className="two-vs-two__battle-heading">
+            <h2 id="two-battle-heading" className="two-vs-two__battle-heading">
                 TOP 8
               </h2>
               <ul className="two-vs-two__rules-list">
@@ -145,7 +143,7 @@ export const TwoVsTwo = () => {
                   <li key={index}>{rule}</li>
                 ))}
               </ul>
-            </div>
+            
           </div>
         </section>
 
