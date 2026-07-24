@@ -501,12 +501,15 @@
     margin-top: 100px;
   }
 
-  .two-vs-two__battle-grid {
+  /* .two-vs-two__battle-grid {
     display: grid;
     grid-template-columns: 1fr 607px;
     grid-template-areas:
       "image copy";
-  }
+  } */
+
+
+
 
   .two-vs-two__stage-label {
     margin: 0 0 16px;
@@ -545,6 +548,25 @@
     margin-bottom: 10px;
   }
 
+
+     /* Battle section */
+  .two-vs-two__battle-grid {
+  display: grid;
+    grid-template-columns: minmax(280px, 450px) 1fr;
+    grid-template-areas:
+      "image banner"
+      "image heading"
+      "image rules";
+    column-gap: 48px;
+    row-gap: 0;
+    align-items: center;
+    margin-top: 100px;
+}
+  .two-vs-two__battle-heading{
+    margin-top: -10px;
+    margin-bottom: 30px;
+  }
+
   .two-vs-two__prelim-image,
   .two-vs-two__battle-image {
     width: 200%;
@@ -561,9 +583,12 @@
 
   .two-vs-two__battle-image {
     grid-area: image;
+    width: 100%;
     max-width: 450px;
-    margin-top: 40px;
-    margin-left: -50px;
+    height: auto;
+    object-fit: cover;
+    margin: 40px 0 0 -50px;
+    justify-self: start;
   }
 
 
@@ -571,15 +596,35 @@
     padding-top: 100px;
     grid-area: copy;
   }
+  
   .two-vs-two__battle-heading {
-    margin: 0 0 24px;
-    color: var(--ghost-white);
-    font-family: 'DC Monument Extended', var(--font-neue-plak);
-    font-size: 36px;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-  }
+  grid-area: heading;
+  justify-self: end;
+  align-self: center;
+
+  margin: 0 0 12px;
+  color: var(--ghost-white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: 36px;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.two-vs-two__battle-grid > .two-vs-two__rules-list {
+  grid-area: rules;
+  justify-self: end;
+  align-self: start;
+
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+
+  margin: 0;
+  padding: 20px;
+
+  font-size: clamp(22px, 3vw, 28px);
+}
 
   .two-vs-two__recall {
     position: relative;
@@ -814,10 +859,26 @@
 
 
 @media (max-width: 850px) {
-
-  .two-vs-two__prelim-image{
-    max-width: 380px;
+  .two-vs-two__main{
+    padding-right: 12px;
+    padding-left: 22px;  
   }
+    .two-vs-two__prelim-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 450px);
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .two-vs-two__prelim-copy{
+    min-width: 0;
+  }
+  .two-vs-two__prelim-image {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px 0 0;
+    justify-self: end;
+  }
+
 
   .two-vs-two__stage-label--prelim{
     margin-top: 10px;
@@ -825,68 +886,86 @@
   }
   .two-vs-two__stage-label--top16 {
     margin-top: 10px;
-    margin-right: -80px;
+    margin-right: -130px;
     margin-bottom: 5px;
     font-family: var(--font-another-tag);
-    font-size: clamp(56px, 8vw, 96px);
+    font-size: clamp(46px, 4vw, 86px);
     align-self: flex-end;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .two-vs-two__rules-list li {
+    min-width: 0;
+    max-width: 100%;
     margin-bottom: 0px;
+    font-size: 20px;
   }
 
   .two-vs-two__prelim-image{
     width: 120%;
     height: auto;
-    max-width: 400px;
+    max-width: 70%;
     border-radius: 15px;
     object-fit: cover;
     margin-top: 20px;
   }
 
   .two-vs-two__battle-grid {
-    display: grid;
     grid-template-columns: minmax(260px, 340px) 1fr;
-    grid-template-areas:
-      "image banner"
-      "image heading"
-      "image rules";
-    column-gap: clamp(1.5rem, 4vw, 3rem);
+    column-gap: 36px;
+    row-gap: 0;
     align-items: center;
+    padding-right: 20px;
+
   }
 
   .two-vs-two__battle-image {
     grid-area: image;
-    width: 100%;
-    max-width: 340px;
     justify-self: center;
-    margin: 0;
+    max-width: 340px;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 10px;
   }
 
   .two-vs-two__battle-banner-wrap {
+    position: relative;
     grid-area: banner;
     justify-self: end;
     align-self: end;
-    margin: 0 0 .5rem;
+    margin: 0 0 28px;
   }
+
+  .two-vs-two__battle-star {
+    width: 220px;
+    top: -115px;
+    left: 58%;
+}
 
   .two-vs-two__battle-heading {
     grid-area: heading;
     justify-self: end;
     align-self: center;
-    margin: 0 0 -20px;
+    margin: 0 0 12px;
     font-size: clamp(2rem, 4vw, 2.8rem);
     line-height: 1;
   }
 
-  .two-vs-two__rules-list {
+  .two-vs-two__battle-grid ul.two-vs-two__rules-list {
     grid-area: rules;
     justify-self: end;
     align-self: start;
     margin: 0;
-    max-width: 28rem;
-    font-size: 25px;
+    font-size: 23px;
+
+    justify-self: stretch;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 1.2rem;
+
   }
 
   /* Only if you decide to keep the wrapper */
@@ -970,7 +1049,7 @@
   .two-vs-two__stage-label--prelim {
     align-self: flex-start;
     text-align: left;
-    margin-top: -20px;        /* touches the bottom edge of the image above */
+    margin-top: -80px;        /* touches the bottom edge of the image above */
   }
   .two-vs-two__rules-list {
     min-width: 0;
@@ -1018,6 +1097,7 @@
         "heading"
         "rules";
     margin-top: 90px;
+    padding-right: 0;
     }
 
   .two-vs-two__battle-image {
@@ -1035,18 +1115,18 @@
   }
 
   .two-vs-two__battle-banner-wrap {
-    margin-top: -60px;   /* pulls banner + star up onto the image's bottom edge */
+    margin-top: -50px;   /* pulls banner + star up onto the image's bottom edge */
     margin-bottom: -50px;
-    margin-right: 24px;  /* keeps it off the screen edge — margin-left: auto (base) keeps it right-aligned */
+    margin-right: 14px;  /* keeps it off the screen edge — margin-left: auto (base) keeps it right-aligned */
     position: relative;
-    transform: translateY(50px);
+    transform: translateY(-60px);
     z-index: 2;
   }
 
   .two-vs-two__battle-heading {
     text-align: right;
     font-size: 30px;
-    margin-bottom: -56px;
+    margin-bottom: 10px;
     z-index: 2;
     transform: translateY(-59px);
   }
