@@ -624,6 +624,105 @@
   }
 }
 
+@media (max-width: 850px) {
+  .recap-year__stats {
+    margin-bottom: -20px;
+  }
+  .recap-year__stat--participants {
+    background: #3e96d0;
+    color: var(--ghost-white);
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 43%;   /* left edge of participant = right edge of interests */
+    top: 30px;       /* temporary anchor point, corrected below */
+    transform: translateY(-100%) rotate(-2.61deg);
+    
+  }
+
+  .recap-year__stat--interests {
+    background: var(--ghost-white);
+    transform: rotate(-0.39deg);
+    color: var(--charcoal-black);
+    left: 5%;
+    position: absolute; /* <-- this becomes the anchor for participants */
+  }
+
+  .recap-year__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 20px;
+    min-width: min(100%, 420px);
+  }
+
+  .recap-year__stat-value {
+    margin: 0;
+    font-family: 'DC Monument Extended', var(--font-neue-plak);
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .recap-year__stat-label {
+    margin: 0;
+    font-family: var(--font-inter-regular);
+    font-size: clamp(20px, 3vw, 40px);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .recap-year__winner-photo {
+    width: min(650px, 100%);
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+    transform: rotate(var(--winner-rotation, -1.9deg));
+  }
+
+  .recap-year__winner-medal {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .recap-year__winner-banner p {
+    margin: 0;
+    font-family: 'DC Monument Extended', var(--font-neue-plak);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .recap-year__winner-banner {
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    gap: 14px;
+    margin-top: -48px;
+    padding: 10px 25px;
+    /* transform: rotate(-0.11deg); */
+    box-shadow: 1px 2px 3px rgba(248, 248, 255, 0.5);
+  }
+
+  .recap-year__judges-title,
+  .recap-year__guests-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: var(--white);
+    font-family: 'SVN A Love of Thunder', var(--font-neue-plak);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: normal;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  
+
+}
+
 
 
 @media (max-width: 450px) {

@@ -80,14 +80,25 @@
   text-align: justify;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 850px) {
   .about-us-stats {
-    padding: 80px 40px;
+    padding: 80px 100px;
     gap: 48px;
   }
 
   .about-us-stats__grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-us-stats__card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 188px;
+    padding: 32px;
+    background: #3e96d0;
+    border-radius: 16px;
+    color: var(--charcoal-black);
   }
 }
 
