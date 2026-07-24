@@ -204,6 +204,28 @@
   }
 }
 
+@media (max-width: 450px) {
+  .organizer-partner-card__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .organizer-partner-card__logo-wrap {
+    width: 100%;
+  }
+
+  .organizer-partner-card__description {
+    width: 100%;
+  }
+
+  /* Navi (descriptionPosition: 'left') expands upward:
+     description renders above the logo */
+  .organizer-partner-card--description-left .organizer-partner-card__inner {
+    flex-direction: column-reverse;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .organizer-partner-card,
   .organizer-partner-card__logo-wrap,

@@ -260,3 +260,60 @@
     display: none;
   }
 }
+
+@media (max-width: 450px) {
+  .about-us-story {
+    padding: 40px 16px 56px;
+  }
+
+
+  .about-us-story__labels {
+    position: static;
+    left: auto;
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 12px;
+    transform: none;
+    pointer-events: none;
+  }
+
+  .about-us-story__label--about,
+  .about-us-story__label--us {
+    font-size: 50px;
+    line-height: 1;
+    transform: none;
+  }
+
+  .about-us-story__star {
+    width: 72px;
+    top: 0;
+    right: -20px;
+  }
+
+  .about-us-story__content {
+    max-width: 100%;
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .about-us-story__content p,
+  .about-us-story__content li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-us-story__para1,
+  .about-us-story__para2,
+  .about-us-story__deyyy {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .about-us-story__deyyy ul {
+    padding-left: 24px;
+  }
+}
