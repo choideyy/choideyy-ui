@@ -119,6 +119,41 @@
   .contact-info-cards__text--single {
     text-align: center;
   }
+
+}
+
+@media (max-width: 850px) {
+  .contact-info-cards {
+    width: 100%;
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+    padding: 30px 20px 64px;
+    box-sizing: border-box;
+  }
+
+  .contact-info-cards__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .contact-info-cards__card img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-info-cards__text {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .contact-info-cards__subtext {
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {

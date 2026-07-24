@@ -167,16 +167,14 @@
   overflow: hidden;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 850px) {
   .contact-form {
-    padding: 0 33px 96px;
+    padding: 0 32px 100px;
   }
 
   .contact-form__label p {
-    font-size: 55px;
-    background: var(--gold-accent);
-    color: var(--charcoal-black);
-    box-shadow: 1px 1px 1px var(--ghost-white);
+    font-size: 48px;
+    padding: 8px 40px;
   }
 
   .contact-form__panel {
@@ -193,26 +191,20 @@
     font-size: 18px;
   }
 
-  .contact-form__field input {
-    padding: 14px 18px;
+  .contact-form__field input,
+  .contact-form__field textarea {
     font-size: 16px;
-    border-radius: 12px;
-    min-height: 47px;
+    padding: 16px 20px;
   }
 
   .contact-form__field--textarea textarea {
-    min-height: 189px;
-    border-radius: 15px;
-    font-size: 16px;
-    padding: 14px 18px;
+    min-height: 220px;
+    border-radius: 20px;
   }
 
   .contact-form__submit {
-    font-size: 18px;
-    padding: 16px 32px;
-    margin-top: 8px;
-    background: #8f2231;
-    color: rgba(26, 26, 27, 0.8);
+    font-size: 22px;
+    padding: 18px 36px;
   }
 }
 
