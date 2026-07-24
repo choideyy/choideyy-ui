@@ -151,11 +151,13 @@
 }
 
 /* Mobile: 0–767px */
-/* @media (max-width: 768px) {
+
+/* Mobile: 0–767px */
+@media (max-width: 450px) {
   .intro {
     padding: 40px 20px 60px;
   }
-s
+
   .intro__inner {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -177,4 +179,4 @@ s
     font-size: 11px;
     max-width: 100%;
   }
-} */
+}
