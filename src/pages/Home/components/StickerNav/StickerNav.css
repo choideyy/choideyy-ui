@@ -89,7 +89,7 @@
 }
 
 /* Tablet: 768px–1023px */
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) {
   .sticker-nav {
     --sticker-scale: 0.65;
     padding: 200px 30px 200px;
@@ -97,10 +97,11 @@
 }
 
 /* Mobile: 0–767px */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .sticker-nav {
     --sticker-scale: 0.3;
     padding: 24px 20px 48px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
+    margin-top: 80px;
   }
 }

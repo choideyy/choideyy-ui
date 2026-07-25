@@ -92,21 +92,23 @@
 /* Mobile: 0–767px */
 @media (max-width: 450px) {
   .countdown__number {
-    font-size: 28px;
+    font-size: clamp(45px, 5vw, 58px);
     min-width: 52px;
   }
 
   .countdown__separator {
-    font-size: 28px;
+    font-size: clamp(45px, 5vw, 58px);
     margin: 0 2px;
   }
 
   .countdown__label {
-    font-size: 12px;
+    font-size: clamp(30px, 5vw, 49px);
+    margin-left: 12px;
+    margin-top: 18px;
   }
 
   .countdown__labels {
-    margin-top: 12px;
+    margin-top: 5px;
     padding: 0 2px;
   }
 }

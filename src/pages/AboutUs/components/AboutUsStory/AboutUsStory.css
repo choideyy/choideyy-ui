@@ -288,11 +288,17 @@
   }
 
   .about-us-story__star {
-    width: 72px;
+    /* width: 72px; */
     top: 0;
-    right: -20px;
+    right: -8px;
   }
-
+  .about-us-story__lip {
+    display: block;
+    left: -93px;
+    bottom: -38px;
+ 
+    opacity: 0.3;
+  }
   .about-us-story__content {
     max-width: 100%;
     margin-left: 0;

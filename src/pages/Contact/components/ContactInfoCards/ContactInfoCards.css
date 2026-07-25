@@ -169,7 +169,7 @@
 
   .contact-info-cards__list > li {
     width: 100%;
-    max-width: 360px;
+    max-width: 80%;
   }
 
   .contact-info-cards__card {

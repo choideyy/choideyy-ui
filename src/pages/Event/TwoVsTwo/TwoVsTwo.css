@@ -1094,7 +1094,8 @@
     text-align: right;
     align-self: stretch;
     margin-top: 20px;
-    font-size: 58px;
+    margin-right: 10px;
+    font-size: clamp(48px, 6vw, 80px);
 
   }
 
@@ -1103,7 +1104,7 @@
     align-self: auto;        /* let it size by width below, not shrink-to-content */
     
     max-width: 90%;
-    margin-left: 50px;        /* pushes the whole box to the right */
+    /* margin-left: 50px;        pushes the whole box to the right */
     /* margin-right: 5px; */
     box-sizing: border-box;
     text-align: left;          /* text reads normally inside the box */
@@ -1152,9 +1153,9 @@
   .two-vs-two__battle-heading {
     text-align: right;
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     z-index: 2;
-    transform: translateY(-59px);
+    transform: translateY(-40px);
   }
 
   .two-vs-two__battle-grid ul.two-vs-two__rules-list {
@@ -1164,8 +1165,8 @@
 
 
   .two-vs-two__recall {
-    padding: 40px 16px 64px;
-    margin-bottom: 48px;
+    padding: 140px 29px 140px;
+    margin-bottom: 28px;
   }
 
  .two-vs-two__recall-inner {
@@ -1195,13 +1196,25 @@
 
 
   .two-vs-two__recall-title {
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 20px;
   }
 
   .two-vs-two__recall-subtitle {
-    font-size: 16px;
+    font-size: 19px;
     margin-bottom: 12px;
+  }
+  .two-vs-two__conditions p,
+  .two-vs-two__rules-list--recall li {
+    font-size: clamp(15px, 3vw, 19px);
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .two-vs-two__conditions p strong,
+  .two-vs-two__rules-list--recall strong {
+    font-weight: 700;
   }
 
   .two-vs-two__conditions {
@@ -1214,9 +1227,9 @@
     height: 24px;
   }
 
-  .two-vs-two__conditions p {
-    font-size: 14px;
-  }
+  /* .two-vs-two__conditions p {
+    font-size: clamp(19px, 3vw, 23px);
+  } */
 
   .two-vs-two__rules-list--recall {
     margin-top: 10px;
@@ -1224,18 +1237,21 @@
   }
 
   .two-vs-two__final-section {
-    margin-bottom: 32px;
+    margin-bottom: 100px;
   }
 
   .two-vs-two__final-banner {
     font-size: 24px;
     padding: 8px 20px;
   }
-
-  .two-vs-two__rules-list--final {
-    font-size: 16px;
-    padding: 0 10px 0;
+  .two-vs-two__rules-list--final{
+    margin-left: 0;
   }
+  .two-vs-two__rules-list--final  li{
+    font-size: 13px;
+    padding: 0 0 0;
+  }
+
 
   .two-vs-two__champion {
     margin-top: 32px;

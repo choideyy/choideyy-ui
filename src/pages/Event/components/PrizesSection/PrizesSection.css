@@ -125,7 +125,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .event-prizes {
     padding: 0 20px 80px;
   }
@@ -137,6 +137,16 @@
 
   .event-prizes__list {
     gap: 0px;
+  }
+  .event-prizes__item{
+    padding: 20px 13px;
+  }
+  .event-prizes__item-title{
+    font-size: clamp(9px, 5vw, 13px);
+  }
+
+  .event-prizes__item-amount{
+    font-size: clamp(14px, 5vw, 18px);
   }
 
   .event-prizes__decoration {

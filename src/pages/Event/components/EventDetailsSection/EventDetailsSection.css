@@ -514,8 +514,8 @@
   }
 
   .event-details__meta {
-    width: min(900px, 100%);  
-    margin: 32px 60px 0;
+    width: fit-content;  
+    margin: 32px auto 0;
   }
 
   .event-details__date {
@@ -541,83 +541,19 @@
 
     padding: 16px 22px;
 
-    font-size: 24px;
+    font-size: 22px;
     transform: rotate(0.83deg);
   }
 
   .event-details__address {
     margin: 15px 20px 0 40px;
 
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.45;
   }
 }
 
-@media (max-width: 768px) {
-  .event-details__categories {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    gap: clamp(48px, 22vw, 100px);
-    margin: -180px 0 32px;
-  }
-
-  .event-details__category-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .event-details__category-icon--duo{
-    width: 80px;
-    height: 80px;
-  }
-
-  .event-details__category-icon--crew{
-    width: 161px;
-    height: 80px;
-  }
-  .event-details__category-label-duo{
-
-    /* height :32px; */
-    margin-bottom: -3.2px;
-    font-size: 30px;
-  }
-  .event-details__category-label-crew{
-    font-size: 30px;
-  }
-
-  /* Show spirit images instead of hiding them, stacked and centered */
-  .event-details__spirit,
-  .event-details__spirit-more {
-    display: block;
-    position: relative;
-    width: 90%;
-    max-width: 420px;
-    margin: 0 auto;
-    z-index: auto;
-    height: auto;
-  }
-
-  .event-details__spirit {
-    margin-top: -50px;
-  }
-
-  .event-details__spirit-more {
-    margin-top: -70px; /* small controlled overlap instead of the -400px desktop offset */
-  }
-
-  .event-details__meta {
-    width: min(900px, 100%);  
-    margin: 32px 20px 150px;
-  }
-}
-
 @media (max-width: 450px) {
-  @media (max-width: 768px) {
   .event-details {
     padding: 40px 20px 0;
     overflow-x: clip;
@@ -719,7 +655,8 @@
   }
 
   .event-details__meta {
-    margin-top: 24px;
+    width: fit-content;
+    margin: 24px auto 0;
   }
 
   .event-details__date {
@@ -741,5 +678,5 @@
     font-size: 11px;
     margin: 12px 0 0 24px;
   }
-}
+
 }

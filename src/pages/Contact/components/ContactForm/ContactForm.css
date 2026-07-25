@@ -217,11 +217,15 @@
     margin-bottom: -16px;
   }
 
-  .contact-form__label p {
+  /* .contact-form__label p {
     font-size: 36px;
     padding: 6px 16px;
     background: var(--gold-accent);
     color: var(--charcoal-black);
+  } */
+  .contact-form__label p {
+    font-size: clamp(39px, 4vw, 48px);
+    padding: 6px 16px;
   }
 
   .contact-form__panel {
@@ -255,7 +259,8 @@
     width: auto;
     font-size: 14px;
     padding: 14px 28px;
-    background: #8f2231;
-    color: rgba(26, 26, 27, 0.8);
+    /* background: #8f2231; */
+    /* color: rgba(26, 26, 27, 0.8); */
   }
+
 }
