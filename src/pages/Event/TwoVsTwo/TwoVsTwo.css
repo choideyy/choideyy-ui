@@ -1012,6 +1012,16 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .two-vs-two__rules-list li {
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+
+}
 
 
 @media (max-width: 450px) {
@@ -1038,6 +1048,7 @@
     position: relative;
     z-index: 2;
   }
+
   .two-vs-two__prelim-grid {
     max-width: 100%;
     display: flex;           /* was still grid — this was the column-width leak */
@@ -1058,6 +1069,7 @@
     order: 2;
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
   }
 
   .two-vs-two__stage-label--prelim {

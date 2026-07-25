@@ -44,7 +44,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .round-banner {
     padding: 15px 25px;
   }
@@ -56,6 +56,22 @@
 
   .round-banner__text {
     font-size: 25px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  .round-banner {
+    padding: 15px 25px;
+  }
+
+  .round-banner--left {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .round-banner__text {
+    font-size: 20px;
     white-space: normal;
     text-align: center;
   }
