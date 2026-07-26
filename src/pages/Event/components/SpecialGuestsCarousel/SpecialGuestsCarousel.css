@@ -79,7 +79,7 @@
   }
 
   .event-guests__title {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .event-guests__card {
@@ -87,6 +87,6 @@
   }
 
   .event-guests__name {
-    font-size: 24px;
+    font-size: 22px;
   }
 }

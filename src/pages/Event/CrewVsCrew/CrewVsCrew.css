@@ -155,10 +155,10 @@
 .crew-vs-crew__req-title {
   margin: 0 0 2px;
   color: var(--white);
-  font-family: var(--font-inter-regular);
+  font-family: 'Inter Regular Italic';
   font-size: 32px;
   font-weight: 600;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .crew-vs-crew__req-value {

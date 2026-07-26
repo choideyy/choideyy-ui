@@ -94,6 +94,7 @@
   .countdown__number {
     font-size: clamp(45px, 5vw, 58px);
     min-width: 52px;
+    font-weight: 900;
   }
 
   .countdown__separator {

@@ -434,8 +434,7 @@
 }
 
 .recap-year__winner-banner em {
-  font-family: var(--font-inter);
-  font-style: italic;
+  font-family: var(--font-inter-italic);
   font-weight: 700;
 }
 
@@ -808,7 +807,7 @@
   transform: none;
   margin: 0;
   width: max-content;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .recap-judges__header > :last-child {
@@ -845,6 +844,7 @@
   .recap-year__winners-title{
     margin-top: 150px;
     margin-bottom: 50px;
+    font-size: 50px;
   }
   .recap-year__winners-list {
     gap: 30px; /* or 60px if you want them even closer */
@@ -909,7 +909,7 @@
     transform: none;
     margin: 0;
     width: max-content;
-    font-size: 35px;
+    font-size: 30px;
   }
   .recap-guest__header {
     display: grid;

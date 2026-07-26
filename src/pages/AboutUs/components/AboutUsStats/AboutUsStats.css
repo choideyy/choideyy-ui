@@ -26,6 +26,7 @@
   text-transform: uppercase;
 }
 
+
 .about-us-stats__intro {
   margin: 0;
   max-width: 1200px;
@@ -80,6 +81,11 @@
   text-align: justify;
 }
 
+  .about-us-stats__value, .about-us-stats__label{
+    font-family: var(--font-inter-extra-bold) ;
+  }
+
+
 @media (max-width: 850px) {
   .about-us-stats {
     padding: 80px 100px;
@@ -121,7 +127,10 @@
     padding: 64px 20px;
 
   }
+
+
   .about-us-stats__title{
     text-align: center;
+    font-size: 25px;
   }
 }

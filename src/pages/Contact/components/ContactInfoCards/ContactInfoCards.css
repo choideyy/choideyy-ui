@@ -156,6 +156,15 @@
   }
 }
 
+@media (max-width: 820px) {
+  .contact-info-cards__text{
+    font-size: 11px;
+  }
+  .contact-info-cards__subtext{
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-info-cards {
     padding: 0 20px 32px;

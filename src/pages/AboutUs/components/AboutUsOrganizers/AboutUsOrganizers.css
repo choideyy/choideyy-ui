@@ -3,7 +3,8 @@
   max-width: var(--page-max-width);
   margin: 0 auto;
   margin-top: 200px;
-  padding: 0 52px 120px;
+  margin-bottom: 100px;
+  padding: 0 auto 120px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -43,6 +44,13 @@
 .about-us-organizers__partners.has-active {
   align-items: flex-start;
 }
+/* 
+@media (max-width: 850px) {
+  .about-us-organizers{
+    padding: 0 auto 120px;
+  }
+  
+} */
 
 @media (max-width: 768px) {
   .about-us-organizers {
@@ -62,8 +70,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .about-us-organizers{
     margin-top: 100px;
+  
+  }
+  .about-us-organizers__title{
+    font-size: 25px;
   }
 }
+

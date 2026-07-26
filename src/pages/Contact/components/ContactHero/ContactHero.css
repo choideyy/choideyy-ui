@@ -82,14 +82,14 @@
   }
 
   .contact-hero__title {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 35px;
+    margin-bottom: 15px;
     top: 10px;
   }
 
   .contact-hero__description {
     margin-top: 24px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.45;
   }
 }

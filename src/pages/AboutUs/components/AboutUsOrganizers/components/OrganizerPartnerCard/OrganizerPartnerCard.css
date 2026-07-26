@@ -151,7 +151,7 @@
 }
 
 .organizer-partner-card__description strong {
-  font-weight: 800;
+  font-family: var(--font-inter-extra-bold);
 }
 
 .organizer-partner-card--description-left .organizer-partner-card__description p {
@@ -173,7 +173,8 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+
   .organizer-partner-card {
     --partner-logo-height: 280px;
 
@@ -183,7 +184,11 @@
 
   .about-us-organizers__partners:not(.has-active) .organizer-partner-card {
     flex: 1 1 100%;
-    max-width: min(360px, 100%);
+    max-width: min(480px, 100%); /* was 360px — gives the row more total room */
+  }
+
+  .organizer-partner-card__inner {
+    gap: 24px; /* was 48px — frees up space now that logo is smaller */
   }
 
   .organizer-partner-card__logo-wrap {
@@ -195,6 +200,9 @@
   .organizer-partner-card__description p,
   .organizer-partner-card--description-left .organizer-partner-card__description p {
     font-size: 16px;
+  }
+    .organizer-partner-card--description-left .organizer-partner-card__inner {
+    flex-direction: row-reverse;
   }
 
   .organizer-partner-card__logo-hint {

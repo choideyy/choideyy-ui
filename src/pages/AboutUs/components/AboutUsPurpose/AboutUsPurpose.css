@@ -129,7 +129,7 @@
 
   .about-us-purpose__title {
     margin: 0 0 24px;
-    font-size: 32px;
+    font-size: 25px;
     text-align: center;
   }
 
@@ -145,10 +145,11 @@
     position: absolute;
     z-index: 1;
 
-    width: 260px;
+    max-width: 500px;
+    width: 450px;
 
-    top: 48%;
-    left: 70%;
+    top: 80%;
+    left: 90%;
     transform: translate(-50%, -50%) rotate(-10.16deg);
 
     margin: 0;

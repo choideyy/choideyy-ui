@@ -45,7 +45,7 @@
 }
 
 .intro__text strong {
-  font-weight: 700;
+  font-family: var(--font-inter-extra-bold);
 }
 
 .intro__image-wrap {
@@ -180,6 +180,7 @@
     max-width: 100%;
   }
   .intro__text p{
-    font-size: clamp(15px, 5vw, 25px);
+    font-size: clamp(11px, 5vw, 16px);
   }
+
 }
