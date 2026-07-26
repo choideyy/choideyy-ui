@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Slopdogz';
-  src: url('../../otf/Slopdogz_PERSONAL_USE_ONLY.otf') format('opentype');
+  src: url('/fonts/Slopdogz_PERSONAL_USE_ONLY.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Aerosoldier';
-  src: url('../../otf/Aerosoldier_PERSONAL_USE_ONLY.otf') format('opentype');
+  src: url('/fonts/Aerosoldier_PERSONAL_USE_ONLY.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,61 +16,80 @@
 
 @font-face {
   font-family: 'Another Tag';
-  src: url('../../otf/aAnotherTag.otf') format('opentype');
+  src: url('/fonts/aAnotherTag.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Neue Plak Black';
-  src: url('../../otf/NeuePlak-Black.ttf') format('truetype');
-  font-weight: 900;
+  font-family: 'Neue Plak';
+  src: url('/fonts/Neue Plak Extended Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Neue Plak Regular';
-  src: url('../../otf/NeuePlak-Regular.ttf') format('truetype');
+  src: url('/fonts/Neue Plak Extended Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'Neue Plak Black';
+  src: url('/fonts/NeuePlak-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'DC Monument Extended';
-  src: url('../../otf/TITLE.OTF') format('opentype');
+  src: url('/fonts/TITLE.OTF') format('opentype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-    font-family: "SVN A Love of Thunder";
-    src: url("../../otf/SVN-A-Love-of-Thunder.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'SVN A Love of Thunder';
+  src: url('/fonts/SVN-A-Love-Of-Thunder.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'SVN A Love Of Thunder';
+  src: url('/fonts/SVN-A-Love-Of-Thunder.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter Regular';
-  src: url('../../otf/Inter-Regular.ttf') format('truetype');
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter Black';
-  src: url('../../otf/Inter-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter Extra Bold';
-  src: url('../../otf/Inter-ExtraBold.ttf') format('truetype');
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Black';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
