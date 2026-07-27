@@ -8,30 +8,31 @@
   width: 100%;
   /* background-color: var(--faq-bg-60); */
 }
-.torn-edge-seam {
-  display: block;
+ .faq__bg {
   position: absolute;
-  top: -100px; /* nudge to sit on the seam, tune by eye */
-  left: 0;
-  width: 100%;
-  height: 150px; /* fixed, matches viewBox height — never grows with content */
-  pointer-events: none;
+  inset: 0;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: visible; /* so the seam can still bleed upward past the top edge */
 }
 
-.torn-edge-seam--mobile{
+.torn-edge-seam {
+  flex: 0 0 auto;
+  position: relative; /* no longer absolute + top offset */
+  width: 100%;
+  height: 150px;
+  margin-top: -100px; /* same upward bleed effect as before, now via flow */
+}
+
+.torn-edge-seam--mobile {
   display: none;
 }
 .faq__fill {
-  position: absolute;
-  top: 50px; /* wherever the seam's wavy shape visually ends — tune to match */
-  left: 0;
-  right: 0;
-  bottom: 0;
+  flex: 1 1 auto; /* automatically fills all remaining height, at any breakpoint */
   background: #520E18;
   opacity: 0.6;
-  z-index: 0;
-  pointer-events: none;
 }
 
 .faq__torn-paper {
@@ -186,7 +187,7 @@
 }
 
 /* Tablet: 768px–1023px */
-@media (max-width: 1280px) and (min-width: 768px) {
+@media (max-width: 1280px) {
   .faq__content {
     padding: 80px 62px 120px;
   }
@@ -212,7 +213,7 @@
     font-size: 24px;
   }
   .torn-edge-seam--desktop{
-    top:-99.5px;
+    margin-top:-99.5px;
   }
   .faq__torn-paper{
     top: -25px;
@@ -261,13 +262,12 @@
     bottom: 30px;
 }
   .torn-edge-seam--desktop {
-        display: none;
-    }
+    display: none;
+  }
 
   .torn-edge-seam--mobile {
-      display: block;
-      top: -45px;
-      padding: 0 0 55px;
+    display: block;
+    margin-top: -54px; /* only this needs tuning — fill still auto-adjusts */
   }
 }
 
