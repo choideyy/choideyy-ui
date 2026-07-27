@@ -54,10 +54,11 @@ export const FAQSection = () => {
   return (
     <section className="faq" id="faq" aria-labelledby="faq-heading">
       <div className="faq__body">
-        <>
-            <TornEdgeSeamDesktop />
-            <TornEdgeSeamMobile />
-        </>
+        <div className="faq__bg" aria-hidden="true">
+          <TornEdgeSeamDesktop />
+          <TornEdgeSeamMobile />
+          <div className="faq__fill" />
+        </div>
         <div className="faq__fill" aria-hidden="true" />
         <div className="faq__torn-paper" aria-hidden="true">
           <div className="faq__torn-paper-rotator">
