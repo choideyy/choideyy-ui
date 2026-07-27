@@ -271,6 +271,9 @@
 .crew-vs-crew__rules-list li {
   margin-bottom: 8px;
 }
+.crew-vs-crew__rules-list strong {
+  font-family: var(--font-inter-extra-bold);
+}
 
 .crew-vs-crew__final {
   margin-top: 134px;
@@ -296,7 +299,7 @@
 }
 
 .crew-vs-crew__rules-list--final strong {
-  font-weight: 800;
+  font-family: var(--font-inter-extra-bold);
 }
 
 .crew-vs-crew__champion {
