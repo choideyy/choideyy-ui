@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logoChoideyy from '../../../assets/figma/logo-choideyy.png';
-import { env, openGoogleForm } from '../../../config/env';
+import { env, openExternalUrl } from '../../../config/env';
 import { Button } from '../../ui/Button';
 import './NavBar.css';
 
@@ -13,6 +13,113 @@ const NAV_LINKS = [
 ] as const;
 
 const MENU_LINKS = [{ label: 'HOME', to: '/' }, ...NAV_LINKS] as const;
+
+const REGISTER_OPTIONS = [
+  {
+    label: 'Vé thi đấu',
+    url: () => env.googleFormUrl,
+    envKey: 'VITE_GOOGLE_FORM_URL',
+  },
+  {
+    label: 'Vé xem',
+    url: () => env.googleFormTicketUrl,
+    envKey: 'VITE_GOOGLE_FORM_TICKET_URL',
+  },
+] as const;
+
+type RegisterDropdownProps = {
+  onCloseMenu?: () => void;
+};
+
+const RegisterDropdown = ({ onCloseMenu }: RegisterDropdownProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const hasAnyForm = Boolean(env.googleFormUrl || env.googleFormTicketUrl);
+
+  const closeDropdown = () => setIsOpen(false);
+
+  const handleToggle = () => {
+    setIsOpen((open) => !open);
+  };
+
+  const handleSelect = (url: string | undefined, envKey: string) => {
+    openExternalUrl(url, envKey);
+    closeDropdown();
+    onCloseMenu?.();
+  };
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        closeDropdown();
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
+  return (
+    <div className="navbar__cta-dropdown" ref={dropdownRef}>
+      <Button
+        className="navbar__cta"
+        onClick={handleToggle}
+        disabled={!hasAnyForm}
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        aria-controls="navbar-register-menu"
+      >
+        ĐĂNG KÍ
+      </Button>
+
+      {isOpen ? (
+        <ul
+          id="navbar-register-menu"
+          className="navbar__cta-menu"
+          role="menu"
+          aria-label="Đăng kí"
+        >
+          {REGISTER_OPTIONS.map((option) => {
+            const optionUrl = option.url();
+
+            return (
+              <li key={option.label} role="none">
+                <button
+                  type="button"
+                  className="navbar__cta-menu-item"
+                  role="menuitem"
+                  disabled={!optionUrl}
+                  onClick={() => handleSelect(optionUrl, option.envKey)}
+                >
+                  {option.label}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
+    </div>
+  );
+};
 
 type NavBarInnerProps = {
   isMenuOpen: boolean;
@@ -65,14 +172,7 @@ const NavBarInner = ({
       </ul>
     </nav>
 
-    <Button
-      className="navbar__cta"
-      onClick={openGoogleForm}
-      disabled={!env.googleFormUrl}
-      type="button"
-    >
-      ĐĂNG KÍ
-    </Button>
+    <RegisterDropdown onCloseMenu={onLinkClick} />
   </div>
 );
 
