@@ -8,7 +8,8 @@ export type McDjMember = {
 
 export type McDjSectionProps = {
   title?: string;
-  members: McDjMember[];
+  members?: McDjMember[];
+  description?: string;
   variant?: 'event' | 'recap';
   className?: string;
   decorationSrc?: string;

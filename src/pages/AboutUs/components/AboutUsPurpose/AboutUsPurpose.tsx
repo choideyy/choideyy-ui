@@ -15,7 +15,7 @@ export const AboutUsPurpose = () => {
           từng bước nhảy. Bên cạnh đó, Chọi Deyyy hướng đến vai trò kết nối giữa
           các thế hệ dancer – tạo cơ hội để những người đi trước và lớp trẻ gặp
           gỡ, chia sẻ kinh nghiệm và cùng nhau đóng góp vào sự phát triển của bộ
-          môn tại địa phương cũng như cộng đồng Street Dance Việt Nam
+          môn tại địa phương cũng như cộng đồng Street Dance Việt Nam.
         </p>
       </div>
 

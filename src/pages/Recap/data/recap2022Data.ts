@@ -79,6 +79,7 @@ export const RECAP_2022_DATA: RecapYearData = {
   ],
   specialGuests: [guest1, guest2, guest3],
   mcDjImages: [],
+  mcDjDescription: 'MC Tùng Bi Quang Anh và DJ Tedymation là người đã truyền tải trọn vẹn năng lượng bùng nổ, nhiệt huyết, thổi bùng ngọn lửa đam mê trong các bạn trẻ.',
   decorations: {
     starBurst: decoStarBurst,
     cassette: decoCassette,

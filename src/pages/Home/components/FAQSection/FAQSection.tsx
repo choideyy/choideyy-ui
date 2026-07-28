@@ -31,7 +31,7 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: 'Ai có thể đăng kí tham gia Chọi Deyyy 2026 ?',
-    answer: <p>Các cá nhân, nhóm nhảy, có niềm đam mê với nhảy, yêu thích vũ đạo nói chung và các thể loại nhảy Đường phố nói riêng đang sinh sống, học tập và làm việc trên địa bàn thành phố Hải Phòng và các tỉnh miền Bắc</p>,
+    answer: <p>Các cá nhân, nhóm nhảy, có niềm đam mê với nhảy, yêu thích vũ đạo nói chung và các thể loại nhảy Đường phố nói riêng đang sinh sống, học tập và làm việc trên địa bàn thành phố Hải Phòng và các tỉnh miền Bắc.</p>,
   },
   {
     question: 'Sự kiện diễn ra ở đâu, vào thời gian nào ?',

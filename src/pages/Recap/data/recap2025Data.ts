@@ -43,6 +43,7 @@ export const RECAP_2025_DATA: RecapYearData = {
   stats: {
     participants: '150+',
     interests: '200k+',
+    interestsLabel: 'Tổng lượt xem cho một tài khoảng hoàn toàn mới ',
   },
   judges: [judge1, judge2, judge3],
   winners: [

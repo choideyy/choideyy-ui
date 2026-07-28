@@ -24,11 +24,13 @@ export type RecapYearData = {
   stats: {
     participants: string;
     interests: string;
+    interestsLabel?: string; 
   };
   judges: string[];
   winners: RecapWinner[];
   specialGuests: string[];
   mcDjImages: string[];
+  mcDjDescription?: string;
   decorations: {
     starBurst: string;
     cassette: string;

@@ -7,7 +7,7 @@ export const IntroSection = () => {
       <div className="intro__inner">
         <div className="intro__content">
           <h2 id="intro-heading" className="intro__title">
-            CHỌI DEYY
+            CHỌI DEYYY
             <br />
             DANCE COMPETITION 2026
           </h2>

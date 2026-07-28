@@ -121,11 +121,11 @@ const guestsCarousel = useLoopCarousel(guestCount);
             alt=""
             aria-hidden="true"
           />
-          <div className="recap-year__stats-cards">
+         <div className="recap-year__stats-cards">
             <div className="recap-year__stat recap-year__stat--interests">
               <p className="recap-year__stat-value">{data.stats.interests}</p>
               <p className="recap-year__stat-label">
-                Tổng số lượt quan tâm sự kiện
+                {data.stats.interestsLabel ?? 'Tổng số lượt quan tâm sự kiện'}
               </p>
             </div>
             <div className="recap-year__stat recap-year__stat--participants">
@@ -263,7 +263,7 @@ const guestsCarousel = useLoopCarousel(guestCount);
           )}
         </section>)
         }
-        {data.mcDjImages.length > 0 && (
+        {(data.mcDjImages.length > 0 || data.mcDjDescription !== undefined) && (
           <McDjSection
             variant="recap"
             headingId="recap-mc-dj"
@@ -272,6 +272,7 @@ const guestsCarousel = useLoopCarousel(guestCount);
               image,
               alt: `MC & DJ ${index + 1}`,
             }))}
+            description={data.mcDjDescription}
             decorationSrc={data.decorations.starBurst}
             secondaryDecorationSrc={data.decorations.cassette}
           />
