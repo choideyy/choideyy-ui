@@ -29,6 +29,7 @@ export type RecapYearData = {
   winners: RecapWinner[];
   specialGuests: string[];
   mcDjImages: string[];
+  mcDjDescription?: string;
   decorations: {
     starBurst: string;
     cassette: string;

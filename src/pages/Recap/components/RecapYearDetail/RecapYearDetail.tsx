@@ -263,7 +263,7 @@ const guestsCarousel = useLoopCarousel(guestCount);
           )}
         </section>)
         }
-        {data.mcDjImages.length > 0 && (
+        {(data.mcDjImages.length > 0 || data.mcDjDescription !== undefined) && (
           <McDjSection
             variant="recap"
             headingId="recap-mc-dj"
@@ -272,6 +272,7 @@ const guestsCarousel = useLoopCarousel(guestCount);
               image,
               alt: `MC & DJ ${index + 1}`,
             }))}
+            description={data.mcDjDescription}
             decorationSrc={data.decorations.starBurst}
             secondaryDecorationSrc={data.decorations.cassette}
           />
