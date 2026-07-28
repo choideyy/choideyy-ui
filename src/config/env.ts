@@ -12,10 +12,15 @@ const warnMissing = (name: string) => {
 };
 
 const googleFormUrl = readEnv('VITE_GOOGLE_FORM_URL');
+const googleFormTicketUrl = readEnv('VITE_GOOGLE_FORM_TICKET_URL');
 const contactApiUrl = readEnv('VITE_CONTACT_API_URL');
 
 if (!googleFormUrl) {
   warnMissing('VITE_GOOGLE_FORM_URL');
+}
+
+if (!googleFormTicketUrl) {
+  warnMissing('VITE_GOOGLE_FORM_TICKET_URL');
 }
 
 if (!contactApiUrl) {
@@ -24,15 +29,19 @@ if (!contactApiUrl) {
 
 export const env = {
   googleFormUrl,
+  googleFormTicketUrl,
   /** Backend base URL. The contact client appends `/api/contact`. */
   contactApiUrl,
 } as const;
 
-export const openGoogleForm = (): void => {
-  if (!env.googleFormUrl) {
-    warnMissing('VITE_GOOGLE_FORM_URL');
+export const openExternalUrl = (
+  url: string | undefined,
+  envKey: string,
+): void => {
+  if (!url) {
+    warnMissing(envKey);
     return;
   }
 
-  window.open(env.googleFormUrl, '_blank', 'noopener,noreferrer');
+  window.open(url, '_blank', 'noopener,noreferrer');
 };

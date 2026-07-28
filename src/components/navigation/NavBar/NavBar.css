@@ -118,6 +118,52 @@
   border-radius: 5px;
 }
 
+.navbar__cta-dropdown {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.navbar__cta-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 3;
+  min-width: 160px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: var(--charcoal-black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.navbar__cta-menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Neue Plak Black';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.navbar__cta-menu-item:hover:not(:disabled),
+.navbar__cta-menu-item:focus-visible:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar__cta-menu-item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .navbar__overlay {
   position: fixed;
   inset: 0;
@@ -196,9 +242,18 @@
     display: none;
   }
 
-  .navbar__cta {
+  .navbar__cta-dropdown {
     grid-column: 3;
     justify-self: end;
+  }
+
+  .navbar__cta {
+    grid-column: auto;
+    justify-self: auto;
+  }
+
+  .navbar__cta-menu-item {
+    font-size: 16px;
   }
 }
 
@@ -224,5 +279,9 @@
 
   .navbar__overlay-link {
     font-size: 32px;
+  }
+
+  .navbar__cta-menu-item {
+    font-size: 14px;
   }
 }

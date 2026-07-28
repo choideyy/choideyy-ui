@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_GOOGLE_FORM_URL: string;
+  readonly VITE_GOOGLE_FORM_TICKET_URL: string;
   readonly VITE_CONTACT_API_URL: string;
 }
 
