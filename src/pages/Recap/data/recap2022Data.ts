@@ -14,6 +14,8 @@ import gallery7 from '../../../assets/figma/recap/2022/gallery-7.png';
 import guest1 from '../../../assets/figma/recap/2022/guest-1.png';
 import guest2 from '../../../assets/figma/recap/2022/guest-2.png';
 import guest3 from '../../../assets/figma/recap/2022/guest-3.png';
+import guest4 from '../../../assets/figma/recap/2022/guest-4.png';
+import guest5 from '../../../assets/figma/recap/2022/guest-5.png';
 import judge1 from '../../../assets/figma/recap/2022/judge-1.png';
 import judge2 from '../../../assets/figma/recap/2022/judge-2.png';
 import judge3 from '../../../assets/figma/recap/2022/judge-3.png';
@@ -77,7 +79,7 @@ export const RECAP_2022_DATA: RecapYearData = {
       medalIcon: medalStar2,
     },
   ],
-  specialGuests: [guest1, guest2, guest3],
+  specialGuests: [guest1, guest2, guest3,guest4, guest5],
   mcDjImages: [],
   mcDjDescription: 'MC Tùng Bi Quang Anh và DJ Tedymation là người đã truyền tải trọn vẹn năng lượng bùng nổ, nhiệt huyết, thổi bùng ngọn lửa đam mê trong các bạn trẻ.',
   decorations: {
