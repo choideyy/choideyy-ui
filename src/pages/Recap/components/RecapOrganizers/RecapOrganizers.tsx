@@ -1,5 +1,5 @@
-import organizersImage from '../../../../assets/figma/about-us/organizers.png';
-import partnerNavi from '../../../../assets/figma/about-us/partner-navi.png';
+// import organizersImage from '../../../../assets/figma/about-us/organizers.png';
+import partnerOS from '../../../../assets/figma/about-us/partner-os.png';
 import partnerSoloist from '../../../../assets/figma/about-us/partner-soloist.png';
 import './RecapOrganizers.css';
 
@@ -11,8 +11,8 @@ const PARTNERS = [
   },
   {
     id: 'partnerB',
-    logo: partnerNavi,
-    logoAlt: 'Navi Dance Team',
+    logo: partnerOS,
+    logoAlt: 'OS Crew',
   },
 ] as const;
 
@@ -25,12 +25,12 @@ export const RecapOrganizers = () => {
       <h2 id="recap-organizers-heading" className="recap-organizers__title">
         BAN TỔ CHỨC
       </h2>
-
+{/* 
       <img
         className="recap-organizers__photo"
         src={organizersImage}
         alt="Ban tổ chức Chọi Deyyy"
-      />
+      /> */}
 
       <div className="recap-organizers__partners">
         {PARTNERS.map((partner) => (

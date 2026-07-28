@@ -9,7 +9,7 @@ import { NewPostMarquee } from './components/NewPostMarquee';
 import { PrizesSection } from './components/PrizesSection';
 import { RulesSection } from './components/RulesSection';
 import { ScrollToTop } from './components/ScrollToTop';
-import { SpecialGuestsCarousel } from './components/SpecialGuestsCarousel';
+import { SpecialGuestsSection } from './components/SpecialGuestsCarousel';
 // import { SponsorsSection } from './components/SponsorsSection';
 import { ThemeSection } from './components/ThemeSection';
 import './Event.css';
@@ -34,7 +34,7 @@ export const Event = () => {
         <PrizesSection />
         <RulesSection />
         <JudgesCarousel />
-        <SpecialGuestsCarousel />
+        <SpecialGuestsSection />
         <McDjSection
             variant="event"
             headingId="event-mc-dj"

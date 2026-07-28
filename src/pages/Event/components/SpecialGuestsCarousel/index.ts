@@ -1,1 +1,1 @@
-export { SpecialGuestsCarousel } from './SpecialGuestsCarousel';
+export { SpecialGuestsSection } from './SpecialGuestsCarousel';

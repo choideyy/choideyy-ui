@@ -1,36 +1,58 @@
-import specialGuest from '../../../../assets/figma/event/special-guest.png';
 import { useAutoCarousel } from '../../hooks/useAutoCarousel';
 import { CarouselControls } from '../CarouselControls';
+import specialGuest from '../../../../assets/figma/event/special-guest.png';
+// TODO: replace with your actual NTT guest image import(s)
+import nttGuestImage from '../../../../assets/figma/event/special-guest-ntt.png';
 import './SpecialGuestsCarousel.css';
 
-const SPECIAL_GUESTS = [
-  {
-    id: 'os-crew',
-    image: specialGuest,
-    name: 'OS CREW',
-  },
-] as const;
+export type SpecialGuest = {
+  id: string;
+  image: string;
+  name: string;
+};
 
-export const SpecialGuestsCarousel = () => {
+type SpecialGuestsCarouselProps = {
+  title: string;
+  guests: readonly SpecialGuest[];
+  headingId: string;
+  intervalMs?: number;
+  className?: string;
+};
+
+const SpecialGuestsCarousel = ({
+  title,
+  guests,
+  headingId,
+  intervalMs = 4000,
+  className = '',
+}: SpecialGuestsCarouselProps) => {
+
   const { activeIndex, goToNext, goToPrevious } = useAutoCarousel({
-    itemCount: SPECIAL_GUESTS.length,
-    intervalMs: 4000,
+    itemCount: guests.length,
+    intervalMs,
   });
 
-  const guest = SPECIAL_GUESTS[activeIndex];
+  if (guests.length === 0) {
+    return null;
+  }
+
+  const guest = guests[activeIndex];
 
   return (
-    <section className="event-guests" aria-labelledby="event-guests-heading">
+     <section
+        className={`event-guests ${className}`.trim()}
+        aria-labelledby={headingId}
+      >
       <div className="event-guests__header">
-        <h2 id="event-guests-heading" className="event-guests__title">
-          SPECIAL GUESTS
+        <h2 id={headingId} className="event-guests__title">
+          {title}
         </h2>
-        {SPECIAL_GUESTS.length > 1 && (
+        {guests.length > 1 && (
           <CarouselControls
             onPrevious={goToPrevious}
             onNext={goToNext}
-            previousLabel="Previous special guest"
-            nextLabel="Next special guest"
+            previousLabel={`Previous ${title.toLowerCase()}`}
+            nextLabel={`Next ${title.toLowerCase()}`}
           />
         )}
       </div>
@@ -44,5 +66,32 @@ export const SpecialGuestsCarousel = () => {
         <p className="event-guests__name">{guest.name}</p>
       </article>
     </section>
+  );
+};
+
+const SPECIAL_GUESTS_1 = [
+  { id: 'os-crew', image: specialGuest, name: 'OS CREW' },
+] as const;
+
+const SPECIAL_GUESTS_NTT = [
+  { id: 'ntt-guest-1', image: nttGuestImage, name: 'NHP MEDIA PRODUCTIONS' },
+] as const;
+
+export const SpecialGuestsSection = () => {
+  return (
+    <>
+      <SpecialGuestsCarousel
+        title="ĐƠN VỊ BẢO TRỢ CHUYÊN MÔN"
+        guests={SPECIAL_GUESTS_1}
+        headingId="event-guests-heading-1"
+        className="event-guests--stacked"
+      />
+
+      <SpecialGuestsCarousel
+        title="ĐƠN VỊ BẢO TRỢ HÌNH ẢNH"
+        guests={SPECIAL_GUESTS_NTT}
+        headingId="event-guests-heading-ntt"
+      />
+    </>
   );
 };
