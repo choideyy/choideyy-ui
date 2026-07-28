@@ -3,6 +3,7 @@ import { McDjSection } from '../../../../components/McDjSection';
 import { SponsorsSection } from '../../../../components/SponsorsSection';
 import type { RecapYearData } from '../../types/recapYearData';
 import { BackToRecap } from '../BackToRecap';
+import { RecapOrganizers } from '../RecapOrganizers';
 import './RecapYearDetail.css';
 import type { CSSProperties } from 'react';
 import { useLoopCarousel } from '../../../../hooks/useLoopCarousel';
@@ -284,6 +285,8 @@ const guestsCarousel = useLoopCarousel(guestCount);
             className={`recap-year__sponsors recap-year__sponsors--${data.year}`}
           />
         )}
+
+        <RecapOrganizers />
 
         <button
           type="button"

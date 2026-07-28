@@ -1,0 +1,112 @@
+.recap-organizers {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  padding: 0 90px 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.recap-organizers__title {
+  margin: 0;
+  color: var(--white);
+  font-family: 'DC Monument Extended', var(--font-neue-plak);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.recap-organizers__photo {
+  width: min(1336px, 100%);
+  height: auto;
+  object-fit: cover;
+}
+
+.recap-organizers__partners {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: min(1034px, 100%);
+  padding-top: 20px;
+}
+
+.recap-organizers__partner {
+  --partner-logo-height: 481px;
+
+  flex: 1 1 492px;
+  max-width: 492px;
+}
+
+.recap-organizers__logo-wrap {
+  position: relative;
+  flex: 0 0 min(300px, 100%);
+  width: min(300px, 100%);
+  max-width: 492px;
+  margin: 0 auto;
+}
+
+.recap-organizers__logo-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--partner-logo-height);
+}
+
+.recap-organizers__logo {
+  display: block;
+  max-width: 100%;
+  max-height: var(--partner-logo-height);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .recap-organizers {
+    padding: 0 20px 80px;
+    gap: 48px;
+  }
+
+  .recap-organizers__partners {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 850px) {
+  .recap-organizers__partner {
+    --partner-logo-height: 280px;
+
+    flex: 1 1 100%;
+    max-width: min(480px, 100%);
+  }
+
+  .recap-organizers__logo-wrap {
+    width: min(280px, 100%);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .recap-organizers {
+    margin-top: 100px;
+  }
+
+  .recap-organizers__title {
+    font-size: 25px;
+  }
+
+  .recap-organizers__logo-wrap {
+    width: 100%;
+  }
+}
