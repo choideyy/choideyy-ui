@@ -24,6 +24,7 @@ export type RecapYearData = {
   stats: {
     participants: string;
     interests: string;
+    interestsLabel?: string; 
   };
   judges: string[];
   winners: RecapWinner[];

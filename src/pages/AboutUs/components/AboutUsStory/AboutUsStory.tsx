@@ -38,7 +38,7 @@ export const AboutUsStory = () => {
             <strong>lễ hội Chọi Trâu Đồ Sơn</strong> – một biểu tượng gắn liền với
             tinh thần mạnh mẽ, quyết liệt và giàu bản sắc. Từ “Chọi” được giữ lại
             như một dấu ấn về sự đối đầu, bản lĩnh và tinh thần thi đấu, đồng thời
-            phù hợp với tính chất của một giải hiphop
+            phù hợp với tính chất của một giải hiphop.
           </p>
         </div>
         <div className="about-us-story__para2">
@@ -75,7 +75,7 @@ export const AboutUsStory = () => {
             phát âm “Deyyy” gần giống từ <strong>“Day”</strong> trong tiếng Anh,
             gợi lên ý nghĩa{' '}
             <strong>“Chọi Day – ngày Chọi – ngày thi đấu”</strong> của các
-            dancers
+            dancers.
           </p>
         </div>
       </div>

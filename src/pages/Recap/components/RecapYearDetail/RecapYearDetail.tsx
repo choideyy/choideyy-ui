@@ -121,11 +121,11 @@ const guestsCarousel = useLoopCarousel(guestCount);
             alt=""
             aria-hidden="true"
           />
-          <div className="recap-year__stats-cards">
+         <div className="recap-year__stats-cards">
             <div className="recap-year__stat recap-year__stat--interests">
               <p className="recap-year__stat-value">{data.stats.interests}</p>
               <p className="recap-year__stat-label">
-                Tổng số lượt quan tâm sự kiện
+                {data.stats.interestsLabel ?? 'Tổng số lượt quan tâm sự kiện'}
               </p>
             </div>
             <div className="recap-year__stat recap-year__stat--participants">
