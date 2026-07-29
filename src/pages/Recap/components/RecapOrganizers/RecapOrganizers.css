@@ -98,9 +98,13 @@
 
 
 @media (max-width: 850px) {
+  .recap-organizers__partners {
+    gap: 10px;
+    margin-right: 30px;
+  }
+
   .recap-organizers__partner {
     --partner-logo-height: 280px;
-
     flex: 1 1 100%;
     max-width: min(480px, 100%);
   }
@@ -124,7 +128,7 @@
 }
 
 @media (max-width: 450px) {
-    .recap-organizers {
+  .recap-organizers {
     padding: 0 20px 0;
     gap: 48px;
   }
@@ -133,6 +137,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
+    margin-left: 30px;;
   }
   .recap-organizers {
     margin-top: 100px;
