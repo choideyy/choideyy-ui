@@ -81,7 +81,9 @@ export const RECAP_2022_DATA: RecapYearData = {
   ],
   specialGuests: [guest1, guest2, guest3,guest4, guest5],
   mcDjImages: [],
-  mcDjDescription: 'MC Tùng Bi Quang Anh và DJ Tedymation là người đã truyền tải trọn vẹn năng lượng bùng nổ, nhiệt huyết, thổi bùng ngọn lửa đam mê trong các bạn trẻ.',
+  mcDjDescription: [
+    'Tại Chọi Deyyy 2022, MC Tùng Bi và MC Quang Anh cùng DJ Tedymation đã góp phần khuấy động bầu không khí, lan tỏa nguồn năng lượng bùng nổ và tiếp thêm động lực cho các đội thi. Với sự nhiệt huyết và đam mê, bộ ba đã mang đến những màn dẫn dắt và âm nhạc đầy cảm hứng, giúp các dancers tự tin cháy hết mình trên sân khấu. Chọi Deyyy Mùa 1 đã khép lại với nhiều khoảng khắc đáng nhớ, và dấu ấn mà các MC & DJ để lại chắc chắn đã góp phần tạo nên thành công của chương trình.'
+  ],
   decorations: {
     starBurst: decoStarBurst,
     cassette: decoCassette,

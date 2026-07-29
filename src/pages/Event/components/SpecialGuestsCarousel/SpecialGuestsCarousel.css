@@ -24,6 +24,7 @@
   font-size: 64px;
   font-weight: 400;
   line-height: normal;
+
 }
 
 .event-guests__card {
@@ -98,5 +99,11 @@
   }
   .event-guests--stacked {
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+   .event-guests__title {
+    font-size: 24px;
   }
 }

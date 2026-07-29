@@ -30,7 +30,7 @@ export type RecapYearData = {
   winners: RecapWinner[];
   specialGuests: string[];
   mcDjImages: string[];
-  mcDjDescription?: string;
+  mcDjDescription?: string | React.ReactNode;
   decorations: {
     starBurst: string;
     cassette: string;
