@@ -30,15 +30,16 @@
 
 .mc-dj-section__description {
   margin: 0 auto;
-  max-width: min(900px, 100%);
+  max-width: var(--page-max-width);
   padding: 0 20px;
   color: var(--white);
   font-family: var(--font-inter-regular);
-  font-size: clamp(18px, 3vw, 24px);
+  font-size: clamp(18px, 3vw, 26px);
   font-weight: 400;
   line-height: 1.5;
   text-align: justify;
 }
+
 
 .mc-dj-section--has-description .mc-dj-section__description {
   padding-inline: 20px;
@@ -54,6 +55,7 @@
   padding-left: 0; /* neutralize the 100px section-level padding-left */
 }
 
+
 .mc-dj-section__deco {
   position: absolute;
   pointer-events: none;
@@ -68,7 +70,7 @@
 
 .mc-dj-section--recap .mc-dj-section__title {
   margin: 0 0 80px;
-  margin-right: 80px;
+  margin-left: 20px;
   text-align: center;
   color: var(--white);
   font-family: 'DC Monument Extended', var(--font-neue-plak);
@@ -81,7 +83,7 @@
 }
 
 .mc-dj-section--recap .mc-dj-section__description {
-  padding: 0 100px 0 120px;
+  padding: 0 100px 0 100px;
 }
 
 .mc-dj-section--recap .mc-dj-section__card {
@@ -152,14 +154,14 @@
 
 .mc-dj-section--has-description .mc-dj-section__deco--star {
   left: -5%;
-  top: -30px;
+  top: -10px;
   bottom: auto;
   width: min(200px, 22vw);
 }
 
 .mc-dj-section--has-description .mc-dj-section__deco--cassette {
   right: 0;
-  bottom: -40px;
+  bottom: -180px;
   width: min(260px, 26vw);
 }
 @media (max-width: 1280px) {
@@ -171,6 +173,11 @@
     opacity: 0.9;
     transform: rotate(-7.39deg);
   }
+
+  .mc-dj-section--recap .mc-dj-section__description {
+    font-size: 30px;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -190,8 +197,9 @@
   }
 
   .mc-dj-section--recap .mc-dj-section__description {
-    padding: 0 33px;
-    font-size: 18px;
+    padding: 0 50px;
+    margin-top: -20px;
+    font-size: 22px;
   }
    .mc-dj-section--event.mc-dj-section--has-description {
     margin-left: 0; /* cancels margin-left: 25px from image-mode rule above */
@@ -222,13 +230,13 @@
   }
 
   .mc-dj-section--has-description .mc-dj-section__deco--star {
-    left: -8%;
+    left: -38px;
     top: -20px;
     width: min(160px, 22vw);
   }
   .mc-dj-section--has-description .mc-dj-section__deco--cassette {
     right: -10px;
-    bottom: -25px;
+    bottom: -145px;
     width: min(200px, 24vw);
   }
 }
@@ -415,8 +423,10 @@
   }
 
   .mc-dj-section--recap .mc-dj-section__description {
+    position:relative;
     padding: 0 12px;
     font-size: 14px;
+    z-index: 2;
   }
 
   .mc-dj-section--recap .mc-dj-section__title {
@@ -442,7 +452,7 @@
 
   .mc-dj-section--recap .mc-dj-section__deco--star {
     left: -40px;
-    top: 8px;
+    top: -10px;
     width: 120px;
   }
 
@@ -453,13 +463,16 @@
   }
 
   .mc-dj-section--has-description .mc-dj-section__deco--star {
-    left: -10px;
-    top: -5px;
-    width: 90px;
+    position:relative;
+    left: -40px;
+    top: -275px;
+    width: 100px;
+    z-index: 0;
   }
+
   .mc-dj-section--has-description .mc-dj-section__deco--cassette {
-    right: -10px;
-    bottom: -10px;
-    width: 110px;
+    right: -20px;
+    bottom: 100px;
+    width: 120px;
   }
 }

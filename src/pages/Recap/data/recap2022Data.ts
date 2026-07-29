@@ -14,6 +14,8 @@ import gallery7 from '../../../assets/figma/recap/2022/gallery-7.png';
 import guest1 from '../../../assets/figma/recap/2022/guest-1.png';
 import guest2 from '../../../assets/figma/recap/2022/guest-2.png';
 import guest3 from '../../../assets/figma/recap/2022/guest-3.png';
+import guest4 from '../../../assets/figma/recap/2022/guest-4.png';
+import guest5 from '../../../assets/figma/recap/2022/guest-5.png';
 import judge1 from '../../../assets/figma/recap/2022/judge-1.png';
 import judge2 from '../../../assets/figma/recap/2022/judge-2.png';
 import judge3 from '../../../assets/figma/recap/2022/judge-3.png';
@@ -77,9 +79,11 @@ export const RECAP_2022_DATA: RecapYearData = {
       medalIcon: medalStar2,
     },
   ],
-  specialGuests: [guest1, guest2, guest3],
+  specialGuests: [guest1, guest2, guest3,guest4, guest5],
   mcDjImages: [],
-  mcDjDescription: 'MC Tùng Bi Quang Anh và DJ Tedymation là người đã truyền tải trọn vẹn năng lượng bùng nổ, nhiệt huyết, thổi bùng ngọn lửa đam mê trong các bạn trẻ.',
+  mcDjDescription: [
+    'Tại Chọi Deyyy 2022, MC Tùng Bi và MC Quang Anh cùng DJ Tedymation đã góp phần khuấy động bầu không khí, lan tỏa nguồn năng lượng bùng nổ và tiếp thêm động lực cho các đội thi. Với sự nhiệt huyết và đam mê, bộ ba đã mang đến những màn dẫn dắt và âm nhạc đầy cảm hứng, giúp các dancers tự tin cháy hết mình trên sân khấu. Chọi Deyyy Mùa 1 đã khép lại với nhiều khoảng khắc đáng nhớ, và dấu ấn mà các MC & DJ để lại chắc chắn đã góp phần tạo nên thành công của chương trình.'
+  ],
   decorations: {
     starBurst: decoStarBurst,
     cassette: decoCassette,

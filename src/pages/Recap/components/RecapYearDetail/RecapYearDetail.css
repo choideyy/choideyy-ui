@@ -215,6 +215,7 @@
   box-sizing: border-box;
 }
 
+
 .recap-year__judges-viewport,
 .recap-year__guests-viewport {
   overflow: hidden;
@@ -229,6 +230,10 @@
   justify-content: flex-end;
   gap: 24px;
   margin-bottom: 80px;
+}
+
+.recap-year__guests {
+  margin-bottom: 150px;
 }
 
 .recap-year__judges-title,
